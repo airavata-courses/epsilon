@@ -12,6 +12,7 @@ import matplotlib.pyplot as plt
 import json
 import django
 import pyart
+import datetime
 
 
 # Create your views here.
@@ -19,12 +20,12 @@ class statusCheck(APIView):
 
     def get(self, request):
         try:
-            res = {"success": True, "message": "Server is Up and Running"}
-            return Response(res)
+            response = django.http.JsonResponse({"success": True, "message": "Server is Up and Running"}, status=200)
+            return response
 
         except Exception as e:
-            res = {"success": False, "message": "Server is down", "Exception": e}
-            return Response(res)
+            response = django.http.JsonResponse({"success": False, "message": "Server is down", "Exception": e}, status=500)
+            return response
 
 # class fetchPlot2(APIView):
 
@@ -109,7 +110,8 @@ class fetchPlot(APIView):
             my_display = pyart.graph.RadarDisplay(radar)
             my_display.plot_ppi('reflectivity', 0, vmin=-12, vmax=64)
 
-            file_name = '../../image.png'
+            # file_name = '../../image.png'
+            file_name = '../../' + str(datetime.datetime.now()) + '_image.png'
 
             plt.savefig(file_name)
             plt.close()
