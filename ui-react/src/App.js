@@ -9,20 +9,25 @@ import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import GoogleIcon from '@mui/icons-material/Google';
 
+import Maphome from "./Maphome";
+import Timefilter from "./Timefilter";
+import { Route, Link } from "react-router-dom";
+
 const theme = createTheme();
 
 const App = () => {
     return (
         <>
             <CssBaseline />
-            <AppBar position="relative" style={{ background: '#2E3B55' }}>
+            <AppBar position="relative" style={{ background: '#990000' }}>
                 <Toolbar>
-                    <WbSunnyTwoToneIcon />
+                    <WbSunnyTwoToneIcon style={{ marginRight: '20px' }} />
                     <Typography variant="h5">Welcome to Epsilon</Typography>
                 </Toolbar>
             </AppBar>
             <main>
                 <div>
+
                     <ThemeProvider theme={theme}>
                         <Container component="main" maxWidth="xs">
                             <CssBaseline />
@@ -32,13 +37,13 @@ const App = () => {
                                     display: 'flex',
                                     flexDirection: 'column',
                                     alignItems: 'center',
-                                    border: '1px solid grey',
+                                    boxShadow: 4
                                 }}
                             >
-                                <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
+                                <Avatar sx={{ m: 1 }} style={{ background: '#990000' }}>
                                     <LockOutlinedIcon />
                                 </Avatar>
-                                <Typography variant="h2" align="center" color="textPrimary" gutterBottom>
+                                <Typography variant="h4" align="center" color="textPrimary" gutterBottom>
                                     Sign In
                                 </Typography>
 
@@ -47,6 +52,7 @@ const App = () => {
                                 </Typography>
                                 <Box component="form" noValidate sx={{ mt: 1 }}>
                                     <Button
+                                        style={{ marginTop: '40px', background: '#990000' }}
                                         variant="contained"
                                         startIcon={<GoogleIcon />}
                                         type="submit"
@@ -63,6 +69,14 @@ const App = () => {
                     </ThemeProvider>
                 </div>
             </main>
+            <footer style={{ padding: '10px 0', position: 'absolute', left: '0', bottom: '0', right: '0' }}>
+                <Typography varirant="h6" align="center" gutterBottom>
+                    Applied Distributed Systems @ Epsilon
+                </Typography>
+                <Typography varirant="subtitle1" align="center" color="textSecondary">
+                    NOAA Nexrad Data
+                </Typography>
+            </footer>
         </>
     );
 }
