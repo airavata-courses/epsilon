@@ -1,0 +1,10 @@
+/dist
+/node_modules
+.env
+newrelic.js
+package-lock.json
+.history
+/boy_logs
+tmpUploads
+.vscode/
+newrelic_agent.log
