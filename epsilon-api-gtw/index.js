@@ -20,6 +20,8 @@ global.globalLogger = log;
 
 const port = process.env.PORT || 3003;
 
+const RouterV1 = require("./api/v1/v1.router");
+
 app.use("*", log.logRequest);
 
 app.use(function (req, res, next) {
@@ -180,8 +182,6 @@ app.use(
 
 app.listen(port, () => console.log(`Server is listening on port ${port}!`));
 
-/**
- *
- */
+app.use("/api/gtw/v1", RouterV1);
 
 module.exports = app;
