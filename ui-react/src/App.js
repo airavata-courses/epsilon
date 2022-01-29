@@ -1,5 +1,5 @@
 import React from "react";
-import { Typography, CssBaseline, Container } from '@material-ui/core';
+import { Typography, CssBaseline, Container, Paper } from '@material-ui/core';
 
 import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
@@ -36,13 +36,12 @@ const Home = () => (
 
         <main>
             <div>
-
                 <ThemeProvider theme={theme}>
                     <Container component="main" maxWidth="xs" >
                         <CssBaseline />
                         <Box
                             sx={{
-                                marginTop: 8,
+                                marginTop: 23,
                                 display: 'flex',
                                 flexDirection: 'column',
                                 alignItems: 'center',
@@ -75,6 +74,7 @@ const Home = () => (
                         </Box>
                     </Container>
                 </ThemeProvider>
+
             </div>
         </main>
         <footer style={{ padding: '10px 0', position: 'absolute', left: '0', bottom: '0', right: '0' }}>
