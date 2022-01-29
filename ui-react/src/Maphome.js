@@ -2,17 +2,6 @@ import React from "react";
 import { Typography, AppBar, CssBaseline, Toolbar, Container } from '@material-ui/core';
 import WbSunnyTwoToneIcon from '@mui/icons-material/WbSunnyTwoTone';
 
-import Avatar from '@mui/material/Avatar';
-import Button from '@mui/material/Button';
-import Box from '@mui/material/Box';
-import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
-import { createTheme, ThemeProvider } from '@mui/material/styles';
-import GoogleIcon from '@mui/icons-material/Google';
-
-import Timefilter from "./Timefilter";
-
-const theme = createTheme();
-
 
 const Maphome = () => {
     return (
