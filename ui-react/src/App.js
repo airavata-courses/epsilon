@@ -1,6 +1,5 @@
 import React from "react";
-import { Typography, AppBar, CssBaseline, Toolbar, Container } from '@material-ui/core';
-import WbSunnyTwoToneIcon from '@mui/icons-material/WbSunnyTwoTone';
+import { Typography, CssBaseline, Container } from '@material-ui/core';
 
 import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
@@ -11,36 +10,35 @@ import GoogleIcon from '@mui/icons-material/Google';
 
 import Maphome from "./Maphome";
 import Timefilter from "./Timefilter";
+import Header from "./Header";
+import Footer from "./Footer";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 const theme = createTheme();
 
-const HeaderFooterTemplate = () => {
+const App = () => {
     return (
         <Router>
+            <Header />
             <Routes>
                 <Route path="/" element={<Home />}></Route>
                 <Route path="/maphome" element={<Maphome />}></Route>
                 <Route path="/timefilter" element={<Timefilter />}></Route>
             </Routes>
+            <Footer />
         </Router>
     );
 }
 
 const Home = () => (
     <>
-        <CssBaseline />
-        <AppBar position="relative" style={{ background: '#990000' }}>
-            <Toolbar>
-                <WbSunnyTwoToneIcon style={{ marginRight: '20px' }} />
-                <Typography variant="h5">Welcome to Epsilon</Typography>
-            </Toolbar>
-        </AppBar>
+
+
         <main>
             <div>
 
                 <ThemeProvider theme={theme}>
-                    <Container component="main" maxWidth="xs">
+                    <Container component="main" maxWidth="xs" >
                         <CssBaseline />
                         <Box
                             sx={{
@@ -68,7 +66,6 @@ const Home = () => (
                                     startIcon={<GoogleIcon />}
                                     type="submit"
                                     fullWidth
-                                    variant="contained"
                                     sx={{ mt: 3, mb: 2 }}
 
                                 >
@@ -90,4 +87,4 @@ const Home = () => (
         </footer>
     </>
 );
-export default HeaderFooterTemplate;
+export default App;
