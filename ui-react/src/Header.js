@@ -6,7 +6,7 @@ import Button from '@mui/material/Button';
 
 const pathname = window.location.pathname
 let dontShowLogout = false
-if (pathname == "/") {
+if (pathname === "/") {
     dontShowLogout = true
 }
 

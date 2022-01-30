@@ -1,13 +1,15 @@
 import React from "react";
-import { Typography, Box, CssBaseline, Container } from '@material-ui/core';
+import { Box, CssBaseline, Container } from '@material-ui/core';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import plot from "./testPlot.png"
+import Header from "./Header";
 
 const theme = createTheme();
 
 const PlotResults = () => {
     return (
         <main>
+            <Header />
             <ThemeProvider theme={theme}>
                 <Container component="main" maxWidth="lg" >
                     <CssBaseline />

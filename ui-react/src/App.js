@@ -1,17 +1,16 @@
 import React from "react";
-import { Typography, CssBaseline, Container } from '@material-ui/core';
-
+import { Typography, Container, AppBar, CssBaseline, Toolbar } from '@material-ui/core';
 import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import Box from '@mui/material/Box';
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import GoogleIcon from '@mui/icons-material/Google';
-
+import WbSunnyTwoToneIcon from '@mui/icons-material/WbSunnyTwoTone';
 import Maphome from "./Maphome";
 import PlotResults from "./PlotResults";
 import Header from "./Header";
-import Footer from "./Footer";
+import DateTimeFilter from "./DateTimeFilter";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 
@@ -20,10 +19,10 @@ const theme = createTheme();
 const App = () => {
     return (
         <Router>
-            <Header />
             <Routes>
                 <Route path="/" element={<Home />}></Route>
                 <Route path="/maphome" element={<Maphome />}></Route>
+                <Route path="/datetimefilter" element={<DateTimeFilter />}></Route>
                 <Route path="/plotresults" element={<PlotResults />}></Route>
             </Routes>
         </Router>
@@ -35,6 +34,12 @@ const Home = () => (
         <main>
             <div>
                 <ThemeProvider theme={theme}>
+                    <AppBar position="relative" style={{ background: '#990000' }}>
+                        <Toolbar>
+                            <WbSunnyTwoToneIcon style={{ marginRight: '20px' }} />
+                            <Typography variant="h5">Welcome to Epsilon</Typography>
+                        </Toolbar>
+                    </AppBar>
                     <Container component="main" maxWidth="xs" >
                         <CssBaseline />
                         <Box
