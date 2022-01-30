@@ -1,5 +1,5 @@
 import React from "react";
-import { Typography, CssBaseline, Container, Paper } from '@material-ui/core';
+import { Typography, CssBaseline, Container } from '@material-ui/core';
 
 import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
@@ -9,10 +9,11 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 import GoogleIcon from '@mui/icons-material/Google';
 
 import Maphome from "./Maphome";
-import Timefilter from "./Timefilter";
+import PlotResults from "./PlotResults";
 import Header from "./Header";
 import Footer from "./Footer";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
 
 const theme = createTheme();
 
@@ -23,17 +24,14 @@ const App = () => {
             <Routes>
                 <Route path="/" element={<Home />}></Route>
                 <Route path="/maphome" element={<Maphome />}></Route>
-                <Route path="/timefilter" element={<Timefilter />}></Route>
+                <Route path="/plotresults" element={<PlotResults />}></Route>
             </Routes>
-            <Footer />
         </Router>
     );
 }
 
 const Home = () => (
     <>
-
-
         <main>
             <div>
                 <ThemeProvider theme={theme}>
@@ -48,7 +46,7 @@ const Home = () => (
                                 boxShadow: 4
                             }}
                         >
-                            <Avatar sx={{ m: 1 }} style={{ background: '#990000' }}>
+                            <Avatar sx={{ m: 1 }} style={{ background: '#0066CC' }}>
                                 <LockOutlinedIcon />
                             </Avatar>
                             <Typography variant="h4" align="center" color="textPrimary" gutterBottom>
@@ -74,17 +72,8 @@ const Home = () => (
                         </Box>
                     </Container>
                 </ThemeProvider>
-
             </div>
         </main>
-        <footer style={{ padding: '10px 0', position: 'absolute', left: '0', bottom: '0', right: '0' }}>
-            <Typography varirant="h6" align="center" gutterBottom>
-                Applied Distributed Systems @ Epsilon
-            </Typography>
-            <Typography varirant="subtitle1" align="center" color="textSecondary">
-                NOAA Nexrad Data
-            </Typography>
-        </footer>
     </>
 );
 export default App;
