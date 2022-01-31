@@ -1,7 +1,10 @@
 #!/usr/bin/env python
 """Django's command-line utility for administrative tasks."""
+from operator import concat
 import os
 import sys
+from dotenv import load_dotenv
+config = load_dotenv(".env")
 
 
 def main():
@@ -19,4 +22,6 @@ def main():
 
 
 if __name__ == '__main__':
+    from django.core.management.commands.runserver import Command as runserver
+    runserver.default_port = os.getenv("PORT")
     main()
