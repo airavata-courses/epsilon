@@ -17,9 +17,10 @@ async function signUp(body) {
       if (ret.length > 0) {
         user = ret[0];
       }
-
+      user["returning_user"] = false;
       return user;
     } else {
+      userInDb[0]["returning_user"] = true;
       return userInDb[0];
     }
 

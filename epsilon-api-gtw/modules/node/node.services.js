@@ -2,6 +2,8 @@ const NODE_URL = process.env.MSVC_NODE + "/node/api/";
 const PYTHON_URL = process.env.MSVC_PYTHON + "/python/api/";
 const JAVA_URL = process.env.MSVC_JAVA;
 
+const logUtils = require("../../api/v1/utils/logger.utils");
+
 const axios = require("axios");
 const FormData = require("form-data");
 const fs = require("fs");
@@ -36,12 +38,15 @@ async function getBinaryFromS3(body, user) {
       fileName: fileName,
     });
 
+    body["user_id"] = user.id;
+    logUtils.logUserHistory(body, "ImageRequest");
+
     // form.append('radarfile', await fs.readFileSync('../../KIND20210530_005140_V06'));
     // let data = await unirest
     //   .post(`${NODE_URL}v1/download`)
     //   .field({ fileName: fileName });
     let pyResponse = await unirest
-      .post(`${PYTHON_URL}fetchplot2/`)
+      .post(`${PYTHON_URL}fetchplot/`)
       .header("Accept", "application/json")
       .attach("radarfile", "../KIND20210530_005140_V06");
 
@@ -49,7 +54,6 @@ async function getBinaryFromS3(body, user) {
 
     const file_new = await fs.readFileSync(path.join(dirname + file_name));
 
-    let logging_body = { user_id: user.id, request: body };
     //Call java api and send this to it
     return file_new;
   } catch (err) {

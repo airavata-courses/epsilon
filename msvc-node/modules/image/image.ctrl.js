@@ -2,6 +2,7 @@ const imageService = require("./image.services");
 
 exports.getBinaryFromS3 = getBinaryFromS3;
 exports.getDates = getDates;
+exports.insertLogs = insertLogs;
 
 async function getBinaryFromS3(req, res, next) {
   try {
@@ -27,6 +28,22 @@ async function getDates(req, res, next) {
   try {
     let data = await imageService.getDates();
     return res.bhejdo(HttpStatus.OK, { success: true, data: data });
+  } catch (err) {
+    globalLogger.logError(err);
+    console.log(err);
+    return res.bhejdo(HttpStatus.INTERNAL_SERVER_ERROR, {
+      success: false,
+      msg: err,
+    });
+  }
+}
+
+async function insertLogs(req, res, next) {
+  try {
+    await imageService.insertLogs(req.body);
+    return res.bhejdo(HttpStatus.OK, {
+      success: true,
+    });
   } catch (err) {
     globalLogger.logError(err);
     console.log(err);
