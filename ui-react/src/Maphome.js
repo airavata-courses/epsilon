@@ -208,7 +208,8 @@ const Maphome = () => {
                             </map>
 
                             <img src={map} width="554" height="491" border="0" alt="National Doppler Radar Sites" useMap="#dopplers" ></img>
-                            <Typography variant="h5" align="center" color="textPrimary" gutterBottom >
+
+                            <Typography variant="h5" align="center" color="textPrimary" gutterBottom>
                                 Recent Searches
                             </Typography>
                             <Box

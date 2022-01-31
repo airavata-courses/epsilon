@@ -9,10 +9,32 @@ import GoogleIcon from '@mui/icons-material/Google';
 import WbSunnyTwoToneIcon from '@mui/icons-material/WbSunnyTwoTone';
 import Maphome from "./Maphome";
 import PlotResults from "./PlotResults";
-import Header from "./Header";
 import DateTimeFilter from "./DateTimeFilter";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import axios from "axios";
+import { GoogleLogin } from "react-google-login";
 
+export const axiosApiCall = (url, method, body = {}) =>
+    axios({
+        method,
+        url: `${url}`,
+        data: body,
+        withCredentials: true,
+        headers: {
+            "Access-Control-Allow-Origin": "*",
+            "Content-Type": "application/json",
+        },
+    });
+
+const responseGoogle = async (response) => {
+    axiosApiCall("http://localhost:19030/auth/ms1/google/", "POST", response)
+        .then((res) => {
+            console.log(res);
+        })
+        .catch((err) => {
+            throw new Error(err);
+        });
+};
 
 const theme = createTheme();
 
@@ -61,18 +83,13 @@ const Home = () => (
                             <Typography variant="h6" align="center" color="textSecondary" paragraph>
                                 Please sign into your Google Account
                             </Typography>
-                            <Box component="form" noValidate sx={{ mt: 1 }}>
-                                <Button
-                                    style={{ marginTop: '40px', background: '#990000' }}
-                                    variant="contained"
-                                    startIcon={<GoogleIcon />}
-                                    type="submit"
-                                    fullWidth
-                                    sx={{ mt: 3, mb: 2 }}
-
-                                >
-                                    Sign in with Google
-                                </Button>
+                            <Box component="form" noValidate sx={{ mt: 1, boxShadow: 4 }}>
+                                <GoogleLogin
+                                    clientId="636817888058-df41du2pgci4432ipd7b7afea6plq846.apps.googleusercontent.com"
+                                    buttonText="Login with Google"
+                                    onSuccess={responseGoogle}
+                                    cookiePolicy="single_host_origin"
+                                />
                             </Box>
                         </Box>
                     </Container>
