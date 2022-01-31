@@ -5,27 +5,7 @@ var cookieParser = require("cookie-parser");
 var bodyParser = require("body-parser");
 const contentDisposition = require("content-disposition");
 const dotenv = require("dotenv");
-
-const redis = require("redis");
-const session = require("express-session");
-const connectRedis = require("connect-redis");
-
-const RedisStore = connectRedis(session);
-
-global.redisClient;
-(async () => {
-  redisClient = redis.createClient({
-    host: "localhost",
-    port: 6379,
-  });
-  await redisClient.connect();
-  redisClient.on("error", function (err) {
-    console.log("Could not establish a connection with redis. " + err);
-  });
-  redisClient.on("connect", function (err) {
-    console.log("Connected to redis successfully");
-  });
-})();
+const fileUpload = require("express-fileupload");
 
 const cors = require("cors");
 dotenv.config({
@@ -34,7 +14,8 @@ dotenv.config({
 
 global.HttpStatus = require("http-status-codes");
 global.dirname = __dirname;
-global.app_name = "MSVC-USERS";
+global.app_name = "EPSILON-MSVC-USERS";
+global.db = require("./api/v1/common/knexfile.db");
 
 const log = require("./api/v1/common/logs/logs.v1.services");
 global.globalLogger = log;
@@ -42,10 +23,8 @@ global.globalLogger = log;
 const port = process.env.PORT || 3003;
 
 const RouterV1 = require("./api/v1/v1.router");
-const AuthRouter = require("./api/v1/routers/auth.router");
 
 app.use("*", log.logRequest);
-
 app.use(function (req, res, next) {
   res.bhejdo = function (status, body = {}, acfBhejnaHai) {
     log.logResponse(req, res, body, status);
@@ -89,7 +68,9 @@ app.use(function (req, res, next) {
       } else if (body && body.msg) {
         log.logError(body.msg);
       } else {
-        log.logError("ERROR");
+        log.logError(
+          "Error toh aaya hai, par jabh tak bhejoge nai toh dikhau kaise? Please use the last parameter(Error Object) to send an error object or atleast include error in body.msg(string) or body.stack(string)."
+        );
       }
     } else {
       if (custom_error.message && custom_error.stack)
@@ -98,7 +79,10 @@ app.use(function (req, res, next) {
         log.logCustomError(custom_error);
       else if (typeof custom_error == "object")
         log.logCustomError(JSON.stringify(custom_error));
-      else log.logError("Error");
+      else
+        log.logError(
+          "Custom error toh daal diye ho par atleast Error Object bana lo ya toh string ya toh Object, yeh kya bavaseer bhej diye ho"
+        );
     }
 
     return res.bhejdo(status, body, acfBhejnaHai);
@@ -146,9 +130,8 @@ app.use("*", (req, res, next) => {
     preflightContinue: false,
     "Access-Control-Allow-Origin": process.env.WHITELIST,
     "Access-Control-Allow-Headers":
-      "Origin, X-Requested-With, Content-Type, Accept, sentry-trace, Access-Control-Allow-Origin",
+      "Origin, X-Requested-With, Content-Type, Accept, sentry-trace",
     "Access-Control-Allow-Methods": "GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS",
-    "Access-Control-Allow-Credentials": true,
   });
 
   const result = /^(http(s)?(:\/\/))?((.*)\.)?leadschool\.in(\/.*)?$/.test(
@@ -199,25 +182,14 @@ app.use(
 );
 
 app.use(
-  session({
-    name: "session",
-    secret: process.env.TOKEN_SECRET,
-    // create new redis store.
-    store: new RedisStore({ client: redisClient }),
-    saveUninitialized: false,
-    resave: false,
-    cookie: {
-      secure: false, // if true only transmit cookie over https
-      httpOnly: false, // if true prevent client side JS from reading the cookie
-      maxAge: 259200000,
-      sameSite: "strict",
-    },
+  fileUpload({
+    useTempFiles: true,
+    tempFileDir: "/tmp/",
   })
 );
 
 app.listen(port, () => console.log(`Server is listening on port ${port}!`));
 
-app.use("/auth", AuthRouter);
-app.use("/api/gtw/v1", RouterV1);
+app.use("/user/api/v1", RouterV1);
 
 module.exports = app;

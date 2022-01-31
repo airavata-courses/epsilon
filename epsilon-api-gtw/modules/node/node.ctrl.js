@@ -6,7 +6,7 @@ exports.getDate = getDate;
 
 async function getUserHistory(req, res, next) {
   try {
-    let user_id = req.users.id;
+    let user_id = req.user.id;
 
     return res.bhejdo(HttpStatus.OK, { data: result });
   } catch (err) {
@@ -21,7 +21,7 @@ async function getUserHistory(req, res, next) {
 
 async function getBinaryFromS3(req, res, next) {
   try {
-    let data = await nodeService.getBinaryFromS3(req.body);
+    let data = await nodeService.getBinaryFromS3(req.body, req.user);
     res.set({ "Content-Type": "image/png" });
     res.bufferBhejdo(data, "new.png");
   } catch (err) {

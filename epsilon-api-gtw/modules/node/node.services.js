@@ -28,7 +28,7 @@ async function getUserHistory(user_id) {
   }
 }
 
-async function getBinaryFromS3(body) {
+async function getBinaryFromS3(body, user) {
   try {
     let fileName = makeS3FileName(body);
 
@@ -48,6 +48,9 @@ async function getBinaryFromS3(body) {
     let file_name = "/" + pyResponse.body.file_name;
 
     const file_new = await fs.readFileSync(path.join(dirname + file_name));
+
+    let logging_body = { user_id: user.id, request: body };
+    //Call java api and send this to it
     return file_new;
   } catch (err) {
     console.log(err);

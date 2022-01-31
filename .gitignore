@@ -4,3 +4,5 @@
 package-lock.json
 .history
 .vscode/
+epsilon-api-gtw/node_modules
+msvc-users/node_modules/
