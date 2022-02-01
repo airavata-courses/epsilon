@@ -32,10 +32,15 @@ async function getUserHistory(user_id) {
 async function getBinaryFromS3(body, user) {
   try {
     let fileName = makeS3FileName(body);
-
-    let data = await axios.post(`${NODE_URL}v1/download`, {
-      fileName: fileName,
-    });
+    let data;
+    try {
+      data = await axios.post(`${NODE_URL}v1/download`, {
+        fileName: fileName,
+        body,
+      });
+    } catch (err) {
+      throw err;
+    }
 
     body["user_id"] = user.id;
     logUtils.logUserHistory(body, "ImageRequest");
@@ -53,6 +58,7 @@ async function getBinaryFromS3(body, user) {
     return file_new;
   } catch (err) {
     console.log(err);
+    throw err;
   }
 }
 

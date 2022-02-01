@@ -8,8 +8,8 @@ AWS.config.update({ region: "us-east-1" });
 let S3 = new AWS.S3({ apiVersion: "2006-03-01" });
 
 const fs = require("fs");
-const path = require("path");
 const tmp = require("tmp");
+const _ = require("lodash");
 
 exports.getBinaryFromS3 = getBinaryFromS3;
 exports.getDates = getDates;
@@ -32,9 +32,10 @@ async function getBinaryFromS3(body) {
     if (fileList.Contents.length == 0) {
       return { status: 400, msg: "No data available for the given date" };
     }
+    let file_name = getClosestFile(body.body, fileList.Contents);
     const params2 = {
       Bucket: BUCKET_NAME,
-      Key: fileList.Contents[0].Key,
+      Key: file_name.file,
     };
 
     let download = await S3.makeUnauthenticatedRequest(
@@ -49,6 +50,22 @@ async function getBinaryFromS3(body) {
     console.log(err);
     return err;
   }
+}
+
+function getClosestFile(body, files) {
+  let time = body.time.split(":").join("") + "00";
+  file_beginner = body.station + body.year + body.month + body.day;
+  file_key_obj = [];
+  for (let file of files) {
+    let file_splice = file.Key.split("_");
+    file_key_obj.push({ file: file.Key, time: file_splice[1] });
+  }
+
+  let results = _.sortBy(file_key_obj, (o) => {
+    return Math.abs(parseInt(time) - parseInt(o.time));
+  });
+
+  return results[0];
 }
 
 async function getDates() {
