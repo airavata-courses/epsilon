@@ -6,6 +6,10 @@ var bodyParser = require("body-parser");
 const contentDisposition = require("content-disposition");
 const dotenv = require("dotenv");
 
+dotenv.config({
+  path: __dirname + "/.env",
+});
+
 const redis = require("redis");
 const session = require("express-session");
 const connectRedis = require("connect-redis");
@@ -15,8 +19,8 @@ const RedisStore = connectRedis(session);
 global.redisClient;
 (async () => {
   redisClient = redis.createClient({
-    host: "localhost",
-    port: 6379,
+    host: process.env.REDIS_HOST,
+    port: process.env.REDIS_PORT,
   });
   await redisClient.connect();
   redisClient.on("error", function (err) {
@@ -28,9 +32,6 @@ global.redisClient;
 })();
 
 const cors = require("cors");
-dotenv.config({
-  path: __dirname + "/.env",
-});
 
 global.HttpStatus = require("http-status-codes");
 global.dirname = __dirname;

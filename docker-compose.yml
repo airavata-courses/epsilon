@@ -1,0 +1,75 @@
+version: '2.1'
+
+services:
+  users-db:
+    build: ./msvc-users/db
+    ports:
+      - '5433:5432'
+    environment:
+      - POSTGRES_USER=admin
+      - POSTGRES_PASSWORD=admin
+    healthcheck:
+        test: exit 0
+
+  users-service:
+    build: ./msvc-users
+    volumes:
+      - './msvc-users:/msvc-users'
+    ports:
+      - '19032:19032'
+    environment:
+      - DATABASE_URL=postgres://admin:admin@users-db:5432/epsilon
+      - NODE_ENV=${NODE_ENV}
+      - TOKEN_SECRET=changeme
+    depends_on:
+      users-db:
+        condition: service_healthy
+    links:
+      - users-db
+  
+  node-service:
+    build: ./msvc-node
+    volumes:
+      - './msvc-node:/msvc-node'
+    ports:
+      - '19031:19031'
+    environment:
+      - NODE_ENV=${NODE_ENV}
+      - TOKEN_SECRET=changeme
+    depends_on:
+      users-service:
+        condition: service_started
+    links:
+      - users-service
+
+  redis-server: 
+    image: 'redis'
+    expose:
+    - 6379
+
+  api-gtw-service:
+    build: ./epsilon-api-gtw
+    volumes:
+      - './epsilon-api-gtw:/epsilon-api-gtw'
+    ports:
+      - '19030:19030'
+    environment:
+      - NODE_ENV=${NODE_ENV}
+      - TOKEN_SECRET=8ba7493001075aa54efc272589e48c57030fa4682e9d6a4cde8622089b5476f8
+      - MSVC_NODE=http://node-service:19031
+      - MSVC_PYTHON=http://localhost:8000
+      - MSVC_JAVA=http://localhost:8080
+      - MSVC_USERS=http://users-service:19032
+      - REDIS_HOST=redis-server
+      - REDIS_PORT=6379
+    depends_on:
+      users-service:
+        condition: service_started
+      node-service:
+        condition: service_started
+      redis-server:
+        condition: service_started
+    links:
+      - users-service
+      - node-service
+      - redis-server

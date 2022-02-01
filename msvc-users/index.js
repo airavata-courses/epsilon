@@ -15,7 +15,8 @@ dotenv.config({
 global.HttpStatus = require("http-status-codes");
 global.dirname = __dirname;
 global.app_name = "EPSILON-MSVC-USERS";
-global.db = require("./api/v1/common/knexfile.db");
+const config = require("./knexfile");
+global.db = require("knex")(config);
 
 const log = require("./api/v1/common/logs/logs.v1.services");
 global.globalLogger = log;

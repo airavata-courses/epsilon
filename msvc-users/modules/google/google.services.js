@@ -38,7 +38,7 @@ async function addUser(body) {
       first_name: body.givenName,
       last_name: body.familyName,
       google_id: body.googleId,
-      imageurl: body.imageUrl,
+      image_url: body.imageUrl,
     };
 
     let adduser = await db.from("users").insert(db_object, "*");
