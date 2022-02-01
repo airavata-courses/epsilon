@@ -7,5 +7,6 @@ const os = require("os");
 router.post("/download", imageCtrl.getBinaryFromS3);
 router.get("/getDates/:location", imageCtrl.getDates);
 router.post("/logs", imageCtrl.insertLogs);
+router.get("/logs/:user_id", imageCtrl.getLogs);
 
 module.exports = router;

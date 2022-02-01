@@ -7,9 +7,14 @@ AWS.config.update({ region: "us-east-1" });
 
 let S3 = new AWS.S3({ apiVersion: "2006-03-01" });
 
+const fs = require("fs");
+const path = require("path");
+const tmp = require("tmp");
+
 exports.getBinaryFromS3 = getBinaryFromS3;
 exports.getDates = getDates;
 exports.insertLogs = insertLogs;
+exports.getLogs = getLogs;
 
 async function getBinaryFromS3(body) {
   try {
@@ -36,8 +41,10 @@ async function getBinaryFromS3(body) {
       "getObject",
       params2
     ).promise();
+    const tmpobj = tmp.fileSync();
+    await fs.writeFileSync(tmpobj.name, download.Body);
 
-    return download;
+    return tmpobj.name;
   } catch (err) {
     console.log(err);
     return err;
@@ -63,5 +70,52 @@ async function insertLogs(body) {
   } catch (err) {
     console.log(err);
     return err;
+  }
+}
+
+async function getLogs(user_id) {
+  try {
+    // let data = await axios.post(`${JAVA_URL}/data/add`, body);
+    data = [
+      {
+        month: "01",
+        year: "2022",
+        user_id: 3,
+        station: "KLGX",
+        action: "ImageRequest",
+        time: "19:00",
+        day: "24",
+      },
+      {
+        month: "01",
+        year: "2022",
+        user_id: 3,
+        station: "KLGX",
+        action: "ImageRequest",
+        time: "20:00",
+        day: "25",
+      },
+    ];
+    return convertLogs(data);
+  } catch (err) {
+    console.log(err);
+    return err;
+  }
+}
+
+function convertLogs(body) {
+  key_val = [];
+  if (body.length > 0) {
+    for (history of body) {
+      console.log(history);
+      let obj = {
+        value: history,
+        key: `${history.station} on ${history.month}/${history.day}/${history.year} at ${history.time}`,
+      };
+      key_val.push(obj);
+    }
+    return key_val;
+  } else {
+    return body;
   }
 }

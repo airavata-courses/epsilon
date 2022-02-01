@@ -7,8 +7,9 @@ exports.getDate = getDate;
 async function getUserHistory(req, res, next) {
   try {
     let user_id = req.user.id;
+    let history = await nodeService.getUserHistory(user_id);
 
-    return res.bhejdo(HttpStatus.OK, { data: result });
+    return res.bhejdo(HttpStatus.OK, { data: history.data });
   } catch (err) {
     globalLogger.logError(err);
     console.log(err);

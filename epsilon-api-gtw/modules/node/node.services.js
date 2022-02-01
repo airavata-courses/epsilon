@@ -21,9 +21,8 @@ exports.getDates = getDates;
 
 async function getUserHistory(user_id) {
   try {
-    //Call java api, get user logs from mongo
-    // let result = await axios.get(JAVA_URL+'/test/');
-    return { Success: true, msg: "Got data from java" };
+    let data = await axios.get(`${NODE_URL}v1/logs/${user_id}`);
+    return { Success: true, data: data.data.history };
   } catch (err) {
     console.log(err);
     return { success: false, msg: "Server did not respond" };
@@ -41,14 +40,10 @@ async function getBinaryFromS3(body, user) {
     body["user_id"] = user.id;
     logUtils.logUserHistory(body, "ImageRequest");
 
-    // form.append('radarfile', await fs.readFileSync('../../KIND20210530_005140_V06'));
-    // let data = await unirest
-    //   .post(`${NODE_URL}v1/download`)
-    //   .field({ fileName: fileName });
     let pyResponse = await unirest
       .post(`${PYTHON_URL}fetchplot/`)
       .header("Accept", "application/json")
-      .attach("radarfile", "../KIND20210530_005140_V06");
+      .attach("radarfile", data.data.file_name);
 
     let file_name = "/" + pyResponse.body.file_name;
 
