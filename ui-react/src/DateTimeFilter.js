@@ -6,18 +6,31 @@ import DateTimePicker from '@mui/lab/DateTimePicker';
 import TextField from '@mui/material/TextField';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Button from '@mui/material/Button';
-import { Link } from 'react-router-dom'
 import { useLocation } from "react-router-dom";
 import Header from "./Header";
+import { useNavigate } from "react-router-dom";
 
 const theme = createTheme();
 
-
-
 const DateTimeFilter = () => {
+
     const [value, setValue] = React.useState(null);
     const search = useLocation().search;
-    const stid = new URLSearchParams(search).get('id');
+    const stid = search ? new URLSearchParams(search).get('id') : "";
+    const navigate = useNavigate();
+
+    const RequestImageData = () => {
+        const generateRequestImageRequest = {
+
+            "year": document.getElementById("dateTimePicker").value.split(" ")[0].split("/")[2],
+            "month": document.getElementById("dateTimePicker").value.split(" ")[0].split("/")[0],
+            "day": document.getElementById("dateTimePicker").value.split(" ")[0].split("/")[1],
+            "station": document.getElementById("stationSelected").value,
+            "time": document.getElementById("dateTimePicker").value.split(" ")[1]
+        }
+        navigate("../plotresults", { state: generateRequestImageRequest });
+    };
+
     return (
         <>
             <Header />
@@ -37,20 +50,18 @@ const DateTimeFilter = () => {
                             Please select a particular date and time
                         </Typography>
                         <TextField
-                            disabled
                             label="Station Selected"
-                            id="outlined-start-adornment"
+                            id="stationSelected"
                             sx={{ m: 1, width: '25ch' }}
-                            value={stid.toUpperCase()}
-
+                            defaultValue={stid.toUpperCase()}
                         />
 
                         <LocalizationProvider dateAdapter={AdapterDateFns}>
                             <DateTimePicker
                                 label="Select Date and Time"
-                                maxDate={new Date()}
-                                maxTime={new Date()}
-                                renderInput={(props) => <TextField {...props} />}
+                                ampm={false}
+                                maxDateTime={new Date()}
+                                renderInput={(props) => <TextField id='dateTimePicker' {...props} />}
                                 value={value}
                                 onChange={(newValue) => {
                                     setValue(newValue);
@@ -59,17 +70,17 @@ const DateTimeFilter = () => {
                         </LocalizationProvider>
 
                         <Box component="form" noValidate sx={{ mt: 1 }}>
-                            <Link to='/plotresults' style={{ textDecoration: 'none' }}>
-                                <Button
-                                    style={{ marginTop: '10px', background: '#990000' }}
-                                    variant="contained"
-                                    type="submit"
-                                    fullWidth
-                                    sx={{ mt: 3, mb: 2 }}
-                                >
-                                    Generate Plot
-                                </Button>
-                            </Link>
+                            <Button
+                                id='generatePlotButton'
+                                style={{ marginTop: '10px', background: '#990000' }}
+                                variant="contained"
+                                type="submit"
+                                fullWidth
+                                sx={{ mt: 3, mb: 2 }}
+                                onClick={() => RequestImageData()}
+                            >
+                                Generate Plot
+                            </Button>
                         </Box>
                     </Box>
                 </Container >
@@ -78,4 +89,5 @@ const DateTimeFilter = () => {
     );
 
 }
+
 export default DateTimeFilter;

@@ -1,3 +1,7 @@
+import datetime
+import pyart
+import django
+import json
 from django.http import HttpResponse
 from rest_framework.views import APIView
 from rest_framework.response import Response
@@ -5,14 +9,12 @@ from rest_framework.response import Response
 # import cartopy.feature as cfeature
 # import cartopy.crs as ccrs
 import matplotlib.pyplot as plt
+import matplotlib
+matplotlib.use('Agg')
 # import metpy.plots as mpplots
 # import numpy as np
 # from datetime import datetime
 # from siphon.radarserver import RadarServer
-import json
-import django
-import pyart
-import datetime
 
 
 # Create your views here.
