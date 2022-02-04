@@ -1,7 +1,7 @@
 const NODE_URL = process.env.MSVC_NODE + "/node/api/";
 const PYTHON_URL = process.env.MSVC_PYTHON + "/python/api/";
 const JAVA_URL = process.env.MSVC_JAVA;
-
+const { constants } = require("../../api/v1/common/constants");
 const logUtils = require("../../api/v1/utils/logger.utils");
 
 const axios = require("axios");
@@ -13,6 +13,7 @@ const AWS = require("aws-sdk");
 const BUCKET_NAME = "noaa-nexrad-level2";
 AWS.config.update({ region: "us-east-1" });
 const unirest = require("unirest");
+const { RedisClient } = require("redis");
 const S3 = new AWS.S3({ apiVersion: "2006-03-01" });
 
 exports.getUserHistory = getUserHistory;
@@ -32,6 +33,16 @@ async function getUserHistory(user_id) {
 async function getBinaryFromS3(body, user) {
   try {
     let fileName = makeS3FileName(body);
+
+    let redisValue = await redisNew.get(`${fileName}${body.time}`);
+    if (redisValue) {
+      let file_name = "/files/" + redisValue;
+      const file_new = await fs.readFileSync(path.join(dirname + file_name), {
+        encoding: "base64",
+      });
+
+      return file_new;
+    }
     let data;
     try {
       data = await axios.post(`${NODE_URL}v1/download`, {
@@ -48,13 +59,23 @@ async function getBinaryFromS3(body, user) {
     let pyResponse = await unirest
       .post(`${PYTHON_URL}fetchplot/`)
       .header("Accept", "application/json")
-      .attach("radarfile", data.data.file_name);
+      .attach(
+        "radarfile",
+        path.join(__dirname + `/../../files/${data.data.file_name}`)
+      );
 
-    let file_name = "/" + pyResponse.body.file_name;
+    let file_name = "/files/" + pyResponse.body.file_name;
 
-    const file_new = await fs.readFileSync(path.join(dirname + file_name));
+    const file_new = await fs.readFileSync(path.join(dirname + file_name), {
+      encoding: "base64",
+    });
 
-    //Call java api and send this to it
+    await redisNew.set(
+      `${fileName}${body.time}`,
+      pyResponse.body.file_name,
+      10 * 24 * 60 * 60
+    );
+
     return file_new;
   } catch (err) {
     console.log(err);

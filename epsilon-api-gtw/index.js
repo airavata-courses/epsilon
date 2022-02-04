@@ -16,6 +16,9 @@ const connectRedis = require("connect-redis");
 
 const RedisStore = connectRedis(session);
 
+const REDIS = require("./api/v1/common/redis");
+
+global.redisNew = new REDIS();
 global.redisClient;
 (async () => {
   redisClient = redis.createClient({
@@ -106,7 +109,7 @@ app.use(function (req, res, next) {
   };
 
   res.bufferBhejdo = function (buffer, fileName) {
-    res.setHeader("Content-Disposition", contentDisposition(fileName));
+    // res.setHeader("Content-Disposition", contentDisposition(fileName));
     const status = HttpStatus.OK;
     log.logResponse(
       req,
