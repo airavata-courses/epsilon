@@ -10,6 +10,7 @@ let S3 = new AWS.S3({ apiVersion: "2006-03-01" });
 const fs = require("fs");
 const tmp = require("tmp");
 const _ = require("lodash");
+const path = require("path");
 
 exports.getBinaryFromS3 = getBinaryFromS3;
 exports.getDates = getDates;
@@ -42,10 +43,15 @@ async function getBinaryFromS3(body) {
       "getObject",
       params2
     ).promise();
-    const tmpobj = tmp.fileSync();
-    await fs.writeFileSync(tmpobj.name, download.Body);
 
-    return tmpobj.name;
+    let file_name_write = Date.now() + "_radarfile";
+    let download_file = path.join(
+      __dirname + `/../../files/${file_name_write}`
+    );
+
+    await fs.writeFileSync(download_file, download.Body);
+
+    return file_name_write;
   } catch (err) {
     console.log(err);
     return err;
@@ -92,28 +98,10 @@ async function insertLogs(body) {
 
 async function getLogs(user_id) {
   try {
-    // let data = await axios.post(`${JAVA_URL}/data/add`, body);
-    data = [
-      {
-        month: "01",
-        year: "2022",
-        user_id: 3,
-        station: "KLGX",
-        action: "ImageRequest",
-        time: "19:00",
-        day: "24",
-      },
-      {
-        month: "01",
-        year: "2022",
-        user_id: 3,
-        station: "KLGX",
-        action: "ImageRequest",
-        time: "20:00",
-        day: "25",
-      },
-    ];
-    return convertLogs(data);
+    let data = await axios.get(`${JAVA_URL}/data/${user_id}`);
+    console.log("DATA FROM JAVA", data.data);
+
+    return convertLogs(data.data);
   } catch (err) {
     console.log(err);
     return err;
@@ -124,10 +112,10 @@ function convertLogs(body) {
   key_val = [];
   if (body.length > 0) {
     for (history of body) {
-      console.log(history);
+      console.log(history.jsObj);
       let obj = {
-        value: history,
-        key: `${history.station} on ${history.month}/${history.day}/${history.year} at ${history.time}`,
+        value: history.jsObj,
+        key: `${history.jsObj.station} on ${history.jsObj.month}/${history.jsObj.day}/${history.jsObj.year} at ${history.jsObj.time}`,
       };
       key_val.push(obj);
     }
