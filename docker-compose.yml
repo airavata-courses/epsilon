@@ -2,7 +2,6 @@ version: '2.1'
 
 services:
   users-db:
-    build: ./msvc-users/db
     ports:
       - '5433:5432'
     environment:
@@ -10,12 +9,9 @@ services:
       - POSTGRES_PASSWORD=admin
     healthcheck:
         test: exit 0
-    image: epsilonsp22/users-db
+    image: epsilonsp22/users-db:latest
 
   users-service:
-    build: ./msvc-users
-    volumes:
-      - './msvc-users:/msvc-users'
     ports:
       - '19032:19032'
     environment:
@@ -27,21 +23,19 @@ services:
         condition: service_healthy
     links:
       - users-db
-    image: epsilonsp22/users-service
+    image: epsilonsp22/users-service:latest
   
   
 
   pythonservice:
-    build: ./msvc-python
     environment:
       - ALLOWED_HOSTS=['*',]
     volumes:
-      - './msvc-python:/msvc-python'
       - files:/msvc-python/files
     ports:
       - 19034:19034
     command: python -u manage.py runserver 0.0.0.0:19034
-    image: epsilonsp22/pythonservice
+    image: epsilonsp22/pythonservice:latest
 
   mongoserver:
     image: "mongo"
@@ -50,7 +44,6 @@ services:
       - 27017:27017
 
   javaservice:
-    build: ./msvc-java
     restart: always
     ports:
       - 19035:19035
@@ -66,9 +59,7 @@ services:
     image: epsilonsp22/javaservice
     
   node-service:
-    build: ./msvc-node
     volumes:
-      - './msvc-node:/msvc-node'
       - files:/msvc-node/files
     ports:
       - '19031:19031'
@@ -81,7 +72,7 @@ services:
         condition: service_started
     links:
       - javaservice
-    image: epsilonsp22/node-service
+    image: epsilonsp22/node-service:latest
 
   redis-server: 
     image: 'redis'
@@ -89,9 +80,7 @@ services:
       - "6379"
 
   apigtwservice:
-    build: ./epsilon-api-gtw
     volumes:
-      - './epsilon-api-gtw:/epsilon-api-gtw'
       - files:/epsilon-api-gtw/files
     ports:
       - '19030:19030'
@@ -118,10 +107,9 @@ services:
       - node-service
       - redis-server
       - pythonservice
-    image: epsilonsp22/apigtwservice
+    image: epsilonsp22/epsilon-api-gtw:latest
 
   reactui:
-    build: ./ui-react
     ports:
       - '20001:20001'
     environment:
