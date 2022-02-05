@@ -9,4 +9,5 @@ ADD package.json /epsilon-api-gtw/package.json
 RUN npm install
 
 # start app
+COPY . .
 CMD ["npm", "run","prod"]
