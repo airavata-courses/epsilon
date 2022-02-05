@@ -9,6 +9,11 @@ import Button from '@mui/material/Button';
 import { useLocation } from "react-router-dom";
 import Header from "./Header";
 import { useNavigate } from "react-router-dom";
+import InputLabel from '@mui/material/InputLabel';
+import Select from '@mui/material/Select';
+import MenuItem from '@mui/material/MenuItem';
+import { constants } from "./Constants";
+import FormControl from '@mui/material/FormControl';
 
 const theme = createTheme();
 
@@ -25,7 +30,7 @@ const DateTimeFilter = () => {
             "year": document.getElementById("dateTimePicker").value.split(" ")[0].split("/")[2],
             "month": document.getElementById("dateTimePicker").value.split(" ")[0].split("/")[0],
             "day": document.getElementById("dateTimePicker").value.split(" ")[0].split("/")[1],
-            "station": document.getElementById("stationSelected").value,
+            "station": document.getElementById("stationSelectedSelect").innerHTML,
             "time": document.getElementById("dateTimePicker").value.split(" ")[1]
         }
         navigate("../plotresults", { state: generateRequestImageRequest });
@@ -46,15 +51,27 @@ const DateTimeFilter = () => {
                             boxShadow: 4,
                         }}
                     >
-                        <Typography variant="h5" align="center" color="textPrimary" gutterBottom >
+                        <Typography sx={{ mt: 2, mb: 2 }} variant="h5" align="center" color="textPrimary" gutterBottom >
                             Please select a particular date and time
                         </Typography>
-                        <TextField
-                            label="Station Selected"
-                            id="stationSelected"
-                            sx={{ m: 1, width: '25ch' }}
-                            defaultValue={stid.toUpperCase()}
-                        />
+                        <FormControl style={{ minWidth: 230 }}>
+                            <InputLabel sx={{ marginTop: 2 }}>
+                                Select Station
+                            </InputLabel>
+                            <Select
+                                id="stationSelectedSelect"
+                                defaultValue={stid.toUpperCase()}
+                                sx={{
+                                    marginTop: 3,
+                                    marginBottom: 2
+                                }}
+
+                            >
+                                {constants["station_names"].map(item => (
+                                    <MenuItem key={item} value={item}>{item}</MenuItem>
+                                ))}
+                            </Select>
+                        </FormControl>
 
                         <LocalizationProvider dateAdapter={AdapterDateFns}>
                             <DateTimePicker
@@ -66,6 +83,7 @@ const DateTimeFilter = () => {
                                 onChange={(newValue) => {
                                     setValue(newValue);
                                 }}
+
                             />
                         </LocalizationProvider>
 

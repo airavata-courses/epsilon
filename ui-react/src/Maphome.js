@@ -52,7 +52,7 @@ class Maphome extends Component {
             const { index, style } = props;
             return (
                 <ListItem style={style} key={index} component="div" disablePadding>
-                    <ListItemButton>
+                    <ListItemButton sx={{ boxShadow: 1 }}>
                         <Link to='/plotresults' state={{ state: userHistory[index].value }} style={{ textDecoration: 'none', color: "black" }}>
                             <ListItemText primary={userHistory[index].key} />
                         </Link>
@@ -77,7 +77,7 @@ class Maphome extends Component {
                                         boxShadow: 4,
                                     }}
                                 >
-                                    <Typography variant="h5" align="center" color="textPrimary" gutterBottom >
+                                    <Typography sx={{ mt: 2, mb: 3 }} variant="h5" align="center" color="textPrimary" gutterBottom >
                                         Please select a Station by Clicking on the Map
                                     </Typography>
 
@@ -244,14 +244,14 @@ class Maphome extends Component {
 
                                     <img src={map} width="554" height="491" border="0" alt="National Doppler Radar Sites" useMap="#dopplers" ></img>
 
-                                    <Typography variant="h5" align="center" color="textPrimary" gutterBottom>
+                                    <Typography sx={{ mt: 5, mb: 3 }} variant="h5" align="center" color="textPrimary" gutterBottom>
                                         Recent Searches
                                     </Typography>
                                     <Box
-                                        sx={{ width: '100%', height: 500, maxWidth: 750, bgcolor: 'background.paper', boxShadow: 4 }}
+                                        sx={{ bgcolor: 'background.paper', boxShadow: 4 }}
                                     >
                                         <FixedSizeList
-                                            height={500}
+                                            height={400}
                                             width={750}
                                             itemSize={46}
                                             itemCount={userHistory.length}

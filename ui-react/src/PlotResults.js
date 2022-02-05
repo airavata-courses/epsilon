@@ -3,6 +3,7 @@ import { useLocation } from "react-router-dom";
 import axios from "axios";
 import Header from "./Header";
 import ReactDOM from 'react-dom'
+import { Typography } from '@material-ui/core';
 
 const axiosApiCall = (url, method, body = {}) =>
     axios({
@@ -27,7 +28,8 @@ const PlotResults = () => {
     return (
         <main>
             <Header />
-
+            <Typography variant="h5">Please wait until the plot is generated......</Typography>
+            <br></br>
             <div id="test" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}></div>
 
         </main>

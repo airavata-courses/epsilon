@@ -54,18 +54,28 @@ const Home = () => {
                                 <Typography variant="h5">Welcome to Epsilon</Typography>
                             </Toolbar>
                         </AppBar>
+
+                        <Container component="main" maxWidth="md" sx={{ marginTop: 8 }} >
+                            <CssBaseline />
+                            <Typography variant="h5" align="center" color="textPrimary" gutterBottom sx={{ fontStyle: 'italic' }}>
+                                "Reflectivity" is the amount of transmitted power returned to the radar receiver
+                                after hitting precipitation, compared to a reference power density at a distance
+                                of 1 meter from the radar antenna.
+                            </Typography>
+                        </Container>
+
                         <Container component="main" maxWidth="xs" >
                             <CssBaseline />
                             <Box
                                 sx={{
-                                    marginTop: 23,
+                                    marginTop: 8,
                                     display: 'flex',
                                     flexDirection: 'column',
                                     alignItems: 'center',
                                     boxShadow: 4
                                 }}
                             >
-                                <Avatar sx={{ m: 1 }} style={{ background: '#0066CC' }}>
+                                <Avatar sx={{ m: 3 }} style={{ background: '#0066CC' }}>
                                     <LockOutlinedIcon />
                                 </Avatar>
                                 <Typography variant="h4" align="center" color="textPrimary" gutterBottom>
@@ -73,9 +83,9 @@ const Home = () => {
                                 </Typography>
 
                                 <Typography variant="h6" align="center" color="textSecondary" paragraph>
-                                    Please sign into your Google Account
+                                    Please sign in with your Google Account
                                 </Typography>
-                                <Box component="form" noValidate sx={{ mt: 1, boxShadow: 4 }}>
+                                <Box component="form" noValidate sx={{ mt: 1, mb: 3, boxShadow: 4 }}>
                                     <GoogleLogin
                                         clientId="636817888058-df41du2pgci4432ipd7b7afea6plq846.apps.googleusercontent.com"
                                         buttonText="Login with Google"
