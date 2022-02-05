@@ -1,7 +1,6 @@
 /dist
 /node_modules
 .env
-package-lock.json
 .history
 .vscode/
 epsilon-api-gtw/node_modules
