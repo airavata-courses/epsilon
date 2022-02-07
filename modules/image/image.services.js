@@ -112,12 +112,13 @@ function convertLogs(body) {
   key_val = [];
   if (body.length > 0) {
     for (history of body) {
-      console.log(history.jsObj);
-      let obj = {
-        value: history.jsObj,
-        key: `${history.jsObj.station} on ${history.jsObj.month}/${history.jsObj.day}/${history.jsObj.year} at ${history.jsObj.time}`,
-      };
-      key_val.push(obj);
+      if (history.jsObj.action != "LOGIN") {
+        let obj = {
+          value: history.jsObj,
+          key: `${history.jsObj.station} on ${history.jsObj.month}/${history.jsObj.day}/${history.jsObj.year} at ${history.jsObj.time}`,
+        };
+        key_val.push(obj);
+      }
     }
     return key_val;
   } else {
