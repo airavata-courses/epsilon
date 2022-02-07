@@ -113,9 +113,11 @@ class fetchPlot(APIView):
             my_display.plot_ppi('reflectivity', 0, vmin=-12, vmax=64)
 
             # file_name = '../../image.png'
-            file_name = '../../' + str(datetime.datetime.now()) + '_image.png'
+            # file_name = '../../' + str(datetime.datetime.now()) + '_image.png'
+            file_name = str(datetime.datetime.now()) + '_image.png'
+            file_path = 'files/'+file_name
 
-            plt.savefig(file_name)
+            plt.savefig(file_path)
             plt.close()
 
             response = django.http.JsonResponse({'file_name': file_name}, status=200)
