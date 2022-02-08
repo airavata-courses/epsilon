@@ -1,0 +1,1 @@
+docker-compose run users-service knex migrate:latest --knexfile ./knexfile.js
