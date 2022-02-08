@@ -1,7 +1,6 @@
 /dist
 .env
 newrelic.js
-package-lock.json
 .history
 /boy_logs
 tmpUploads
