@@ -56,7 +56,7 @@ services:
       - mongoserver
     links:
       - mongoserver
-    image: epsilonsp22/javaservice
+    image: epsilonsp22/javaservice:latest
     
   node-service:
     volumes:
@@ -120,7 +120,7 @@ services:
         condition: service_started
     links:
       - apigtwservice
-    image: epsilonsp22/reactui
+    image: epsilonsp22/reactui:latest
     
 volumes:
     files:
