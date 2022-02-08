@@ -1,0 +1,10 @@
+/dist
+/node_modules
+.env
+.history
+.vscode/
+epsilon-api-gtw/node_modules
+msvc-users/node_modules/
+tmp*
+.DS_Store
+msvc-python/*
