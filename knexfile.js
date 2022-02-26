@@ -11,11 +11,7 @@ const config = {
     min: 0,
     max: 20,
   },
-  migrations: {
-    directory: path.join(__dirname + "/db/migrations"),
-    tableName: "knex_migrations",
-  },
 };
 
-// const knex = require("knex")(config);
-module.exports = config;
+const knex = require("knex")(config);
+module.exports = knex;
