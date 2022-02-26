@@ -1,0 +1,126 @@
+version: '2.1'
+
+services:
+  users-db:
+    ports:
+      - '5433:5432'
+    environment:
+      - POSTGRES_USER=admin
+      - POSTGRES_PASSWORD=admin
+    healthcheck:
+        test: exit 0
+    image: epsilonsp22/users-db:latest
+
+  users-service:
+    ports:
+      - '19032:19032'
+    environment:
+      - DATABASE_URL=postgres://admin:admin@users-db:5432/epsilon
+      - NODE_ENV=${NODE_ENV}
+      - TOKEN_SECRET=changeme
+    depends_on:
+      users-db:
+        condition: service_healthy
+    links:
+      - users-db
+    image: epsilonsp22/users-service:latest
+  
+  
+
+  pythonservice:
+    environment:
+      - ALLOWED_HOSTS=['*',]
+    volumes:
+      - files:/msvc-python/files
+    ports:
+      - 19034:19034
+    command: python -u manage.py runserver 0.0.0.0:19034
+    image: epsilonsp22/pythonservice:latest
+
+  mongoserver:
+    image: "mongo"
+    restart: always
+    ports:
+      - 27017:27017
+
+  javaservice:
+    restart: always
+    ports:
+      - 19035:19035
+    environment:
+      - spring_data_mongodb_host=mongoserver
+      - spring_data_mongodb_port=27017
+      - spring_data_mongodb_database=weather
+      - server_port=19035
+    depends_on:
+      - mongoserver
+    links:
+      - mongoserver
+    image: epsilonsp22/javaservice
+    
+  node-service:
+    volumes:
+      - files:/msvc-node/files
+    ports:
+      - '19031:19031'
+    environment:
+      - NODE_ENV=${NODE_ENV}
+      - TOKEN_SECRET=changeme
+      - MSVC_JAVA=http://javaservice:19035
+    depends_on:
+      javaservice:
+        condition: service_started
+    links:
+      - javaservice
+    image: epsilonsp22/node-service:latest
+
+  redis-server: 
+    image: 'redis'
+    expose:
+      - "6379"
+
+  apigtwservice:
+    volumes:
+      - files:/epsilon-api-gtw/files
+    ports:
+      - '19030:19030'
+    environment:
+      - NODE_ENV=development
+      - TOKEN_SECRET=8ba7493001075aa54efc272589e48c57030fa4682e9d6a4cde8622089b5476f8
+      - MSVC_NODE=http://node-service:19031
+      - MSVC_PYTHON=http://pythonservice:19034
+      - MSVC_JAVA=http://javaservice:19035
+      - MSVC_USERS=http://users-service:19032
+      - REDIS_HOST=redis-server
+      - REDIS_PORT=6379
+    depends_on:
+      users-service:
+        condition: service_started
+      node-service:
+        condition: service_started
+      redis-server:
+        condition: service_started
+      pythonservice:
+        condition: service_started
+    links:
+      - users-service
+      - node-service
+      - redis-server
+      - pythonservice
+    image: epsilonsp22/epsilon-api-gtw:latest
+
+  reactui:
+    ports:
+      - '20001:20001'
+    environment:
+      - PORT=20001
+      - REACT_APP_API_GTW=http://localhost:19030
+    depends_on:
+      apigtwservice:
+        condition: service_started
+    links:
+      - apigtwservice
+    image: epsilonsp22/reactui
+    
+volumes:
+    files:
