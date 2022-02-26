@@ -1,0 +1,45 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    kompose.cmd: kompose convert
+    kompose.version: 1.26.1 (HEAD)
+  labels:
+    io.kompose.service: node-service
+  name: node-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      io.kompose.service: node-service
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      annotations:
+        kompose.cmd: kompose convert
+        kompose.version: 1.26.1 (HEAD)
+      labels:
+        io.kompose.service: node-service
+    spec:
+      containers:
+        - env:
+            - name: MSVC_JAVA
+              value: http://javaservice:19035
+            - name: NODE_ENV
+            - name: TOKEN_SECRET
+              value: changeme
+          image: epsilonsp22/node-service:latest
+          name: node-service
+          ports:
+            - containerPort: 19031
+          resources: {}
+          volumeMounts:
+            - mountPath: /msvc-node/files
+              name: files
+      restartPolicy: Always
+      volumes:
+        - name: files
+          persistentVolumeClaim:
+            claimName: files
+status: {}

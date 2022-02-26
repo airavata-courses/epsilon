@@ -1,0 +1,40 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    kompose.cmd: kompose convert
+    kompose.version: 1.26.1 (HEAD)
+  labels:
+    io.kompose.service: javaservice
+  name: javaservice
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      io.kompose.service: javaservice
+  strategy: {}
+  template:
+    metadata:
+      annotations:
+        kompose.cmd: kompose convert
+        kompose.version: 1.26.1 (HEAD)
+      labels:
+        io.kompose.service: javaservice
+    spec:
+      containers:
+        - env:
+            - name: server_port
+              value: "19035"
+            - name: spring_data_mongodb_database
+              value: weather
+            - name: spring_data_mongodb_host
+              value: mongoserver
+            - name: spring_data_mongodb_port
+              value: "27017"
+          image: epsilonsp22/javaservice:latest
+          name: javaservice
+          ports:
+            - containerPort: 19035
+          resources: {}
+      restartPolicy: Always
+status: {}

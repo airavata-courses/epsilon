@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: Service
+metadata:
+  annotations:
+    kompose.cmd: kompose convert
+    kompose.version: 1.26.1 (HEAD)
+  labels:
+    io.kompose.service: users-service
+  name: users-service
+spec:
+  ports:
+    - name: "19032"
+      port: 19032
+      targetPort: 19032
+  selector:
+    io.kompose.service: users-service
+status:
+  loadBalancer: {}
