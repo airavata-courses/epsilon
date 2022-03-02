@@ -142,7 +142,7 @@ spec:
         command:
         - /metrics-server
         - --kubelet-insecure-tls
-        - --kubelet-preferred-address-types=InternalIP
+        - --kubelet-preferred-address-types=InternalIP,ExternalIP,Hostname
         livenessProbe:
           failureThreshold: 3
           httpGet:

@@ -22,17 +22,23 @@ spec:
         io.kompose.service: users-service
     spec:
       containers:
-        - env:
+        - name: users-service
+          env:
             - name: DATABASE_URL
               value: postgres://admin:admin@localhost:5432/epsilon
             - name: NODE_ENV
             - name: TOKEN_SECRET
               value: changeme
           image: epsilonsp22/users-service:latest
-          name: users-service
           ports:
-            - containerPort: 19032
-          resources: {}
+          - containerPort: 19032
+          resources: 
+            requests:
+              cpu: 200m
+              memory: 128M
+            limits:
+              cpu: 500m
+              memory: 256M
         - env:
           - name: POSTGRES_PASSWORD
             value: admin
@@ -42,6 +48,12 @@ spec:
           name: users-db
           ports:
             - containerPort: 5432
-          resources: {}
+          resources: 
+            requests:
+               cpu: 200m
+               memory: 128M
+            limits:
+               cpu: 300m
+               memory: 256M
       restartPolicy: Always
-status: {}
+

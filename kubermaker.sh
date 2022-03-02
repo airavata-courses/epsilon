@@ -29,3 +29,5 @@ kubectl apply -f redis-server-deployment.yaml
 kubectl apply -f apigtwservice-service.yaml
 
 kubectl apply -f apigtwservice-deployment.yaml
+
+kubectl apply -f ./components.yml
