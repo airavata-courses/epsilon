@@ -1,4 +1,5 @@
 #!/bin/bash
+cd kubes
 
 kubectl apply -f files-persistentvolumeclaim.yaml
 
