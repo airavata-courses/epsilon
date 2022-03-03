@@ -3,6 +3,7 @@ config:
   phases:
     - duration: 60
       arrivalCount: 15000
+      maxVusers: 60
       name: Warm up
 
 scenarios:

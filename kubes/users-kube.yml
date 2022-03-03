@@ -24,7 +24,7 @@ kind: Deployment
 metadata:
   name: msvc-users-deployment
 spec:
-  replicas: 1
+  replicas: 3
   selector:
     matchLabels:
       app: msvc-users
@@ -47,10 +47,10 @@ spec:
           resources: 
             requests:
               cpu: 200m
-              memory: 128M
+              memory: 256M
             limits:
               cpu: 500m
-              memory: 256M
+              memory: 512M
         - name: users-db
           env:
           - name: POSTGRES_PASSWORD
@@ -63,8 +63,8 @@ spec:
           resources: 
             requests:
                cpu: 200m
-               memory: 128M
+               memory: 256M
             limits:
                cpu: 300m
-               memory: 256M
+               memory: 512M
       restartPolicy: Always

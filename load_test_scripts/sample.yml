@@ -1,27 +1,27 @@
 config:
   target: "http://localhost:19030"
   phases:
-    - duration: 60
-      arrivalRate: 5
+    - duration: 1
+      arrivalRate: 1
       name: Warm up
-    - duration: 120
-      arrivalRate: 5
-      rampTo: 1000
+    - duration: 1
+      arrivalRate: 1
+      rampTo: 1
       name: Ramp up load
-    - duration: 300
-      arrivalRate: 500
-      rampTo: 10000
+    - duration: 1
+      arrivalRate: 1
+      rampTo: 1
       name: Sustained load
-  payload:
-    path: "test.csv"
-    fields:
-      - "date"
 
 scenarios:
-  - name: "Get radars"
+  - name: "Login"
     flow:
       - post:
-          url: "/radars"
+          url: "/auth/ms1/google/"
           json:
-            date: "{{ date }}"
-      - think: 3
+            profileObj: {"googleId": "111163958196518887017",
+                          imageUrl:"https://lh3.googleusercontent.com/a/AATXAJzD651TM-vGg_8ksr_kd7O731vNR43LCknpkRyB=s96-c",
+                          email:"pramod.bhakta@somaiya.edu",
+                          name:"Pramod",
+                          givenName:"Pramod"
+                        }
