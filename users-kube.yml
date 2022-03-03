@@ -1,25 +1,37 @@
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: users-service
+spec:
+  selector:
+    app: msvc-users
+  ports:
+    - protocol: "TCP"
+      # Port accessible inside cluster
+      port: 19032
+      # Port to forward to inside the pod
+      targetPort: 19032
+      # Port accessible outside cluster
+      nodePort: 30002
+  type: LoadBalancer
+
+
+
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  annotations:
-    kompose.cmd: kompose convert
-    kompose.version: 1.26.1 (HEAD)
-  labels:
-    io.kompose.service: users-service
-  name: users-service
+  name: msvc-users-deployment
 spec:
   replicas: 1
   selector:
     matchLabels:
-      io.kompose.service: users-service
-  strategy: {}
+      app: msvc-users
   template:
     metadata:
-      annotations:
-        kompose.cmd: kompose convert
-        kompose.version: 1.26.1 (HEAD)
       labels:
-        io.kompose.service: users-service
+        app: msvc-users
     spec:
       containers:
         - name: users-service
@@ -39,13 +51,13 @@ spec:
             limits:
               cpu: 500m
               memory: 256M
-        - env:
+        - name: users-db
+          env:
           - name: POSTGRES_PASSWORD
             value: admin
           - name: POSTGRES_USER
             value: admin
           image: epsilonsp22/users-db:latest
-          name: users-db
           ports:
             - containerPort: 5432
           resources: 
@@ -56,4 +68,3 @@ spec:
                cpu: 300m
                memory: 256M
       restartPolicy: Always
-

@@ -1,26 +1,37 @@
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: python-services
+spec:
+  selector:
+    app: msvc-python
+  ports:
+    - protocol: "TCP"
+      # Port accessible inside cluster
+      port: 19034
+      # Port to forward to inside the pod
+      targetPort: 19034
+      # Port accessible outside cluster
+      nodePort: 30004
+  type: LoadBalancer
+
+
+
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  annotations:
-    kompose.cmd: kompose convert
-    kompose.version: 1.26.1 (HEAD)
-  labels:
-    io.kompose.service: pythonservice
-  name: pythonservice
+  name: msvc-python-deployment
 spec:
   replicas: 1
   selector:
     matchLabels:
-      io.kompose.service: pythonservice
-  strategy:
-    type: Recreate
+      app: msvc-python
   template:
     metadata:
-      annotations:
-        kompose.cmd: kompose convert
-        kompose.version: 1.26.1 (HEAD)
       labels:
-        io.kompose.service: pythonservice
+        app: msvc-python
     spec:
       containers:
         - args:
@@ -33,7 +44,7 @@ spec:
             - name: ALLOWED_HOSTS
               value: '[''*'',]'
           image: epsilonsp22/pythonservice:latest
-          name: pythonservice
+          name: msvc-python
           ports:
             - containerPort: 19034
           resources: {}
@@ -45,4 +56,3 @@ spec:
         - name: files
           persistentVolumeClaim:
             claimName: files
-status: {}

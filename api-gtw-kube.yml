@@ -1,54 +1,67 @@
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: api-gtw-services
+spec:
+  selector:
+    app: api-gtw
+  ports:
+    - protocol: "TCP"
+      # Port accessible inside cluster
+      port: 19030
+      # Port to forward to inside the pod
+      targetPort: 19030
+      # Port accessible outside cluster
+      nodePort: 30000
+  type: LoadBalancer
+
+
+
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  annotations:
-    kompose.cmd: kompose convert
-    kompose.version: 1.26.1 (HEAD)
-  labels:
-    io.kompose.service: apigtwservice
-  name: apigtwservice
+  name: api-gtw-deployment
 spec:
   replicas: 1
   selector:
     matchLabels:
-      io.kompose.service: apigtwservice
-  strategy:
-    type: Recreate
+      app: api-gtw
   template:
     metadata:
-      annotations:
-        kompose.cmd: kompose convert
-        kompose.version: 1.26.1 (HEAD)
       labels:
-        io.kompose.service: apigtwservice
+        app: api-gtw
     spec:
       containers:
         - env:
             - name: MSVC_JAVA
-              value: http://javaservice:19035
+              value: http://java-services:19035
             - name: MSVC_NODE
-              value: http://node-service:19031
+              value: http://node-services:19031
             - name: MSVC_PYTHON
-              value: http://pythonservice:19034
+              value: http://python-services:19034
             - name: MSVC_USERS
               value: http://users-service:19032
             - name: NODE_ENV
               value: development
             - name: REDIS_HOST
-              value: redis-server
+              value: redis-server-service
             - name: REDIS_PORT
               value: "6379"
             - name: TOKEN_SECRET
               value: 8ba7493001075aa54efc272589e48c57030fa4682e9d6a4cde8622089b5476f8
           image: epsilonsp22/epsilon-api-gtw:latest
-          name: apigtwservice
+          name: api-gtw
           ports:
             - containerPort: 19030
-          resources:
-            limits:
-              cpu: 500m
+          resources: 
             requests:
-              cpu: 200m
+               cpu: 200m
+               memory: 128M
+            limits:
+               cpu: 300m
+               memory: 256M
           volumeMounts:
             - mountPath: /epsilon-api-gtw/files
               name: files
@@ -57,4 +70,3 @@ spec:
         - name: files
           persistentVolumeClaim:
             claimName: files
-status: {}
