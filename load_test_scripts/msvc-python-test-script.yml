@@ -1,0 +1,22 @@
+config:
+  target: "http://localhost:19034"
+  phases:
+    - duration: 60
+      arrivalRate: 5
+      name: Warm up
+    - duration: 120
+      arrivalRate: 5
+      rampTo: 1000
+      name: Ramp up load
+    - duration: 300
+      arrivalRate: 500
+      rampTo: 10000
+      name: Sustained load
+ 
+
+scenarios:
+  - name: "Fetch Plot"
+    flow:
+      - post:
+          url: "/python/api/fetchplot/"
+
