@@ -1,0 +1,26 @@
+config:
+  target: "http://localhost:19031"
+  http:
+      timeout: 50
+  phases:
+    - duration: 60
+      arrivalRate: 40
+      name: Warm up
+    
+scenarios:
+  - name: "Get file from S3"
+    flow:
+      - post:
+          url: "/node/api/v1/download/"
+          json: {
+                "filename":"20070303KIND",
+                "body":{
+                "year": "2007",
+                "month": "03",
+                "day": "03",
+                "station": "KIND",
+                "time": "00:12"
+                }
+            }
+
+
