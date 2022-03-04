@@ -22,9 +22,9 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: msvc-users-deployment
+  name: msvc-users
 spec:
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
       app: msvc-users
@@ -46,11 +46,11 @@ spec:
           - containerPort: 19032
           resources: 
             requests:
-              cpu: 200m
-              memory: 256M
+              cpu: '200m'
+              memory: '256M'
             limits:
-              cpu: 500m
-              memory: 512M
+              cpu: '500m'
+              memory: '512M'
         - name: users-db
           env:
           - name: POSTGRES_PASSWORD
@@ -62,9 +62,9 @@ spec:
             - containerPort: 5432
           resources: 
             requests:
-               cpu: 200m
-               memory: 256M
+               cpu: '200m'
+               memory: '256M'
             limits:
-               cpu: 300m
-               memory: 512M
+               cpu: '300m'
+               memory: '512M'
       restartPolicy: Always

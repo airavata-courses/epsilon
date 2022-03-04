@@ -22,7 +22,7 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: api-gtw-deployment
+  name: api-gtw
 spec:
   replicas: 1
   selector:
@@ -57,11 +57,11 @@ spec:
             - containerPort: 19030
           resources: 
             requests:
-               cpu: 200m
-               memory: 128M
+               cpu: '200m'
+               memory: '128M'
             limits:
-               cpu: 300m
-               memory: 256M
+               cpu: '300m'
+               memory: '256M'
           volumeMounts:
             - mountPath: /epsilon-api-gtw/files
               name: files

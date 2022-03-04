@@ -22,7 +22,7 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: msvc-python-deployment
+  name: msvc-python
 spec:
   replicas: 1
   selector:
@@ -47,7 +47,13 @@ spec:
           name: msvc-python
           ports:
             - containerPort: 19034
-          resources: {}
+          resources: 
+            requests:
+               cpu: '500m'
+               memory: '512M'
+            limits:
+               cpu: '700m'
+               memory: '1024M'
           volumeMounts:
             - mountPath: /msvc-python/files
               name: files

@@ -22,7 +22,7 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: msvc-node-deployment
+  name: msvc-node
 spec:
   replicas: 1
   selector:
@@ -45,11 +45,11 @@ spec:
             - containerPort: 19031
           resources: 
             requests:
-               cpu: 200m
-               memory: 128M
+               cpu: '200m'
+               memory: '128M'
             limits:
-               cpu: 300m
-               memory: 256M
+               cpu: '300m'
+               memory: '256M'
           volumeMounts:
             - mountPath: /msvc-node/files
               name: files
