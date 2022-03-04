@@ -30,10 +30,10 @@ services:
       - ALLOWED_HOSTS=['*',]
     volumes:
       - files:/msvc-python/files
-    ports:
-      - 19034:19034
+    expose:
+      - 19034
     command: python -u manage.py runserver 0.0.0.0:19034
-    image: epsilonsp22/pythonservice:latest
+    image: epsilonsp22/pythonservice2:latest
 
   mongoserver:
     image: "mongo"
@@ -77,7 +77,7 @@ services:
     volumes:
       - ./nginx.conf:/etc/nginx/nginx.conf:ro
     depends_on:
-      - node-service
+      - pythonservice
     ports:
       - 25000:25000
 
