@@ -24,15 +24,6 @@ services:
     links:
       - users-db
     image: epsilonsp22/users-service:latest
-  
-  nginx:
-    image: nginx:latest
-    volumes:
-      - ./nginx.conf:/etc/nginx/nginx.conf:ro
-    depends_on:
-      - users-service
-    ports:
-      - 25000:25000
 
   pythonservice:
     environment:
@@ -52,8 +43,8 @@ services:
 
   javaservice:
     restart: always
-    ports:
-      - 19035:19035
+    expose:
+      - 19032
     environment:
       - spring_data_mongodb_host=mongoserver
       - spring_data_mongodb_port=27017
@@ -115,6 +106,15 @@ services:
       - redis-server
       - pythonservice
     image: epsilonsp22/epsilon-api-gtw:latest
+
+  nginx:
+    image: nginx:latest
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+    depends_on:
+      - users-service
+    ports:
+      - 25000:25000
 
   reactui:
     ports:
