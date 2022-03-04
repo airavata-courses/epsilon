@@ -2,8 +2,8 @@ config:
   target: "http://localhost:19035"
   phases:
     - duration: 60
-      arrivalRate : 20
-      maxVusers: 60
+      arrivalCount : 25000
+      maxVusers: 50
       name: Warm up
 
 scenarios:
@@ -15,7 +15,7 @@ scenarios:
 
   - name: "MSVC Fetch User Get"
     flow:
-      - post:
+      - get:
           url: "/java/api/data/5"
 
 						
