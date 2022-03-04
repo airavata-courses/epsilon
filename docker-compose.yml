@@ -8,7 +8,7 @@ services:
       - POSTGRES_USER=admin
       - POSTGRES_PASSWORD=admin
     healthcheck:
-        test: exit 0
+      test: exit 0
     image: epsilonsp22/users-db:latest
 
   users-service:
@@ -30,10 +30,10 @@ services:
       - ALLOWED_HOSTS=['*',]
     volumes:
       - files:/msvc-python/files
-    ports:
-      - 19034:19034
+    expose:
+      - 19034
     command: python -u manage.py runserver 0.0.0.0:19034
-    image: epsilonsp22/pythonservice:latest
+    image: epsilonsp22/pythonservice2:latest
 
   mongoserver:
     image: "mongo"
@@ -55,12 +55,12 @@ services:
     links:
       - mongoserver
     image: epsilonsp22/javaservice
-    
+
   node-service:
     volumes:
       - files:/msvc-node/files
-    ports:
-      - '19031:19031'
+    expose:
+      - 19031
     environment:
       - NODE_ENV=${NODE_ENV}
       - TOKEN_SECRET=changeme
@@ -72,7 +72,16 @@ services:
       - javaservice
     image: epsilonsp22/node-service:latest
 
-  redis-server: 
+  nginx:
+    image: nginx:latest
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+    depends_on:
+      - pythonservice
+    ports:
+      - 25000:25000
+
+  redis-server:
     image: 'redis'
     expose:
       - "6379"
@@ -128,6 +137,6 @@ services:
     links:
       - apigtwservice
     image: epsilonsp22/reactui
-    
+
 volumes:
-    files:
+  files:
