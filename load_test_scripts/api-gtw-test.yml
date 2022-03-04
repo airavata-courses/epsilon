@@ -1,46 +1,42 @@
 config:
   target: "http://localhost:19030"
-  http:
-      timeout: 100
   phases:
     - duration: 60
-      arrivalCount: 10
-      maxVusers: 4
+      arrivalCount: 5
+      maxVusers: 2
       name: Warm up
 
 scenarios:
-  - name: "Login"
+  - name: "Full flow"
     flow:
       - post:
           url: "/auth/ms1/google/"
+          log: "Login"
           json:
-            profileObj: {
+            {"profileObj": {
                           "googleId": "111163958196518887017",
                           imageUrl:"https://lh3.googleusercontent.com/a/AATXAJzD651TM-vGg_8ksr_kd7O731vNR43LCknpkRyB=s96-c",
                           email:"pramod.bhakta@somaiya.edu",
                           name:"Pramod",
                           givenName:"Pramod"
                         }
+            }
 
-  - name: "Fetch Plot"
-    flow:
       - post:
           url: "/api/gtw/v1/ms2/getNewImage/"
-          json:
-            profileObj: {
-                          "year": "2007",
-                          "month": "03",
-                          "day": "03",
-                          "station": "KIND",
-                          "time": "00:10"
+          log: "Image"
+          json: {
+                  "year": "2007",
+                  "month": "03",
+                  "day": "03",
+                  "station": "KIND",
+                  "time": "00:10"
                       }
 
-  - name: "Get User History"
-    flow:
       - get:
           url: "/api/gtw/v1/ms2/getUserHistory/"
+          log: "User History"
 
-  - name: "Logout"
-    flow:
       - get:
           url: "/auth/ms1/logout/"
+          log: "Logout"
