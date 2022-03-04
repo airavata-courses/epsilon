@@ -1,0 +1,21 @@
+config:
+  target: "http://localhost:19035"
+  phases:
+    - duration: 60
+      arrivalRate : 20
+      maxVusers: 60
+      name: Warm up
+
+scenarios:
+  - name: "MSVC Add User Put"
+    flow:
+      - post:
+          url: "/java/api/data/add"
+          json: {"user_id":5, "name":"Krishna", "Salary" : 80000}
+
+  - name: "MSVC Fetch User Get"
+    flow:
+      - post:
+          url: "/java/api/data/5"
+
+						
