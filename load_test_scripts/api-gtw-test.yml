@@ -1,9 +1,11 @@
 config:
   target: "http://localhost:19030"
+  http:
+      timeout: 100
   phases:
     - duration: 60
-      arrivalCount: 1000
-      maxVusers: 60
+      arrivalCount: 10
+      maxVusers: 4
       name: Warm up
 
 scenarios:
@@ -12,9 +14,33 @@ scenarios:
       - post:
           url: "/auth/ms1/google/"
           json:
-            profileObj: {"googleId": "111163958196518887017",
+            profileObj: {
+                          "googleId": "111163958196518887017",
                           imageUrl:"https://lh3.googleusercontent.com/a/AATXAJzD651TM-vGg_8ksr_kd7O731vNR43LCknpkRyB=s96-c",
                           email:"pramod.bhakta@somaiya.edu",
                           name:"Pramod",
                           givenName:"Pramod"
                         }
+
+  - name: "Fetch Plot"
+    flow:
+      - post:
+          url: "/api/gtw/v1/ms2/getNewImage/"
+          json:
+            profileObj: {
+                          "year": "2007",
+                          "month": "03",
+                          "day": "03",
+                          "station": "KIND",
+                          "time": "00:10"
+                      }
+
+  - name: "Get User History"
+    flow:
+      - get:
+          url: "/api/gtw/v1/ms2/getUserHistory/"
+
+  - name: "Logout"
+    flow:
+      - get:
+          url: "/auth/ms1/logout/"
