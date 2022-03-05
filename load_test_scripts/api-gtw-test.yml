@@ -1,9 +1,9 @@
 config:
-  target: "http://localhost:19030"
+  target: "http://localhost:20030"
   phases:
     - duration: 60
-      arrivalCount: 5
-      maxVusers: 2
+      arrivalCount: 25000
+      maxVusers: 50
       name: Warm up
 
 scenarios:
@@ -26,12 +26,12 @@ scenarios:
           url: "/api/gtw/v1/ms2/getNewImage/"
           log: "Image"
           json: {
-                  "year": "2007",
-                  "month": "03",
-                  "day": "03",
-                  "station": "KIND",
-                  "time": "00:10"
-                      }
+                "year": "2007",
+                "month": "03",
+                "day": "03",
+                "station": "KIND",
+                "time": "00:10"
+                }
 
       - get:
           url: "/api/gtw/v1/ms2/getUserHistory/"
