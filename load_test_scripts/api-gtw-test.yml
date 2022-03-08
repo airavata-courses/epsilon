@@ -1,0 +1,42 @@
+config:
+  target: "http://localhost:20030"
+  phases:
+    - duration: 60
+      arrivalCount: 25000
+      maxVusers: 50
+      name: Warm up
+
+scenarios:
+  - name: "Full flow"
+    flow:
+      - post:
+          url: "/auth/ms1/google/"
+          log: "Login"
+          json:
+            {"profileObj": {
+                          "googleId": "111163958196518887017",
+                          imageUrl:"https://lh3.googleusercontent.com/a/AATXAJzD651TM-vGg_8ksr_kd7O731vNR43LCknpkRyB=s96-c",
+                          email:"pramod.bhakta@somaiya.edu",
+                          name:"Pramod",
+                          givenName:"Pramod"
+                        }
+            }
+
+      - post:
+          url: "/api/gtw/v1/ms2/getNewImage/"
+          log: "Image"
+          json: {
+                "year": "2007",
+                "month": "03",
+                "day": "03",
+                "station": "KIND",
+                "time": "00:10"
+                }
+
+      - get:
+          url: "/api/gtw/v1/ms2/getUserHistory/"
+          log: "User History"
+
+      - get:
+          url: "/auth/ms1/logout/"
+          log: "Logout"

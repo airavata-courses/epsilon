@@ -1,0 +1,20 @@
+config:
+  target: "http://localhost:25000"
+  phases:
+    - duration: 60
+      arrivalCount: 35000
+      maxVusers: 50
+      name: Warm up
+
+scenarios:
+  - name: "MSVC Users Login"
+    flow:
+      - post:
+          url: "/user/api/v1/google/signUp/"
+          json:
+            {"googleId": "100",
+                          "imageUrl":"https://lh3.googleusercontent.com/a/AATXAJzD651TM-vGg_8ksr_kd7O731vNR43LCknpkRyB=s96-c",
+                          "email":"abc@bca.cba",
+                          "name":"Pramod",
+                          "givenName":"Pramod"
+                        }

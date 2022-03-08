@@ -1,0 +1,16 @@
+config:
+  target: "http://localhost:25000"
+  http:
+      timeout: 100
+  phases:
+    - duration: 60
+      arrivalCount: 10
+      maxVusers: 5
+      name: Warm up
+ 
+scenarios:
+  - name: "Fetch Plot"
+    flow:
+      - post:
+          url: "/python/api/fetchplot/"
+

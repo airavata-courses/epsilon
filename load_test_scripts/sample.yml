@@ -1,0 +1,27 @@
+config:
+  target: "http://localhost:20030"
+  phases:
+    - duration: 1
+      arrivalRate: 1
+      name: Warm up
+    - duration: 1
+      arrivalRate: 1
+      rampTo: 1
+      name: Ramp up load
+    - duration: 1
+      arrivalRate: 1
+      rampTo: 1
+      name: Sustained load
+
+scenarios:
+  - name: "Login"
+    flow:
+      - post:
+          url: "/auth/ms1/google/"
+          json:
+            profileObj: {"googleId": "111163958196518887017",
+                          imageUrl:"https://lh3.googleusercontent.com/a/AATXAJzD651TM-vGg_8ksr_kd7O731vNR43LCknpkRyB=s96-c",
+                          email:"pramod.bhakta@somaiya.edu",
+                          name:"Pramod",
+                          givenName:"Pramod"
+                        }

@@ -8,12 +8,21 @@ services:
       - POSTGRES_USER=admin
       - POSTGRES_PASSWORD=admin
     healthcheck:
-        test: exit 0
+      test: exit 0
     image: epsilonsp22/users-db:latest
 
-  users-service:
+  nginxusers:
+    image: nginx:latest
+    volumes:
+      - ./nginxusers.conf:/etc/nginx/nginx.conf:ro
+    depends_on:
+      - users-service
     ports:
-      - '19032:19032'
+      - 20032:20032
+  
+  users-service:
+    expose:
+      - 19032
     environment:
       - DATABASE_URL=postgres://admin:admin@users-db:5432/epsilon
       - NODE_ENV=${NODE_ENV}
@@ -24,16 +33,23 @@ services:
     links:
       - users-db
     image: epsilonsp22/users-service:latest
-  
-  
+
+  nginxpython:
+    image: nginx:latest
+    volumes:
+      - ./nginxpython.conf:/etc/nginx/nginx.conf:ro
+    depends_on:
+      - pythonservice
+    ports:
+      - 20034:20034
 
   pythonservice:
     environment:
       - ALLOWED_HOSTS=['*',]
     volumes:
       - files:/msvc-python/files
-    ports:
-      - 19034:19034
+    expose:
+      - 19034
     command: python -u manage.py runserver 0.0.0.0:19034
     image: epsilonsp22/pythonservice:latest
 
@@ -43,10 +59,19 @@ services:
     ports:
       - 27017:27017
 
+  nginxjava:
+    image: nginx:latest
+    volumes:
+      - ./nginxjava.conf:/etc/nginx/nginx.conf:ro
+    depends_on:
+      - javaservice
+    ports:
+      - 20035:20035
+
   javaservice:
     restart: always
-    ports:
-      - 19035:19035
+    expose:
+      - 19035
     environment:
       - spring_data_mongodb_host=mongoserver
       - spring_data_mongodb_port=27017
@@ -56,17 +81,26 @@ services:
       - mongoserver
     links:
       - mongoserver
-    image: epsilonsp22/javaservice
-    
+    image: epsilonsp22/javaservice:latest
+
+  nginxnode:
+    image: nginx:latest
+    volumes:
+      - ./nginxnode.conf:/etc/nginx/nginx.conf:ro
+    depends_on:
+      - node-service
+    ports:
+      - 20031:20031
+
   node-service:
     volumes:
       - files:/msvc-node/files
-    ports:
-      - '19031:19031'
+    expose:
+      - 19031
     environment:
       - NODE_ENV=${NODE_ENV}
       - TOKEN_SECRET=changeme
-      - MSVC_JAVA=http://javaservice:19035
+      - MSVC_JAVA=http://nginxjava:20035
     depends_on:
       javaservice:
         condition: service_started
@@ -74,23 +108,32 @@ services:
       - javaservice
     image: epsilonsp22/node-service:latest
 
-  redis-server: 
+  redis-server:
     image: 'redis'
-    expose:
-      - "6379"
+    ports:
+      - "6379:6379"
+
+  nginxapi:
+    image: nginx:latest
+    volumes:
+      - ./nginxapi.conf:/etc/nginx/nginx.conf:ro
+    depends_on:
+      - apigtwservice
+    ports:
+      - 20030:20030
 
   apigtwservice:
     volumes:
       - files:/epsilon-api-gtw/files
-    ports:
-      - '19030:19030'
+    expose:
+      - 19030
     environment:
       - NODE_ENV=development
       - TOKEN_SECRET=8ba7493001075aa54efc272589e48c57030fa4682e9d6a4cde8622089b5476f8
-      - MSVC_NODE=http://node-service:19031
-      - MSVC_PYTHON=http://pythonservice:19034
-      - MSVC_JAVA=http://javaservice:19035
-      - MSVC_USERS=http://users-service:19032
+      - MSVC_NODE=http://nginxnode:20031
+      - MSVC_PYTHON=http://nginxpython:20034
+      - MSVC_JAVA=http://nginxjava:20035
+      - MSVC_USERS=http://nginxusers:20032
       - REDIS_HOST=redis-server
       - REDIS_PORT=6379
     depends_on:
@@ -107,7 +150,7 @@ services:
       - node-service
       - redis-server
       - pythonservice
-    image: epsilonsp22/epsilon-api-gtw:latest
+    image: epsilonsp22/epsilon-api-gtw2:latest
 
   reactui:
     ports:
@@ -120,7 +163,7 @@ services:
         condition: service_started
     links:
       - apigtwservice
-    image: epsilonsp22/reactui
-    
+    image: epsilonsp22/reactui:latest
+
 volumes:
-    files:
+  files:
