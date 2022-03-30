@@ -40,9 +40,9 @@ spec:
             - containerPort: 3000
           resources: 
             requests:
-               cpu: '200m'
-               memory: '128M'
+               cpu: '500m'
+               memory: '512M'
             limits:
-               cpu: '300m'
-               memory: '256M'
+               cpu: '700m'
+               memory: '756M'
       restartPolicy: Always
