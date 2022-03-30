@@ -5,6 +5,7 @@ metadata:
     io.kompose.service: files
   name: files
 spec:
+  storageClassName: manual
   accessModes:
     - ReadWriteMany
   resources:
