@@ -57,7 +57,7 @@ spec:
             value: admin
           - name: POSTGRES_USER
             value: admin
-          image: epsilonsp22/users-db:latest
+          image: epsilonsp22/users-db-linux:latest
           ports:
             - containerPort: 5432
           resources: 
