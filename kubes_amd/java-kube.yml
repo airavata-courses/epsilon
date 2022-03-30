@@ -1,0 +1,57 @@
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: java-services
+spec:
+  selector:
+    app: msvc-java
+  ports:
+    - protocol: "TCP"
+      # Port accessible inside cluster
+      port: 19035
+      # Port to forward to inside the pod
+      targetPort: 19035
+      # Port accessible outside cluster
+      nodePort: 30005
+  type: LoadBalancer
+
+
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: msvc-java
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: msvc-java
+  template:
+    metadata:
+      labels:
+        app: msvc-java
+    spec:
+      containers:
+        - env:
+            - name: server_port
+              value: "19035"
+            - name: spring_data_mongodb_database
+              value: weather
+            - name: spring_data_mongodb_host
+              value: mongo-services
+            - name: spring_data_mongodb_port
+              value: "27017"
+          image: epsilonsp22/javaservice-linux:latest
+          name: msvc-java
+          ports:
+            - containerPort: 19035
+          resources: 
+            requests:
+               cpu: '200m'
+               memory: '128M'
+            limits:
+               cpu: '300m'
+               memory: '256M'
+      restartPolicy: Always

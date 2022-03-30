@@ -1,0 +1,64 @@
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: python-services
+spec:
+  selector:
+    app: msvc-python
+  ports:
+    - protocol: "TCP"
+      # Port accessible inside cluster
+      port: 19034
+      # Port to forward to inside the pod
+      targetPort: 19034
+      # Port accessible outside cluster
+      nodePort: 30004
+  type: LoadBalancer
+
+
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: msvc-python
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: msvc-python
+  template:
+    metadata:
+      labels:
+        app: msvc-python
+    spec:
+      containers:
+        - args:
+            - python
+            - -u
+            - manage.py
+            - runserver
+            - 0.0.0.0:19034
+          env:
+            - name: ALLOWED_HOSTS
+              value: '[''*'',]'
+          image: epsilonsp22/pythonservice:latest
+          name: msvc-python
+          ports:
+            - containerPort: 19034
+          resources: 
+            requests:
+               cpu: '500m'
+               memory: '512M'
+            limits:
+               cpu: '700m'
+               memory: '1024M'
+          volumeMounts:
+            - mountPath: /msvc-python/files
+              name: files
+      restartPolicy: Always
+      volumes:
+        - name: files
+          persistentVolumeClaim:
+            claimName: files

@@ -1,0 +1,60 @@
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: node-services
+spec:
+  selector:
+    app: msvc-node
+  ports:
+    - protocol: "TCP"
+      # Port accessible inside cluster
+      port: 19031
+      # Port to forward to inside the pod
+      targetPort: 19031
+      # Port accessible outside cluster
+      nodePort: 30001
+  type: LoadBalancer
+
+
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: msvc-node
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: msvc-node
+  template:
+    metadata:
+      labels:
+        app: msvc-node
+    spec:
+      containers:
+        - env:
+            - name: MSVC_JAVA
+              value: http://java-services:19035
+            - name: TOKEN_SECRET
+              value: 8ba7493001075aa54efc272589e48c57030fa4682e9d6a4cde8622089b5476f8
+          image: epsilonsp22/node-service-linux:latest
+          name: node-service
+          ports:
+            - containerPort: 19031
+          resources: 
+            requests:
+               cpu: '200m'
+               memory: '128M'
+            limits:
+               cpu: '300m'
+               memory: '256M'
+          volumeMounts:
+            - mountPath: /msvc-node/files
+              name: files
+      restartPolicy: Always
+      volumes:
+        - name: files
+          persistentVolumeClaim:
+            claimName: files
