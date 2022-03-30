@@ -1,0 +1,51 @@
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: react-ui
+spec:
+  selector:
+    app: react-ui
+  ports:
+    - protocol: "TCP"
+      # Port accessible inside cluster
+      port: 3000
+      # Port to forward to inside the pod
+      targetPort: 3000
+      # Port accessible outside cluster
+      nodePort: 31000
+  type: NodePort
+
+
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: react-ui
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: react-ui
+  template:
+    metadata:
+      labels:
+        app: react-ui
+    spec:
+      containers:
+        - image: epsilonsp22/reactui-linux:latest
+          name: react-ui
+          ports:
+            - containerPort: 3000
+          resources: 
+            requests:
+               cpu: '200m'
+               memory: '128M'
+            limits:
+               cpu: '300m'
+               memory: '256M'
+          volumeMounts:
+            - mountPath: /epsilon-react-ui/files
+              name: files
+      restartPolicy: Always
