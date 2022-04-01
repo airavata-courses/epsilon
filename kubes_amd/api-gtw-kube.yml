@@ -55,6 +55,8 @@ spec:
               value: 'http://localhost:19032,http://localhost:20001,http://localhost:3000,http://localhost:3001,http://epsilon.pbrmtech.co.in,http://149.165.153.71:30000'
             - name: PORT
               value: "19030"
+            - name: ENABLE_CACHE
+              value: "1"
           image: epsilonsp22/epsilon-api-gtw-linux:latest
           name: api-gtw
           ports:
