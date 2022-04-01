@@ -35,7 +35,7 @@ async function getBinaryFromS3(body, user) {
     let fileName = makeS3FileName(body);
     console.log("File Name: ", fileName);
     let redisValue = await redisNew.get(`${fileName}${body.time}`);
-    console.log("redisValue ", redisValue);
+    console.log("redisValue ", redisValue, "for", `${fileName}${body.time}`);
     if (redisValue) {
       let file_name = "/files/" + redisValue;
       const file_new = await fs.readFileSync(path.join(dirname + file_name), {
