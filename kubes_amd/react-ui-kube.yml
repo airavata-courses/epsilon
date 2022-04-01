@@ -37,7 +37,7 @@ spec:
         - image: epsilonsp22/reactui-linux:latest
           env:
             - name: REACT_APP_API_GTW
-              value: http://epsilon.pbrmtech.co.in
+              value: http://epsilon.pbrmtech.co.in:30000
           name: react-ui
           ports:
             - containerPort: 3000
