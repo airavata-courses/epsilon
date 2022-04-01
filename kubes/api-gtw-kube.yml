@@ -52,7 +52,7 @@ spec:
             - name: TOKEN_SECRET
               value: 8ba7493001075aa54efc272589e48c57030fa4682e9d6a4cde8622089b5476f8
             - name: WHITELIST
-              value: http://localhost:20001,http://localhost:3000,http://localhost:3001,http://epsilon.pbrmtech.co.in,http://149.165.153.71:30000
+              value: http://localhost:20001,http://localhost:3000,http://localhost:3001,http://epsilon.pbrmtech.co.in/,http://149.165.153.71:30000
           image: epsilonsp22/epsilon-api-gtw:latest
           name: api-gtw
           ports:
