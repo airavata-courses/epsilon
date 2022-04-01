@@ -46,10 +46,10 @@ spec:
           resources: 
             requests:
                cpu: '200m'
-               memory: '128M'
+               memory: '512M'
             limits:
                cpu: '300m'
-               memory: '256M'
+               memory: '800M'
           volumeMounts:
             - mountPath: /msvc-node/files
               name: files
