@@ -13,7 +13,7 @@ class Redis {
       this.client = asyncRedis.createClient(config);
 
       this.client.on("error", (err) => {
-        log.logError(err);
+        console.error(err);
       });
     }
   }
@@ -27,7 +27,7 @@ class Redis {
         const value = await this.client.get(key);
         return value;
       } catch (err) {
-        log.logError(err);
+        console.error(err);
         throw err;
       }
     } else {
@@ -44,7 +44,7 @@ class Redis {
         const value = await this.client.hgetall(key);
         return value;
       } catch (err) {
-        log.logError(err);
+        console.error(err);
         throw err;
       }
     } else {
@@ -67,7 +67,7 @@ class Redis {
 
         return values;
       } catch (err) {
-        log.logError(err);
+        console.error(err);
         throw err;
       }
     } else {
@@ -83,7 +83,7 @@ class Redis {
         const value = await this.client.hmset(key, data);
         return value;
       } catch (err) {
-        log.logError(err);
+        console.error(err);
         throw err;
       }
     } else {
@@ -115,7 +115,7 @@ class Redis {
 
         return value;
       } catch (err) {
-        log.logError(err);
+        console.error(err);
         throw err;
       }
     } else {
@@ -136,7 +136,7 @@ class Redis {
 
         return true;
       } catch (err) {
-        log.logError(err);
+        console.error(err);
         throw err;
       }
     } else {
@@ -154,7 +154,7 @@ class Redis {
         const keys = await this.client.keys(pattern);
         return keys;
       } catch (err) {
-        log.logError(err);
+        console.error(err);
         throw err;
       }
     } else {
@@ -172,7 +172,7 @@ class Redis {
         await this.client.del(key);
         return true;
       } catch (err) {
-        log.logError(err);
+        console.error(err);
         throw err;
       }
     }
@@ -186,7 +186,7 @@ class Redis {
         await this.client.flushall();
         return true;
       } catch (err) {
-        log.logError(err);
+        console.error(err);
         throw err;
       }
     } else {
@@ -199,7 +199,7 @@ class Redis {
 
       this.client.publish(channel, JSON.stringify(message));
     } catch (err) {
-      log.logError(err);
+      console.error(err);
       throw err;
     }
   }
@@ -214,7 +214,7 @@ class Redis {
       }
       return result;
     } catch (err) {
-      log.logError(err);
+      console.error(err);
       throw err;
     }
   }
@@ -225,7 +225,7 @@ class Redis {
       const value = await this.client.lpop(keyname);
       return value;
     } catch (err) {
-      log.logError(err);
+      console.error(err);
       throw err;
     }
   }
@@ -240,7 +240,7 @@ class Redis {
         let poppedData = await this.client.lrange(key, fromIndex, toIndex);
         return poppedData;
       } catch (err) {
-        log.logError(err);
+        console.error(err);
         throw err;
       }
     }
@@ -253,7 +253,7 @@ class Redis {
       let result = await this.client.sadd(keyname, value);
       return result;
     } catch (err) {
-      log.logError(err);
+      console.error(err);
       throw err;
     }
   }
@@ -265,7 +265,7 @@ class Redis {
       let result = await this.client.smembers(keyname);
       return result;
     } catch (err) {
-      log.logError(err);
+      console.error(err);
       throw err;
     }
   }
@@ -277,7 +277,7 @@ class Redis {
       let result = await this.client.srem(keyname, member);
       return result;
     } catch (err) {
-      log.logError(err);
+      console.error(err);
       throw err;
     }
   }
