@@ -2,9 +2,9 @@ const asyncRedis = require("async-redis");
 
 class Redis {
   constructor() {
-    
     this.enable_cache = !!+process.env.ENABLE_CACHE;
     if (this.enable_cache) {
+      console.log("Hereee");
       let config = process.env.REDIS_URL || {
         host: process.env.REDIS_HOST || "127.0.0.1",
         port: process.env.REDIS_PORT || 6379,
