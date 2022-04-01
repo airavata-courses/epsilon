@@ -22,6 +22,7 @@ const REDIS = require("./api/v1/common/redis");
 
 global.redisNew = new REDIS();
 global.redisClient;
+console.log(`REDIS -- ${process.env.REDIS_HOST}:${process.env.REDIS_PORT}`);
 (async () => {
   redisClient = redis.createClient({
     host: process.env.REDIS_HOST,
