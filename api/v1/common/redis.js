@@ -2,6 +2,7 @@ const asyncRedis = require("async-redis");
 
 class Redis {
   constructor() {
+    console.log("Here");
     this.enable_cache = !!+process.env.ENABLE_CACHE;
     if (this.enable_cache) {
       let config = process.env.REDIS_URL || {
