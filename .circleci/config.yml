@@ -29,10 +29,10 @@ jobs:
       - run:
           name: Deployment
           command: |
-            ssh -vvv ubuntu@149.165.153.71
-            cd epsilon/kubes_adm/
-            kubectl delete deployment api-gtw
-            kubectl delete service api-gtw
-            kubectl apply -f api-gtw-kube.yml
+            ssh ubuntu@149.165.153.71
+            'cd epsilon/kubes_adm/ &&
+            kubectl delete deployment api-gtw &&
+            kubectl delete service api-gtw &&
+            kubectl apply -f api-gtw-kube.yml'
 
       
