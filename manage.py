@@ -3,8 +3,8 @@
 from operator import concat
 import os
 import sys
-from dotenv import load_dotenv
-config = load_dotenv(".env")
+# from dotenv import load_dotenv
+# config = load_dotenv(".env")
 
 
 def main():
@@ -23,5 +23,6 @@ def main():
 
 if __name__ == '__main__':
     from django.core.management.commands.runserver import Command as runserver
-    runserver.default_port = os.getenv("PORT")
+    # runserver.default_port = os.getenv("PORT")
+    runserver.default_port = 19034
     main()
