@@ -9,6 +9,8 @@ const dotenv = require("dotenv");
 dotenv.config({
   path: __dirname + "/.env",
 });
+const log = require("./api/v1/common/logs/logs.v1.services");
+global.globalLogger = log;
 
 const redis = require("redis");
 const session = require("express-session");
@@ -39,9 +41,6 @@ const cors = require("cors");
 global.HttpStatus = require("http-status-codes");
 global.dirname = __dirname;
 global.app_name = "MSVC-USERS";
-
-const log = require("./api/v1/common/logs/logs.v1.services");
-global.globalLogger = log;
 
 const port = process.env.PORT || 3003;
 
