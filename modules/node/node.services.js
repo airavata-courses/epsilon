@@ -33,8 +33,9 @@ async function getUserHistory(user_id) {
 async function getBinaryFromS3(body, user) {
   try {
     let fileName = makeS3FileName(body);
-
+    console.log("File Name: ", fileName);
     let redisValue = await redisNew.get(`${fileName}${body.time}`);
+    console.log("redisValue ", redisValue);
     if (redisValue) {
       let file_name = "/files/" + redisValue;
       const file_new = await fs.readFileSync(path.join(dirname + file_name), {
