@@ -16,7 +16,7 @@ jobs:
       - run:
           name: Build and push to docker
           command: |
-            docker build -t epsilonsp22/pythonservice: .
+            docker build -t epsilonsp22/pythonservice .
             echo $DOCKER_PWD | docker login -u $DOCKER_LOGIN --password-stdin
             docker push epsilonsp22/pythonservice:latest
       - run:    
