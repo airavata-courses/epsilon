@@ -29,6 +29,6 @@ jobs:
       - run:
           name: Deployment
           command: |
-            ssh ubuntu@149.165.153.71 'cd epsilon/kubes_amd/ && kubectl delete deployment --ignore-not-found=true msvc-python && kubectl delete service --ignore-not-found=true python-services && kubectl apply -f python-kube.yml'
+            ssh ubuntu@149.165.153.71 'cd epsilon/kubes_amd/ && git pull && kubectl delete deployment --ignore-not-found=true msvc-python && kubectl delete service --ignore-not-found=true python-services && kubectl apply -f python-kube.yml'
 
       
