@@ -1,4 +1,4 @@
-FROM --platform=linux/amd64 node:latest
+FROM node:latest
 
 RUN mkdir /epsilon-api-gtw
 WORKDIR /epsilon-api-gtw
