@@ -57,6 +57,8 @@ spec:
               value: "19030"
             - name: ENABLE_CACHE
               value: "1"
+            - name: KAFKA
+              value: kafka-services:9092
           image: epsilonsp22/epsilon-api-gtw-linux:latest
           name: api-gtw
           ports:
