@@ -8,7 +8,7 @@ https://docs.djangoproject.com/en/4.0/howto/deployment/wsgi/
 """
 
 import os
-from consumer import consumeData
+from utils.consumer import consumeData
 from multiprocessing import Process
 
 from django.core.wsgi import get_wsgi_application
