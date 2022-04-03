@@ -58,10 +58,10 @@ spec:
           resources: 
             requests:
                cpu: '500m'
-               memory: '780M'
+               memory: '7800M'
             limits:
                cpu: '700m'
-               memory: '1024M'
+               memory: '10240M'
           volumeMounts:
             - mountPath: /msvc-python/files
               name: files
