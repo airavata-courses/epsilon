@@ -20,10 +20,20 @@ exports.getUserHistory = getUserHistory;
 exports.getBinaryFromS3 = getBinaryFromS3;
 exports.getDates = getDates;
 
-async function getUserHistory(user_id) {
+async function getUserHistory(user_id, source) {
   try {
+    if (!source) {
+      source = "NEXRAD";
+    }
     let data = await axios.get(`${NODE_URL}v1/logs/${user_id}`);
-    return { Success: true, data: data.data.history };
+    final_data = [];
+    for (hist of data.data.history) {
+      if (hist.value.source == source) {
+        final_data.append(hist);
+      }
+    }
+
+    return { Success: true, data: final_data };
   } catch (err) {
     console.log(err);
     return { success: false, msg: "Server did not respond" };
