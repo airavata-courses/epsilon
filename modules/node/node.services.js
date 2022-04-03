@@ -54,6 +54,7 @@ async function getBinaryFromS3(body, user) {
     }
 
     body["user_id"] = user.id;
+    body["source"] = "NEXRAD";
     logUtils.logUserHistory(body, "ImageRequest");
 
     let pyResponse = await unirest
