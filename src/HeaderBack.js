@@ -40,11 +40,16 @@ const HeaderBack = () => (
       <Toolbar>
         <WbSunnyTwoToneIcon style={{ marginRight: "20px" }} />
         <Typography variant="h5">Welcome to Epsilon</Typography>
-        <Button   
-        style={{ marginTop: "0px", marginLeft:"20px", background: "#0066CC", textColor:"red"}}
-        variant="contained" >
-        <Link to="/select" style={{ textDecoration: "none" }}>BACK</Link>
+       
+        <Link to="/select" style={{ textDecoration: "none" }}>
+        <Button  style={{ marginTop: "0px", marginLeft:"20px", background: "#0066CC"}}
+         variant="contained" > 
+         BACK
         </Button>
+        </Link>
+       
+
+    
 
         <Box
           component="form"
