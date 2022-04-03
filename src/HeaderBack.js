@@ -1,15 +1,12 @@
 import React from "react";
-import {
-  Typography,
-  AppBar,
-  CssBaseline,
-  Toolbar,
-  Box,
-} from "@material-ui/core";
+import {Typography,AppBar, CssBaseline,Toolbar,Box,} from "@material-ui/core";
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import WbSunnyTwoToneIcon from "@mui/icons-material/WbSunnyTwoTone";
 import { Link } from "react-router-dom";
 import Button from "@mui/material/Button";
 import axios from "axios";
+import { ArrowBackIosNewOutlined, ArrowBackIosNewSharp, ArrowBackRounded } from "@mui/icons-material";
+import { ArrowBack } from "@material-ui/icons";
 
 export const axiosApiCall = (url, method, body = {}) =>
   axios({
@@ -39,10 +36,14 @@ const HeaderBack = () => (
     <AppBar position="relative" style={{ background: "#990000" }}>
       <Toolbar>
         <WbSunnyTwoToneIcon style={{ marginRight: "20px" }} />
-        <Typography variant="h5">Welcome to Epsilon</Typography>
+        <Typography variant="h5" style={{  marginRight:"10px"}} >Welcome to Epsilon</Typography>
+
+        <Link to="/select" style={{ textDecoration: "none" }}>
+            <ArrowBackIcon style={{marginTop: "6px", background: "#0066CC", color:"white"}} />
+        </Link>
        
         <Link to="/select" style={{ textDecoration: "none" }}>
-        <Button  style={{ marginTop: "0px", marginLeft:"20px", background: "#0066CC"}}
+        <Button  style={{ marginTop: "0px", marginLeft:"5px", background: "#0066CC"}}
          variant="contained" > 
          BACK
         </Button>
