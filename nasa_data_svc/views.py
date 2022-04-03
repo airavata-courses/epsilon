@@ -34,9 +34,9 @@ class Data(APIView):
             return response
 
         except Exception as e:
-            # redisValue = '{ "Status": "Error in Image Creation", "FilePath": "" }'
+            redisValue = {'Status': 'Error in Image Creation', 'FilePath': ''}
+            r.set(str(data['UID']), str(redisValue))
 
-            # r.set(data['UID'], redisValue)
             traceback.print_exc()
             res = django.http.JsonResponse({"success": False, "message": "Server is down", "Exception": e}, status=500)
             return res
