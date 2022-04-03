@@ -14,6 +14,7 @@ import Select from '@mui/material/Select';
 import MenuItem from '@mui/material/MenuItem';
 import { constants } from "./Constants";
 import FormControl from '@mui/material/FormControl';
+import DatePicker from '@mui/lab/DatePicker';
 
 const theme = createTheme();
 
@@ -76,17 +77,17 @@ const DateTimeFilterNasa = () => {
                         */}
 
                         <LocalizationProvider dateAdapter={AdapterDateFns}>
-                            <DateTimePicker
-                                label="Select Date and Time"
-                                ampm={false}
-                                maxDateTime={new Date()}
-                                renderInput={(props) => <TextField id='dateTimePicker' {...props} />}
-                                value={value}
-                                onChange={(newValue) => {
-                                    setValue(newValue);
-                                }}
-
-                            />
+                        <DatePicker
+          disableFuture
+          label="Responsive"
+          openTo="year"
+          views={['year', 'month', 'day']}
+          value={value}
+          onChange={(newValue) => {
+            setValue(newValue);
+          }}
+          renderInput={(params) => <TextField {...params} />}
+        />
                         </LocalizationProvider>
 
                         <Box component="form" noValidate sx={{ mt: 1 }}>

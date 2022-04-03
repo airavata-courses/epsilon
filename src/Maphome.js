@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Typography, Box, CssBaseline, Container } from "@material-ui/core";
+import { Typography, Box, CssBaseline, Container, Button } from "@material-ui/core";
 import map from "./radar.gif";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import ListItem from "@mui/material/ListItem";
@@ -11,6 +11,9 @@ import Header from "./Header";
 import axios from "axios";
 
 const theme = createTheme();
+
+
+
 
 class Maphome extends Component {
   constructor() {
@@ -24,6 +27,7 @@ class Maphome extends Component {
 
   componentDidMount() {
     this.FetchHistory();
+    console.log(this)
   }
 
   async FetchHistory() {
@@ -75,6 +79,13 @@ class Maphome extends Component {
             <ThemeProvider theme={theme}>
               <Container component="main" maxWidth="md">
                 <CssBaseline />
+        <div style={{ display: "flex" }}>
+        <Button style={{ marginLeft: "auto" ,background: "#0066CC"  }}
+        variant="contained">
+          Back
+        </Button>
+        <Link to="/select">Back</Link>
+        </div>
                 <Box
                   sx={{
                     marginTop: 5,
