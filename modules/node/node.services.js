@@ -29,7 +29,7 @@ async function getUserHistory(user_id, source) {
     final_data = [];
     for (hist of data.data.history) {
       if (hist.value.source == source) {
-        final_data.append(hist);
+        final_data.push(hist);
       }
     }
 
