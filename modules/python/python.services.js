@@ -34,9 +34,9 @@ async function nasaImageCreater(req) {
       10 * 24 * 60 * 60
     );
 
-    body["user_id"] = req.user.id;
-    body["source"] = "NASA";
-    logUtils.logUserHistory(body, "ImageRequest");
+    // body["user_id"] = req.user.id;
+    // body["source"] = "NASA";
+    // logUtils.logUserHistory(body, "ImageRequest");
 
     return { Success: true, UniqueID: UID };
   } catch (err) {
