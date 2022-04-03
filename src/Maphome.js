@@ -8,6 +8,7 @@ import ListItemText from "@mui/material/ListItemText";
 import { FixedSizeList } from "react-window";
 import { Link } from "react-router-dom";
 import Header from "./Header";
+import HeaderBack from "./HeaderBack";
 import axios from "axios";
 
 const theme = createTheme();
@@ -75,16 +76,12 @@ class Maphome extends Component {
       return (
         <>
           <main>
-            <Header />
+            <HeaderBack />
             <ThemeProvider theme={theme}>
               <Container component="main" maxWidth="md">
                 <CssBaseline />
         <div style={{ display: "flex" }}>
-        <Button style={{ marginLeft: "auto" ,background: "#0066CC"  }}
-        variant="contained">
-          Back
-        </Button>
-        <Link to="/select">Back</Link>
+  
         </div>
                 <Box
                   sx={{
