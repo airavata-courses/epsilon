@@ -22,9 +22,6 @@ exports.getDates = getDates;
 
 async function getUserHistory(user_id, source) {
   try {
-    if (!source) {
-      source = "NEXRAD";
-    }
     let data = await axios.get(`${NODE_URL}v1/logs/${user_id}`);
     final_data = [];
     for (hist of data.data.history) {

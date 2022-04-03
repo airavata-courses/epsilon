@@ -11,7 +11,7 @@ async function getUserHistory(req, res, next) {
       user_id,
       req.params.source || "NEXRAD"
     );
-    console.log("HISTORY,", history.data);
+    // console.log("HISTORY,", history.data);
 
     return res.bhejdo(HttpStatus.OK, { data: history.data });
   } catch (err) {
