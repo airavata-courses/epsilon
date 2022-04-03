@@ -53,6 +53,17 @@ services:
     command: python -u manage.py runserver 0.0.0.0:19034
     image: epsilonsp22/pythonservice:latest
 
+  
+  nasaservice:
+    environment:
+      - ALLOWED_HOSTS=['*',]
+    volumes:
+      - files:/msvc-nasa-python/files
+    ports:
+      - 19036:19036
+    command: python -u manage.py runserver 0.0.0.0:19036
+    image: epsilonsp22/python-nasa:latest
+
   mongoserver:
     image: "mongo"
     restart: always
@@ -144,6 +155,8 @@ services:
       redis-server:
         condition: service_started
       pythonservice:
+        condition: service_started
+      nasaservice:
         condition: service_started
     links:
       - users-service
