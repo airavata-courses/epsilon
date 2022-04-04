@@ -30,7 +30,7 @@ axios({
     }
 
     function makeNav(check) {
-        check ? navigate("../maphome", { replace: true }) : navigate("../maphomeNasa", { replace: true });
+        check ? navigate("../maphome", { replace: true }) : navigate("../datetimefilterNasa", { replace: true });
      }
 
 
