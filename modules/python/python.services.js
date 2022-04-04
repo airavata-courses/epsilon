@@ -34,9 +34,9 @@ async function nasaImageCreater(req) {
       10 * 24 * 60 * 60
     );
 
-    // body["user_id"] = req.user.id;
-    // body["source"] = "NASA";
-    // logUtils.logUserHistory(body, "ImageRequest");
+    // requestData["user_id"] = req.user.id;
+    // requestData["source"] = "NASA";
+    // logUtils.logUserHistory(requestData, "ImageRequest");
 
     return { Success: true, UniqueID: UID };
   } catch (err) {
@@ -50,6 +50,8 @@ async function nasaImageGetter(req) {
     let redisKey = req.body.UID;
     let redisValue = await redisNew.get(redisKey.toString());
     console.log("REDIS", redisValue);
+    console.log("VALUE", redisValue["Status"]);
+    console.log("FILE", redisValue["FilePath"]);
     let redisValueJson = JSON.parse(redisValue);
     let action;
     let file = "";
