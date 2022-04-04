@@ -17,26 +17,34 @@ class Data(APIView):
 
     def post(self, request):
         config = load_dotenv(".env")
-        r = redis.Redis(host=os.getenv("REDIS_HOST"), port=os.getenv("REDIS_PORT"), db=0)
+        r = redis.Redis(host=os.getenv("REDIS_HOST"),
+                        port=os.getenv("REDIS_PORT"), db=0)
 
         try:
+            print("REQUEST")
+            print(request)
             data = request.data
             u = Utilities()
             final_results = u.download(data["startDate"], data["endDate"])
             gifs = u.plot(final_results)
-            response = django.http.JsonResponse({"success": True, "data": gifs}, status=200)
+            response = django.http.JsonResponse(
+                {"success": True, "data": gifs}, status=200)
 
             filepath = 'files/gifs' + gifs[0]
-            redisValue = {'Status': 'Image Created Successfully', 'FilePath': filepath}
+            redisValue = {'Status': 'Image Created Successfully',
+                          'FilePath': filepath}
 
             r.set(str(data['UID']), str(redisValue))
 
             return response
 
         except Exception as e:
-            redisValue = {'Status': 'Error in Image Creation', 'FilePath': ''}
+            print("REQUEST")
+            print(request)
+            redisValue = {'Status': 'Error2 in Image Creation', 'FilePath': ''}
             r.set(str(data['UID']), str(redisValue))
 
             traceback.print_exc()
-            res = django.http.JsonResponse({"success": False, "message": "Server is down", "Exception": e}, status=500)
+            res = django.http.JsonResponse(
+                {"success": False, "message": "Server is down", "Exception": e}, status=500)
             return res
