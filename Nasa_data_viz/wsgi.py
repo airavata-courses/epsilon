@@ -16,5 +16,8 @@ from django.core.wsgi import get_wsgi_application
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'Nasa_data_viz.settings')
 
 application = get_wsgi_application()
+print("WSGI A")
 t1 = Process(target=consumeData)
+print("WSGI B")
 t1.start()
+print("WSGI C")
