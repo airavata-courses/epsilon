@@ -49,6 +49,7 @@ async function nasaImageGetter(req) {
   try {
     let redisKey = req.body.UID;
     let redisValue = await redisNew.get(redisKey.toString());
+    console.log("REDIS", redisValue);
     let redisValueJson = JSON.parse(redisValue);
     let action;
     let file = "";
