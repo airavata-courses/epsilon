@@ -17,7 +17,7 @@ r = redis.Redis(host=os.getenv("REDIS_HOST"),
 
 
 def consumeData():
-    consumer = KafkaConsumer('getnasaimage', bootstrap_servers=[
+    consumer = KafkaConsumer('statuscheckpython', bootstrap_servers=[
                              os.getenv("KAFKA")], api_version=(0, 10))
 
     for message in consumer:
