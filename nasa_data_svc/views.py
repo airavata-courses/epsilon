@@ -20,6 +20,8 @@ class Data(APIView):
         r = redis.Redis(host=os.getenv("REDIS_HOST"), port=os.getenv("REDIS_PORT"), db=0)
 
         try:
+            print("REQUEST")
+            print(request)
             data = request.data
             u = Utilities()
             final_results = u.download(data["startDate"], data["endDate"])
