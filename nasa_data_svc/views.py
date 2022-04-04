@@ -41,7 +41,7 @@ class Data(APIView):
         except Exception as e:
             print("REQUEST")
             print(request)
-            redisValue = {'Status': 'Error in Image Creation', 'FilePath': ''}
+            redisValue = {'Status': 'Error2 in Image Creation', 'FilePath': ''}
             r.set(str(data['UID']), str(redisValue))
 
             traceback.print_exc()
