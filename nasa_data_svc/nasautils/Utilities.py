@@ -65,7 +65,7 @@ class Utilities:
             fileName = file[file.rindex("/"):]
             gifFileName = fileName[:fileName.rindex(".")]
             print(gifFileName)
-            saveFileName = dirName + "/" + gifFileName + ".gif"
+            saveFileName = dirName + gifFileName + ".gif"
             print(saveFileName)
             anim.save(saveFileName, writer='imagemagick', fps=1)
             gifs.append(gifFileName + '.gif')
