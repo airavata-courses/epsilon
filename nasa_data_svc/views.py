@@ -26,7 +26,7 @@ class Data(APIView):
             gifs = u.plot(final_results)
             response = django.http.JsonResponse({"success": True, "data": gifs}, status=200)
 
-            filepath = 'files/gifs/' + gifs[0]
+            filepath = 'files/gifs' + gifs[0]
             redisValue = {'Status': 'Image Created Successfully', 'FilePath': filepath}
 
             r.set(str(data['UID']), str(redisValue))
