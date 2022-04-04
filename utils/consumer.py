@@ -30,8 +30,7 @@ def consumeData():
 
             reqJson = json.loads(message.value)
             print(reqJson)
-            redisValue = {
-                'Status': 'Working on Image Creation', 'FilePath': ''}
+            redisValue = '{"Status": "Working on Image Creation", "FilePath": ""}'
             r.set(reqJson['UID'], str(redisValue))
             request = Request(RequestFactory().post(
                 '/irrelevant', content_type='application/json', data=reqJson), parsers=[JSONParser()])

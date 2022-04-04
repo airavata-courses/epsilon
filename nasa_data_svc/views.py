@@ -30,9 +30,9 @@ class Data(APIView):
             response = django.http.JsonResponse(
                 {"success": True, "data": gifs}, status=200)
 
-            filepath = 'files/gifs/' + gifs[0]
-            redisValue = {'Status': 'Image Created Successfully',
-                          'FilePath': filepath}
+            filepath = 'files/gifs' + gifs[0]
+            redisValue = '{ "Status": "Image Created Successfully", "FilePath": {}}'.format(
+                filepath)
 
             r.set(str(data['UID']), str(redisValue))
 
@@ -41,7 +41,7 @@ class Data(APIView):
         except Exception as e:
             print("REQUEST")
             print(request)
-            redisValue = {'Status': 'Error2 in Image Creation', 'FilePath': ''}
+            redisValue = '{"Status": "Error2 in Image Creation", "FilePath": ""}'
             r.set(str(data['UID']), str(redisValue))
 
             traceback.print_exc()
