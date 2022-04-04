@@ -40,7 +40,7 @@ class Maphome extends Component {
       });
     try {
       let res = await axiosApiCall(
-        `${process.env.REACT_APP_API_GTW}/api/gtw/v1/ms2/getUserHistory`,
+        `${process.env.REACT_APP_API_GTW}/api/gtw/v1/ms2/getUserHistory/NEXRAD`,
         "GET"
       );
       this.setState({ userHistory: res.data.data, DataisLoaded: true });
