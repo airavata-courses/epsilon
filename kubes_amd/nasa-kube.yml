@@ -36,6 +36,7 @@ spec:
       containers:
         - args:
             - python
+            - -u
             - manage.py
             - runserver
             - 0.0.0.0:19036
@@ -50,6 +51,8 @@ spec:
               value: redis-server-service
             - name: REDIS_PORT
               value: "6379"
+            - name: PYTHONUNBUFFERED
+              value: "1"
           image: epsilonsp22/python-nasa:latest
           name: msvc-python
           ports:
