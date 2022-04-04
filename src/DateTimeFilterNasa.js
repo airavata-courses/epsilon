@@ -52,10 +52,24 @@ const RequestImageData = () => {
         "monthEnd": document.getElementById("endDateId").value.split(" ")[0].split("/")[0],
         "dayEnd": document.getElementById("endDateId").value.split(" ")[0].split("/")[1],
 
+        
+    }
+
+    const check =  generateRequestImageRequest.dayStart  - generateRequestImageRequest.dayEnd;
+
+
+    if(check === 1 || check === 0 || check === -1)
+    {
+        navigate("../plotresults", { state: generateRequestImageRequest });
+       
+    }
+    else
+    {
+        alert('The difference between start and end date should not be greater than 2 days')
     }
 
     console.log(generateRequestImageRequest);
-    navigate("../plotresults", { state: generateRequestImageRequest });
+    
 };
 
     return (
