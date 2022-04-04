@@ -9,6 +9,7 @@ from dotenv import load_dotenv
 import redis
 from dotenv import load_dotenv
 import traceback
+import json
 
 # Create your views here.
 
@@ -21,8 +22,6 @@ class Data(APIView):
                         port=os.getenv("REDIS_PORT"), db=0)
 
         try:
-            print("REQUEST")
-            print(request)
             data = request.data
             u = Utilities()
             final_results = u.download(data["startDate"], data["endDate"])
@@ -31,18 +30,16 @@ class Data(APIView):
                 {"success": True, "data": gifs}, status=200)
 
             filepath = 'files/gifs' + gifs[0]
-            redisValue = '{ "Status": "Image Created Successfully", "FilePath": {}}'.format(
-                filepath)
+            redisValue = {"Status": "Image Created Successfully",
+                          "FilePath": filepath}
 
-            r.set(str(data['UID']), str(redisValue))
+            r.set(str(data['UID']), json.dumps(redisValue))
 
             return response
 
         except Exception as e:
-            print("REQUEST")
-            print(request)
-            redisValue = '{"Status": "Error2 in Image Creation", "FilePath": ""}'
-            r.set(str(data['UID']), str(redisValue))
+            redisValue = '{"Status": "Error in Image Creation", "FilePath": ""}'
+            r.set(str(data['UID']), redisValue)
 
             traceback.print_exc()
             res = django.http.JsonResponse(
