@@ -27,7 +27,7 @@ async function getUserHistory(user_id, source) {
     for (hist of data.data.history) {
       if (hist.value.source == source) {
         if (source == "NEXRAD") {
-          hist.key = `${history.jsObj.station} on ${history.jsObj.month}/${history.jsObj.day}/${history.jsObj.year} at ${history.jsObj.time}`;
+          hist.key = `${hist.value.station} on ${hist.value.month}/${hist.value.day}/${hist.value.year} at ${hist.value.time}`;
           final_data.push(hist);
         }
         if (source == "NASA") {
