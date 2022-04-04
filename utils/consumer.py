@@ -12,6 +12,9 @@ from rest_framework.parsers import JSONParser
 
 config = load_dotenv(".env")
 
+print("ENV")
+print(os.getenv("REDIS_HOST"))
+print(os.getenv("KAFKA"))
 r = redis.Redis(host=os.getenv("REDIS_HOST"),
                 port=os.getenv("REDIS_PORT"), db=0)
 
