@@ -6,7 +6,7 @@ import TextField from '@mui/material/TextField';
 import DatePicker from '@mui/lab/DatePicker';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Button from '@mui/material/Button';
-import { useLocation } from "react-router-dom";
+import { matchRoutes, useLocation } from "react-router-dom";
 import Header from "./Header";
 import { useNavigate } from "react-router-dom";
 import InputLabel from '@mui/material/InputLabel';
@@ -55,13 +55,14 @@ const RequestImageData = () => {
         
     }
 
-    const check =  generateRequestImageRequest.dayStart  - generateRequestImageRequest.dayEnd;
+    
 
-
-    if(check === 1 || check === 0 || check === -1)
+    let differenceOfDays = (startDatevalue - endDatevalue)/((1000 * 3600 * 24));
+    differenceOfDays = Math.floor(Math.abs(differenceOfDays));
+ 
+    if(differenceOfDays === 1 || differenceOfDays === 0 || differenceOfDays === -1)
     {
-        navigate("../plotresults", { state: generateRequestImageRequest });
-       
+        navigate("../plotresults", { state: generateRequestImageRequest });   
     }
     else
     {
