@@ -8,11 +8,17 @@ import json
 
 config = load_dotenv(".env")
 
-r = redis.Redis(host=os.getenv("REDIS_HOST"), port=os.getenv("REDIS_PORT"), db=0)
+print("ENV")
+print(os.getenv("REDIS_HOST"))
+print(os.getenv("KAFKA"))
+
+r = redis.Redis(host=os.getenv("REDIS_HOST"),
+                port=os.getenv("REDIS_PORT"), db=0)
 
 
 def consumeData():
-    consumer = KafkaConsumer('getnasaimage', bootstrap_servers=[os.getenv("KAFKA")], api_version=(0, 10))
+    consumer = KafkaConsumer('getnasaimage', bootstrap_servers=[
+                             os.getenv("KAFKA")], api_version=(0, 10))
 
     for message in consumer:
         reqJson = json.loads(message.value)
