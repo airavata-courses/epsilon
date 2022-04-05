@@ -24,7 +24,7 @@ async function nasaImageCreater(req) {
   try {
     let requestData = req.body;
     if ("UID" in requestData) {
-      return { Success: true, UniqueID: UID };
+      return { Success: true, UniqueID: requestData["UID"] };
     }
     let UID = Date.now();
     requestData["UID"] = UID;
