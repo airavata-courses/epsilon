@@ -9,9 +9,9 @@ spec:
   ports:
     - protocol: "TCP"
       # Port accessible inside cluster
-      port: 3000
+      port: 80
       # Port to forward to inside the pod
-      targetPort: 3000
+      targetPort: 80
       # Port accessible outside cluster
       nodePort: 31000
   type: NodePort
@@ -34,13 +34,13 @@ spec:
         app: react-ui
     spec:
       containers:
-        - image: epsilonsp22/reactui-linux:latest
+        - image: epsilonsp22/react-ui:prod
           env:
             - name: REACT_APP_API_GTW
               value: http://epsilon.pbrmtech.co.in:30000
           name: react-ui
           ports:
-            - containerPort: 3000
+            - containerPort: 80
           resources: 
             requests:
                cpu: '500m'
