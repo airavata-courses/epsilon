@@ -35,6 +35,7 @@ async function nasaImageCreater(req) {
     );
 
     requestData["user_id"] = req.user.id;
+    requestData["UID-kafka"] = UID;
     requestData["source"] = "NASA";
     logUtils.logUserHistory(requestData, "ImageRequest");
 
