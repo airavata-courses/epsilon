@@ -26,6 +26,7 @@ const PlotResults = () => {
       "POST",
       requestBody
     );
+    document.getElementById("textMsg").style.display = "none";
     ReactDOM.render(
       <img src={`data:image/png;base64,${res.data}`} alt="Plot Results" />,
       document.getElementById("test")
@@ -35,7 +36,7 @@ const PlotResults = () => {
   return (
     <main>
       <Header />
-      <Typography variant="h5">
+      <Typography variant="h5" id="textMsg">
         Please wait until the plot is generated......
       </Typography>
       <br></br>

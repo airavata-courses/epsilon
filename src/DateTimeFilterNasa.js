@@ -6,14 +6,9 @@ import TextField from '@mui/material/TextField';
 import DatePicker from '@mui/lab/DatePicker';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Button from '@mui/material/Button';
-import { matchRoutes, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import Header from "./Header";
 import { useNavigate } from "react-router-dom";
-import InputLabel from '@mui/material/InputLabel';
-import Select from '@mui/material/Select';
-import MenuItem from '@mui/material/MenuItem';
-import { constants } from "./Constants";
-import FormControl from '@mui/material/FormControl';
 
 const theme = createTheme();
 
@@ -25,7 +20,7 @@ const DateTimeFilter = () => {
     const stid = search ? new URLSearchParams(search).get('id') : "";
     const navigate = useNavigate();
 
-   {/* const RequestImageData = () => {
+    {/* const RequestImageData = () => {
         const generateRequestImageRequest = {
 
             "year": document.getElementById("dateTimePicker").value.split(" ")[0].split("/")[2],
@@ -36,42 +31,34 @@ const DateTimeFilter = () => {
         }
         navigate("../plotresults", { state: generateRequestImageRequest });
     };
-*/} 
+*/}
 
-const RequestImageData = () => {
-    const generateRequestImageRequest = {
-        // Start Date
-        "yearStart": document.getElementById("startDateId").value.split(" ")[0].split("/")[2],
-        "monthStart": document.getElementById("startDateId").value.split(" ")[0].split("/")[0],
-        "dayStart": document.getElementById("startDateId").value.split(" ")[0].split("/")[1],
+    const RequestImageData = () => {
+        const generateRequestImageRequest = {
+            // Start Date
+            "startDate": document.getElementById("startDateId").value.split(" ")[0].split("/")[2] + "-" +
+                document.getElementById("startDateId").value.split(" ")[0].split("/")[0] + "-" +
+                document.getElementById("startDateId").value.split(" ")[0].split("/")[1],
 
+            // End Date
+            "endDate": document.getElementById("endDateId").value.split(" ")[0].split("/")[2] + "-" +
+                document.getElementById("endDateId").value.split(" ")[0].split("/")[0] + "-" +
+                document.getElementById("endDateId").value.split(" ")[0].split("/")[1],
+        }
 
+        let differenceOfDays = (startDatevalue - endDatevalue) / ((1000 * 3600 * 24));
+        differenceOfDays = Math.floor(Math.abs(differenceOfDays));
 
-        // End Date
-        "yearEnd": document.getElementById("endDateId").value.split(" ")[0].split("/")[2],
-        "monthEnd": document.getElementById("endDateId").value.split(" ")[0].split("/")[0],
-        "dayEnd": document.getElementById("endDateId").value.split(" ")[0].split("/")[1],
+        if (differenceOfDays === 1 || differenceOfDays === 0 || differenceOfDays === -1) {
+            navigate("../plotresultsNasa", { state: generateRequestImageRequest });
+        }
+        else {
+            alert('The difference between start and end date should not be greater than 2 days')
+        }
 
-        
-    }
+        console.log(generateRequestImageRequest);
 
-    
-
-    let differenceOfDays = (startDatevalue - endDatevalue)/((1000 * 3600 * 24));
-    differenceOfDays = Math.floor(Math.abs(differenceOfDays));
- 
-    if(differenceOfDays === 1 || differenceOfDays === 0 || differenceOfDays === -1)
-    {
-        navigate("../plotresults", { state: generateRequestImageRequest });   
-    }
-    else
-    {
-        alert('The difference between start and end date should not be greater than 2 days')
-    }
-
-    console.log(generateRequestImageRequest);
-    
-};
+    };
 
     return (
         <>
@@ -110,30 +97,30 @@ const RequestImageData = () => {
                                 ))}
                             </Select>
                         </FormControl> */}
-                       
-                        {/*Start Date*/}
-                       <LocalizationProvider dateAdapter={AdapterDateFns}>
-                     <DatePicker
-                        label="Enter Start Date"
-                        value={startDatevalue}
-                        onChange={(newValue) => {
-                            setStartDatevalue(newValue);
-                        }}
-                    renderInput={(params) => <TextField {...params} id='startDateId'/>}
-                    />
-                    </LocalizationProvider>
 
-                    {/*End Date*/}  
-                    <LocalizationProvider dateAdapter={AdapterDateFns}>
-                     <DatePicker
-                        label="Enter End Date"
-                        value={endDatevalue}
-                        onChange={(newValue) => {
-                            setEndDatevalue(newValue);
-                        }}
-                    renderInput={(params) => <TextField {...params} id='endDateId'/>}
-                    />
-                    </LocalizationProvider>
+                        {/*Start Date*/}
+                        <LocalizationProvider dateAdapter={AdapterDateFns}>
+                            <DatePicker
+                                label="Enter Start Date"
+                                value={startDatevalue}
+                                onChange={(newValue) => {
+                                    setStartDatevalue(newValue);
+                                }}
+                                renderInput={(params) => <TextField {...params} id='startDateId' />}
+                            />
+                        </LocalizationProvider>
+
+                        {/*End Date*/}
+                        <LocalizationProvider dateAdapter={AdapterDateFns}>
+                            <DatePicker
+                                label="Enter End Date"
+                                value={endDatevalue}
+                                onChange={(newValue) => {
+                                    setEndDatevalue(newValue);
+                                }}
+                                renderInput={(params) => <TextField {...params} id='endDateId' />}
+                            />
+                        </LocalizationProvider>
 
                         <Box component="form" noValidate sx={{ mt: 1 }}>
                             <Button

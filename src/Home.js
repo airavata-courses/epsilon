@@ -19,7 +19,6 @@ const axiosApiCall = (url, method, body = {}) =>
         data: body,
         withCredentials: true,
         headers: {
-            "Access-Control-Allow-Origin": "*",
             "Content-Type": "application/json",
         },
     });
@@ -40,7 +39,7 @@ const Home = () => {
     };
 
     function makeNav() {
-       //navigate("../maphome", { replace: true });
+        //navigate("../maphome", { replace: true });
         navigate("../select", { replace: true });
 
     }
