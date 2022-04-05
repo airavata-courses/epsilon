@@ -75,8 +75,10 @@ const Select = () => {
 
       <div id="test" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
 
-        <Button
-          style={{ marginTop: "0px", background: "#0066CC" }}
+      <Box sx={{bgcolor :"grey" , boxShadow: 4, borderRadius:2, p:12, minWidth: 200}} >
+
+      <Button
+          style={{ marginTop: "0px", marginBottom : "300px" , background: "#0066CC", width:"150px", height: "40px"}}
           variant="contained"
           sx={{ mb: 2, mr: 5 }}
           onClick={() => clickMe(true)}>
@@ -85,13 +87,16 @@ const Select = () => {
 
 
         <Button
-          style={{ marginTop: "0px", background: "#0066CC" }}
+          style={{ marginTop: "0px",  marginBottom : "300px", background: "#0066CC", width:"150px", height: "40px"}}
           variant="contained"
 
           sx={{ mb: 2 }}
           onClick={() => clickMe(false)}>
           NASA
         </Button>
+
+      </Box>
+  
       </div>
     </div>
 
