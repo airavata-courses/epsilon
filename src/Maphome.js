@@ -1,5 +1,11 @@
 import React, { Component } from "react";
-import { Typography, Box, CssBaseline, Container, Button } from "@material-ui/core";
+import {
+  Typography,
+  Box,
+  CssBaseline,
+  Container,
+  Button,
+} from "@material-ui/core";
 import map from "./radar.gif";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import ListItem from "@mui/material/ListItem";
@@ -10,11 +16,9 @@ import { Link } from "react-router-dom";
 import Header from "./Header";
 import HeaderBack from "./HeaderBack";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 const theme = createTheme();
-
-
-
 
 class Maphome extends Component {
   constructor() {
@@ -28,7 +32,7 @@ class Maphome extends Component {
 
   componentDidMount() {
     this.FetchHistory();
-    console.log(this)
+    console.log(this);
   }
 
   async FetchHistory() {
@@ -80,9 +84,7 @@ class Maphome extends Component {
             <ThemeProvider theme={theme}>
               <Container component="main" maxWidth="md">
                 <CssBaseline />
-        <div style={{ display: "flex" }}>
-  
-        </div>
+                <div style={{ display: "flex" }}></div>
                 <Box
                   sx={{
                     marginTop: 5,
@@ -1061,27 +1063,21 @@ class Maphome extends Component {
                     alt="National Doppler Radar Sites"
                     useMap="#dopplers"
                   ></img>
-
-                  <Typography
-                    sx={{ mt: 5, mb: 3 }}
-                    variant="h5"
-                    align="center"
-                    color="textPrimary"
-                    gutterBottom
-                  >
-                    Recent Searches
-                  </Typography>
-                  <Box sx={{ bgcolor: "background.paper", boxShadow: 4 }}>
-                    <FixedSizeList
-                      height={400}
-                      width={750}
-                      itemSize={46}
-                      itemCount={userHistory.length}
-                      overscanCount={5}
-                    >
-                      {renderRow}
-                    </FixedSizeList>
-                  </Box>
+                  <Link to="/nexradhistory" style={{ textDecoration: "none" }}>
+                    <Box component="form" noValidate sx={{ mt: 1 }}>
+                      <Button
+                        id="generatePlotButton"
+                        style={{ marginTop: "10px", background: "#990000" }}
+                        variant="contained"
+                        type="submit"
+                        fullWidth
+                        sx={{ mt: 3, mb: 2 }}
+                        // onClick={() => (window.location.href = "nexradhistory")}
+                      >
+                        User History (Nexrad)
+                      </Button>
+                    </Box>
+                  </Link>
                 </Box>
               </Container>
             </ThemeProvider>

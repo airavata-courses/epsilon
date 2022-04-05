@@ -19,7 +19,7 @@ import axios from "axios";
 
 const theme = createTheme();
 
-class Nasahistory extends Component {
+class Nexradhistory extends Component {
   constructor() {
     super();
     this.state = {
@@ -48,7 +48,7 @@ class Nasahistory extends Component {
       });
     try {
       let res = await axiosApiCall(
-        `${process.env.REACT_APP_API_GTW}/api/gtw/v1/ms2/getUserHistory/NASA`,
+        `${process.env.REACT_APP_API_GTW}/api/gtw/v1/ms2/getUserHistory/NEXRAD`,
         "GET"
       );
       this.setState({ userHistory: res.data.data, DataisLoaded: true });
@@ -65,7 +65,7 @@ class Nasahistory extends Component {
         <ListItem style={style} key={index} component="div" disablePadding>
           <ListItemButton sx={{ boxShadow: 1 }}>
             <Link
-              to="/plotresultsNasa"
+              to="/plotresults"
               state={{ state: userHistory[index].value }}
               style={{ textDecoration: "none", color: "black" }}
             >
@@ -100,7 +100,7 @@ class Nasahistory extends Component {
                     color="textPrimary"
                     gutterBottom
                   >
-                    User History Nasa
+                    User History Nexrad
                   </Typography>
 
                   <Box sx={{ bgcolor: "background.paper", boxShadow: 4 }}>
@@ -123,4 +123,4 @@ class Nasahistory extends Component {
   }
 }
 
-export default Nasahistory;
+export default Nexradhistory;
