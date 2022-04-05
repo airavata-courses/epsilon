@@ -251,20 +251,23 @@ class Utilities:
         # Earthdata Login
         # Initialise environment variables
         config = load_dotenv(".env")
-
+        print(os.getenv('NASA_USERNAME'))
+        print(os.getenv('NASA_PASSWORD'))
         username = os.getenv('NASA_USERNAME')
 
         #password = getpass.getpass("Provide your EarthData password: ")
         password = os.getenv('NASA_PASSWORD')
 
         password_manager = urllib.request.HTTPPasswordMgrWithDefaultRealm()
-        password_manager.add_password(None, "https://urs.earthdata.nasa.gov", username, password)
+        password_manager.add_password(
+            None, "https://urs.earthdata.nasa.gov", username, password)
 
         # Create a cookie jar for storing cookies. This is used to store and return the session cookie #given to use by the data server
         cookie_jar = CookieJar()
 
         # Install all the handlers.
-        opener = urllib.request.build_opener(urllib.request.HTTPBasicAuthHandler(password_manager), urllib.request.HTTPCookieProcessor(cookie_jar))
+        opener = urllib.request.build_opener(urllib.request.HTTPBasicAuthHandler(
+            password_manager), urllib.request.HTTPCookieProcessor(cookie_jar))
         urllib.request.install_opener(opener)
 
         # Open a request for the data, and download files
