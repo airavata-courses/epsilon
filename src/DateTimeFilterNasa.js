@@ -14,8 +14,8 @@ const theme = createTheme();
 
 const DateTimeFilter = () => {
 
-    const [startDatevalue, setStartDatevalue] = React.useState(null);
-    const [endDatevalue, setEndDatevalue] = React.useState(null);
+    const [startDatevalue, setStartDateValue] = React.useState(null);
+    const [endDatevalue, setEndDateValue] = React.useState(null);
     const search = useLocation().search;
     const stid = search ? new URLSearchParams(search).get('id') : "";
     const navigate = useNavigate();
@@ -46,18 +46,23 @@ const DateTimeFilter = () => {
                 document.getElementById("endDateId").value.split(" ")[0].split("/")[1],
         }
 
-        let differenceOfDays = (startDatevalue - endDatevalue) / ((1000 * 3600 * 24));
-        differenceOfDays = Math.floor(Math.abs(differenceOfDays));
-
-        if (differenceOfDays === 1 || differenceOfDays === 0 || differenceOfDays === -1) {
-            navigate("../plotresultsNasa", { state: generateRequestImageRequest });
+        if(Math.abs(startDatevalue) > Math.abs(endDatevalue))
+        {
+            alert('Start Date should be less than End Date');
         }
-        else {
-            alert('The difference between start and end date should not be greater than 2 days')
+        else
+        {
+            let differenceOfDays = (startDatevalue - endDatevalue) / ((1000 * 3600 * 24));
+            differenceOfDays = Math.floor(Math.abs(differenceOfDays));
+    
+            if (differenceOfDays === 1 || differenceOfDays === 0 || differenceOfDays === -1) {
+                navigate("../plotresultsNasa", { state: generateRequestImageRequest });
+            }
+            else 
+            {
+                alert('The difference between start and end date should not be greater than 2 days')
+            } 
         }
-
-        console.log(generateRequestImageRequest);
-
     };
 
     return (
@@ -104,7 +109,7 @@ const DateTimeFilter = () => {
                                 label="Enter Start Date"
                                 value={startDatevalue}
                                 onChange={(newValue) => {
-                                    setStartDatevalue(newValue);
+                                    setStartDateValue(newValue);
                                 }}
                                 renderInput={(params) => <TextField {...params} id='startDateId' />}
                             />
@@ -116,7 +121,7 @@ const DateTimeFilter = () => {
                                 label="Enter End Date"
                                 value={endDatevalue}
                                 onChange={(newValue) => {
-                                    setEndDatevalue(newValue);
+                                    setEndDateValue(newValue);
                                 }}
                                 renderInput={(params) => <TextField {...params} id='endDateId' />}
                             />
