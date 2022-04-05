@@ -13,7 +13,7 @@ const NotFound = () => {
                     <WbSunnyTwoToneIcon style={{ marginRight: '20px' }} />
                     <Typography variant="h5">Welcome to Epsilon</Typography>
                     <Box component="form" noValidate sx={{ mt: 1 }} style={{ marginLeft: '1000px' }} >
-                        <Link to='/maphome' style={{ textDecoration: 'none' }}>
+                        <Link to='/select' style={{ textDecoration: 'none' }}>
                             <Button
                                 style={{ marginTop: '10px', background: '#0066CC' }}
                                 variant="contained"
@@ -21,7 +21,7 @@ const NotFound = () => {
                                 fullWidth
                                 sx={{ mt: 3, mb: 2 }}
                             >
-                                Map Home
+                                Home
                             </Button>
                         </Link>
                     </Box>
