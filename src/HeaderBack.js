@@ -34,23 +34,28 @@ const HeaderBack = () => (
   <>
     <CssBaseline />
     <AppBar position="relative" style={{ background: "#990000" }}>
-      <Toolbar>
-        <WbSunnyTwoToneIcon style={{ marginRight: "20px" }} />
-        <Typography variant="h5" style={{  marginRight:"10px"}} >Welcome to Epsilon</Typography>
 
-        <Link to="/select" style={{ textDecoration: "none" }}>
-            <ArrowBackIcon style={{marginTop: "6px", background: "#0066CC", color:"white"}} />
-        </Link>
+      
        
+
+        {/*Back Button*/}
+        {/* 
         <Link to="/select" style={{ textDecoration: "none" }}>
         <Button  style={{ marginTop: "0px", marginLeft:"5px", background: "#0066CC"}}
          variant="contained" > 
          BACK
         </Button>
-        </Link>
+        </Link> 
+        */}       
        
 
-    
+      <Toolbar>
+        {/*Back Link*/}
+      <Link to="/select" style={{ textDecoration: "none" }}>
+            <ArrowBackIcon style={{marginTop: "6px", background: "#0066CC", color:"white"}} />
+        </Link>
+        <WbSunnyTwoToneIcon style={{ marginRight: "20px", marginLeft :"5px" }} />
+        <Typography variant="h5" style={{  marginRight:"10px"}} >Welcome to Epsilon</Typography>
 
         <Box
           component="form"
