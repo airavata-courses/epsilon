@@ -20,10 +20,24 @@ exports.getUserHistory = getUserHistory;
 exports.getBinaryFromS3 = getBinaryFromS3;
 exports.getDates = getDates;
 
-async function getUserHistory(user_id) {
+async function getUserHistory(user_id, source) {
   try {
     let data = await axios.get(`${NODE_URL}v1/logs/${user_id}`);
-    return { Success: true, data: data.data.history };
+    final_data = [];
+    for (hist of data.data.history) {
+      if (hist.value.source == source) {
+        if (source == "NEXRAD") {
+          hist.key = `${hist.value.station} on ${hist.value.month}/${hist.value.day}/${hist.value.year} at ${hist.value.time}`;
+          final_data.push(hist);
+        }
+        if (source == "NASA") {
+          hist.key = `Satellite Data for Start Date - End Date`;
+          final_data.push(hist);
+        }
+      }
+    }
+
+    return { Success: true, data: final_data };
   } catch (err) {
     console.log(err);
     return { success: false, msg: "Server did not respond" };
@@ -55,6 +69,7 @@ async function getBinaryFromS3(body, user) {
     }
 
     body["user_id"] = user.id;
+    body["source"] = "NEXRAD";
     logUtils.logUserHistory(body, "ImageRequest");
 
     let pyResponse = await unirest

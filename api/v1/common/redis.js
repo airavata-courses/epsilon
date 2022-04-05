@@ -14,7 +14,7 @@ class Redis {
       this.client = asyncRedis.createClient(config);
 
       this.client.on("error", (err) => {
-        console.log(err);
+        console.error(err);
       });
       console.log("Connected REDIS", `${config.host}:${config.port}`);
     }

@@ -7,7 +7,11 @@ exports.getDate = getDate;
 async function getUserHistory(req, res, next) {
   try {
     let user_id = req.user.id;
-    let history = await nodeService.getUserHistory(user_id);
+    let history = await nodeService.getUserHistory(
+      user_id,
+      req.params.source || "NEXRAD"
+    );
+    // console.log("HISTORY,", history.data);
 
     return res.bhejdo(HttpStatus.OK, { data: history.data });
   } catch (err) {
