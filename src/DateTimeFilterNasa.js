@@ -46,7 +46,12 @@ const DateTimeFilter = () => {
                 document.getElementById("endDateId").value.split(" ")[0].split("/")[1],
         }
 
-        if(Math.abs(startDatevalue) > Math.abs(endDatevalue))
+        if(startDatevalue === null || endDatevalue === null)
+        {
+            alert('Start Date and End Date cannot be empty');
+        }
+
+        else if(Math.abs(startDatevalue) > Math.abs(endDatevalue))
         {
             alert('Start Date should be less than End Date');
         }
