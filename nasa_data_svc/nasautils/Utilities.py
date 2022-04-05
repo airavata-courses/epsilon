@@ -31,7 +31,8 @@ class Utilities:
             z = T2M[i]
             for c in self.cont.collections:
                 c.remove()  # removes only the contours, leaves the rest intact
-            self.cont = plt.contourf(lon, lat, z[0], clevs, transform=ccrs.PlateCarree(), cmap=plt.cm.jet)
+            self.cont = plt.contourf(
+                lon, lat, z[0], clevs, transform=ccrs.PlateCarree(), cmap=plt.cm.jet)
             plt.title('MERRA-2 Air Temperature at Time Interval T = %i:' % (i))
             return self.cont
         gifs = []
@@ -50,8 +51,10 @@ class Utilities:
             ax.coastlines(resolution="110m", linewidth=1)
             ax.gridlines(linestyle='--', color='black')
             clevs = np.arange(210, 311, 5)
-            self.cont = plt.contourf(lon, lat, T2M[0][1], clevs, transform=ccrs.PlateCarree(), cmap=plt.cm.jet)
-            cb = plt.colorbar(ax=ax, orientation="vertical", pad=0.02, aspect=16, shrink=0.8)
+            self.cont = plt.contourf(
+                lon, lat, T2M[0][1], clevs, transform=ccrs.PlateCarree(), cmap=plt.cm.jet)
+            cb = plt.colorbar(ax=ax, orientation="vertical",
+                              pad=0.02, aspect=16, shrink=0.8)
             cb.set_label('K', size=12, rotation=0, labelpad=15)
             cb.ax.tick_params(labelsize=10)
             anim = FuncAnimation(fig, animate, frames=Nt, repeat=False)
@@ -89,7 +92,8 @@ class Utilities:
     def download(self, startDate, endDate):
         # STEP 2
         # Create a urllib PoolManager instance to make requests.
-        http = urllib3.PoolManager(cert_reqs='CERT_REQUIRED', ca_certs=certifi.where())
+        http = urllib3.PoolManager(
+            cert_reqs='CERT_REQUIRED', ca_certs=certifi.where())
         # Set the URL for the GES DISC subset service endpoint
         url = 'https://disc.gsfc.nasa.gov/service/subset/jsonwsp'
         # STEP 4
@@ -108,11 +112,13 @@ class Utilities:
         # Subset only the mandatory pressure levels (units are hPa)
         # 1000 925 850 700 500 400 300 250 200 150 100 70 50 30 20 10 7 5 3 2 1
         dimName = 'lev'
-        dimVals = [1, 4, 7, 13, 17, 19, 21, 22, 23, 24, 25, 26, 27, 29, 30, 31, 32, 33, 35, 36, 37]
+        dimVals = [1, 4, 7, 13, 17, 19, 21, 22, 23, 24,
+                   25, 26, 27, 29, 30, 31, 32, 33, 35, 36, 37]
         # Construct the list of dimension name:value pairs to specify the desired subset
         dimSlice = []
         for i in range(len(dimVals)):
-            dimSlice.append({'dimensionId': dimName, 'dimensionValue': dimVals[i]})
+            dimSlice.append(
+                {'dimensionId': dimName, 'dimensionValue': dimVals[i]})
         # STEP 5
         # Construct JSON WSP request for API method: subset
         subset_request = {
@@ -230,8 +236,10 @@ class Utilities:
                 final_results.append(dirName + "/" + outfn)
 
             except:
-                print('Error! Status code is %d for this URL:\n%s' % (result.status.code, URL))
-                print('Help for downloading data is at https://disc.gsfc.nasa.gov/data-access')
+                print('Error! Status code is %d for this URL:\n%s' %
+                      (result.status.code, URL))
+                print(
+                    'Help for downloading data is at https://disc.gsfc.nasa.gov/data-access')
 
         print('Downloading is done and find the downloaded files in your current working directory')
         return final_results
