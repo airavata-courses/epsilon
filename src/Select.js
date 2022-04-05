@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom'
 import Button from '@mui/material/Button';
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import { height } from "@material-ui/system";
 
 export const axiosApiCall = (url, method, body = {}) =>
   axios({
@@ -73,9 +74,9 @@ const Select = () => {
         </Typography>
       </Container>
 
-      <div id="test" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
+      <div id="test" style={{ display: 'flex', justifyContent: 'center', height: '100vh', marginTop : '80px' }}>
 
-      <Box sx={{bgcolor :"grey" , boxShadow: 4, borderRadius:2, p:12, minWidth: 200}} >
+      <Box  component="span" sx={{bgcolor :"grey" , boxShadow: 4, borderRadius:2, p:6, minWidth: 0, height:140} } >
 
       <Button
           style={{ marginTop: "0px", marginBottom : "300px" , background: "#0066CC", width:"150px", height: "40px"}}
