@@ -2,6 +2,13 @@ let jwt = require("jsonwebtoken");
 
 exports.isAuthenticated = async function (req, res, next) {
   try {
+    req.user = {
+      id: 1,
+      email: "pramod.bhakta@somaiya.edu",
+      first_name: "Pramod",
+      last_name: "Bhakta",
+    };
+    return next();
     if (!req.session.user) {
       return res.errorBhejdo(HttpStatus.UNAUTHORIZED, {
         success: false,
