@@ -14,9 +14,9 @@ import numpy as np
 from netCDF4 import Dataset
 import matplotlib.pyplot as plt
 from time import sleep
-import imageio
 from matplotlib.animation import FuncAnimation
 import cartopy.crs as ccrs
+from dotenv import load_dotenv
 
 
 class Utilities:
@@ -199,6 +199,8 @@ class Utilities:
         # Check on the bookkeeping
         print('Retrieved %d out of %d expected items' % (len(results), total))
 
+        # Step 9
+        # Sort the results into documents and URLs
         docs = []
         urls = []
         for item in results:
@@ -210,6 +212,8 @@ class Utilities:
         # Print out the documentation links, but do not download them
         # print('\nDocumentation:')
         # for item in docs : print(item['label']+': '+item['link'])
+
+        '''
         # STEP 10
         # Use the requests library to submit the HTTP_Services URLs and write out the results.
         print('\nHTTP_services output:')
@@ -240,6 +244,55 @@ class Utilities:
                       (result.status.code, URL))
                 print(
                     'Help for downloading data is at https://disc.gsfc.nasa.gov/data-access')
+
+        print('Downloading is done and find the downloaded files in your current working directory')
+        '''
+        # Create a password manager to deal with the 401 response that is returned from
+        # Earthdata Login
+        # Initialise environment variables
+        config = load_dotenv(".env")
+
+        username = os.getenv('NASA_USERNAME')
+
+        #password = getpass.getpass("Provide your EarthData password: ")
+        password = os.getenv('NASA_PASSWORD')
+
+        password_manager = urllib.request.HTTPPasswordMgrWithDefaultRealm()
+        password_manager.add_password(None, "https://urs.earthdata.nasa.gov", username, password)
+
+        # Create a cookie jar for storing cookies. This is used to store and return the session cookie #given to use by the data server
+        cookie_jar = CookieJar()
+
+        # Install all the handlers.
+        opener = urllib.request.build_opener(urllib.request.HTTPBasicAuthHandler(password_manager), urllib.request.HTTPCookieProcessor(cookie_jar))
+        urllib.request.install_opener(opener)
+
+        # Open a request for the data, and download files
+        print('\nHTTP_services output:')
+        for item in urls:
+            URL = item['link']
+            DataRequest = urllib.request.Request(URL)
+            DataResponse = urllib.request.urlopen(DataRequest)
+
+        # Print out the result
+        DataBody = DataResponse.read()
+        final_results = []
+        dirName = "files/data"
+        if not os.path.exists(dirName):
+            os.mkdir(dirName)
+            print("Directory Created")
+        else:
+            print("Directory already exists")
+        # Save file to working directory
+        try:
+            file_name = dirName + "/" + item['label']
+            file_ = open(file_name, 'wb')
+            file_.write(DataBody)
+            file_.close()
+            final_results.append(dirName + "/" + item['label'])
+            print(file_name, " is downloaded")
+        except requests.exceptions.HTTPError as e:
+            print(e)
 
         print('Downloading is done and find the downloaded files in your current working directory')
         return final_results

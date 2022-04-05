@@ -16,7 +16,7 @@ jobs:
       - run:
           name: Build and push to docker
           command: |
-            docker build -t epsilonsp22/python-nasa .
+            docker build -t --build-arg NASA_USERNAME=${NASA_USERNAME} NASA_PASSWORD=${NASA_PASSWORD} epsilonsp22/python-nasa .
             echo $DOCKER_PWD | docker login -u $DOCKER_LOGIN --password-stdin
             docker push epsilonsp22/python-nasa:latest
       - run:    
