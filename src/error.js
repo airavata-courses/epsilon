@@ -28,7 +28,7 @@ const Error = () => {
                 </Toolbar>
             </AppBar>
             <div id="test" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
-                <Typography variant="h5">There was some error while fetching your visualisation.</Typography>
+                <Typography variant="h5">There was some error while fetching your visualization.</Typography>
             </div>
         </main>
     );

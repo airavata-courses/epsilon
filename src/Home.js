@@ -59,9 +59,7 @@ const Home = () => {
                         <Container component="main" maxWidth="md" sx={{ marginTop: 8 }} >
                             <CssBaseline />
                             <Typography variant="h5" align="center" color="textPrimary" gutterBottom sx={{ fontStyle: 'italic' }}>
-                                "Reflectivity" is the amount of transmitted power returned to the radar receiver
-                                after hitting precipitation, compared to a reference power density at a distance
-                                of 1 meter from the radar antenna.
+                                Weather Data Visualization
                             </Typography>
                         </Container>
 
