@@ -2,11 +2,11 @@ import React from "react";
 import { Typography, Box, CssBaseline, Container } from '@material-ui/core';
 import AdapterDateFns from '@mui/lab/AdapterDateFns';
 import LocalizationProvider from '@mui/lab/LocalizationProvider';
-import DateTimePicker from '@mui/lab/DateTimePicker';
 import TextField from '@mui/material/TextField';
+import DatePicker from '@mui/lab/DatePicker';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Button from '@mui/material/Button';
-import { useLocation } from "react-router-dom";
+import { matchRoutes, useLocation } from "react-router-dom";
 import Header from "./Header";
 import { useNavigate } from "react-router-dom";
 import InputLabel from '@mui/material/InputLabel';
@@ -17,24 +17,61 @@ import FormControl from '@mui/material/FormControl';
 
 const theme = createTheme();
 
-const DateTimeFilterNasa = () => {
+const DateTimeFilter = () => {
 
-    const [value, setValue] = React.useState(null);
+    const [startDatevalue, setStartDatevalue] = React.useState(null);
+    const [endDatevalue, setEndDatevalue] = React.useState(null);
     const search = useLocation().search;
     const stid = search ? new URLSearchParams(search).get('id') : "";
     const navigate = useNavigate();
 
-    const RequestImageData = () => {
+   {/* const RequestImageData = () => {
         const generateRequestImageRequest = {
 
             "year": document.getElementById("dateTimePicker").value.split(" ")[0].split("/")[2],
             "month": document.getElementById("dateTimePicker").value.split(" ")[0].split("/")[0],
             "day": document.getElementById("dateTimePicker").value.split(" ")[0].split("/")[1],
-           // "station": document.getElementById("stationSelectedSelect").innerHTML,
+            "station": document.getElementById("stationSelectedSelect").innerHTML,
             "time": document.getElementById("dateTimePicker").value.split(" ")[1]
         }
         navigate("../plotresults", { state: generateRequestImageRequest });
     };
+*/} 
+
+const RequestImageData = () => {
+    const generateRequestImageRequest = {
+        // Start Date
+        "yearStart": document.getElementById("startDateId").value.split(" ")[0].split("/")[2],
+        "monthStart": document.getElementById("startDateId").value.split(" ")[0].split("/")[0],
+        "dayStart": document.getElementById("startDateId").value.split(" ")[0].split("/")[1],
+
+
+
+        // End Date
+        "yearEnd": document.getElementById("endDateId").value.split(" ")[0].split("/")[2],
+        "monthEnd": document.getElementById("endDateId").value.split(" ")[0].split("/")[0],
+        "dayEnd": document.getElementById("endDateId").value.split(" ")[0].split("/")[1],
+
+        
+    }
+
+    
+
+    let differenceOfDays = (startDatevalue - endDatevalue)/((1000 * 3600 * 24));
+    differenceOfDays = Math.floor(Math.abs(differenceOfDays));
+ 
+    if(differenceOfDays === 1 || differenceOfDays === 0 || differenceOfDays === -1)
+    {
+        navigate("../plotresults", { state: generateRequestImageRequest });   
+    }
+    else
+    {
+        alert('The difference between start and end date should not be greater than 2 days')
+    }
+
+    console.log(generateRequestImageRequest);
+    
+};
 
     return (
         <>
@@ -52,10 +89,10 @@ const DateTimeFilterNasa = () => {
                         }}
                     >
                         <Typography sx={{ mt: 2, mb: 2 }} variant="h5" align="center" color="textPrimary" gutterBottom >
-                            Please select a particular date and time
+                            Please select Start and End Date
                         </Typography>
-                        
-                       {/*  <FormControl style={{ minWidth: 230 }}>
+
+                        {/* <FormControl style={{ minWidth: 230 }}>
                             <InputLabel sx={{ marginTop: 2 }}>
                                 Select Station
                             </InputLabel>
@@ -72,22 +109,31 @@ const DateTimeFilterNasa = () => {
                                     <MenuItem key={item} value={item}>{item}</MenuItem>
                                 ))}
                             </Select>
-                        </FormControl>
-                        */}
+                        </FormControl> */}
+                       
+                        {/*Start Date*/}
+                       <LocalizationProvider dateAdapter={AdapterDateFns}>
+                     <DatePicker
+                        label="Enter Start Date"
+                        value={startDatevalue}
+                        onChange={(newValue) => {
+                            setStartDatevalue(newValue);
+                        }}
+                    renderInput={(params) => <TextField {...params} id='startDateId'/>}
+                    />
+                    </LocalizationProvider>
 
-                        <LocalizationProvider dateAdapter={AdapterDateFns}>
-                            <DateTimePicker
-                                label="Select Date and Time"
-                                ampm={false}
-                                maxDateTime={new Date()}
-                                renderInput={(props) => <TextField id='dateTimePicker' {...props} />}
-                                value={value}
-                                onChange={(newValue) => {
-                                    setValue(newValue);
-                                }}
-
-                            />
-                        </LocalizationProvider>
+                    {/*End Date*/}  
+                    <LocalizationProvider dateAdapter={AdapterDateFns}>
+                     <DatePicker
+                        label="Enter End Date"
+                        value={endDatevalue}
+                        onChange={(newValue) => {
+                            setEndDatevalue(newValue);
+                        }}
+                    renderInput={(params) => <TextField {...params} id='endDateId'/>}
+                    />
+                    </LocalizationProvider>
 
                         <Box component="form" noValidate sx={{ mt: 1 }}>
                             <Button
@@ -110,4 +156,4 @@ const DateTimeFilterNasa = () => {
 
 }
 
-export default DateTimeFilterNasa;
+export default DateTimeFilter;

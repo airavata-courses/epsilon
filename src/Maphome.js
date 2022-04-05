@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Typography, Box, CssBaseline, Container } from "@material-ui/core";
+import { Typography, Box, CssBaseline, Container, Button } from "@material-ui/core";
 import map from "./radar.gif";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import ListItem from "@mui/material/ListItem";
@@ -8,9 +8,13 @@ import ListItemText from "@mui/material/ListItemText";
 import { FixedSizeList } from "react-window";
 import { Link } from "react-router-dom";
 import Header from "./Header";
+import HeaderBack from "./HeaderBack";
 import axios from "axios";
 
 const theme = createTheme();
+
+
+
 
 class Maphome extends Component {
   constructor() {
@@ -24,6 +28,7 @@ class Maphome extends Component {
 
   componentDidMount() {
     this.FetchHistory();
+    console.log(this)
   }
 
   async FetchHistory() {
@@ -71,10 +76,13 @@ class Maphome extends Component {
       return (
         <>
           <main>
-            <Header />
+            <HeaderBack />
             <ThemeProvider theme={theme}>
               <Container component="main" maxWidth="md">
                 <CssBaseline />
+        <div style={{ display: "flex" }}>
+  
+        </div>
                 <Box
                   sx={{
                     marginTop: 5,

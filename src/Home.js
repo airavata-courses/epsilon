@@ -40,9 +40,8 @@ const Home = () => {
     };
 
     function makeNav() {
+       //navigate("../maphome", { replace: true });
         navigate("../select", { replace: true });
-        //navigate("../maphome", { replace: true });
-       //navigate("../select", { replace: true });
 
     }
 
