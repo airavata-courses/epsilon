@@ -19,16 +19,24 @@ jobs:
             docker build -t epsilonsp22/epsilon-api-gtw-linux .
             echo $DOCKER_PWD | docker login -u $DOCKER_LOGIN --password-stdin
             docker push epsilonsp22/epsilon-api-gtw-linux:latest
-      - run:    
-          name: Fix Ssh Could not resolve hostname
-          command: ssh-keyscan 149.165.153.71 >> ~/.ssh/known_hosts
-      
-      - add_ssh_keys:
-          fingerprints:
-            - "98:38:1f:3f:9d:1b:2a:79:8b:27:9e:06:7a:cc:de:f6"
-      - run:
-          name: Deployment
-          command: |
-            ssh ubuntu@149.165.153.71 'cd epsilon/kubes_amd/ && git pull && kubectl delete deployment --ignore-not-found=true api-gtw && kubectl delete service --ignore-not-found=true api-gtw-services && kubectl apply -f api-gtw-kube.yml'
+    deploy:
+      machine: true 
+      steps:
+        - run:    
+            name: Fix Ssh Could not resolve hostname
+            command: ssh-keyscan 149.165.153.71 >> ~/.ssh/known_hosts
+        
+        - add_ssh_keys:
+            fingerprints:
+              - "98:38:1f:3f:9d:1b:2a:79:8b:27:9e:06:7a:cc:de:f6"
+        - run:
+            name: Deployment
+            command: |
+              ssh ubuntu@149.165.153.71 'cd epsilon/kubes_amd/ && git pull && kubectl delete deployment --ignore-not-found=true api-gtw && kubectl delete service --ignore-not-found=true api-gtw-services && kubectl apply -f api-gtw-kube.yml'
 
       
+workflows:
+  build-and-deploy:
+    jobs:
+      - build
+      - deploy
