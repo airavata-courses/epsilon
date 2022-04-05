@@ -135,6 +135,19 @@ const DateTimeFilter = () => {
                                 Generate Plot
                             </Button>
                         </Box>
+                        <Box component="form" noValidate sx={{ mt: 1 }}>
+                            <Button
+                                id='generatePlotButton'
+                                style={{ marginTop: '10px', background: '#990000' }}
+                                variant="contained"
+                                type="submit"
+                                fullWidth
+                                sx={{ mt: 3, mb: 2 }}
+                                onClick={() => navigate("../nasahistory")}
+                            >
+                                User History (Nasa)
+                            </Button>
+                        </Box>
                     </Box>
                 </Container >
             </ThemeProvider >

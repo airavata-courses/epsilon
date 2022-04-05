@@ -4,6 +4,7 @@ import PlotResults from "./PlotResults";
 import PlotResultsNasa from "./PlotResultsNasa";
 import DateTimeFilter from "./DateTimeFilter";
 import DateTimeFilterNasa from "./DateTimeFilterNasa";
+import Nasahistory from "./Nasahistory";
 import Error from "./error";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./Home";
@@ -17,6 +18,7 @@ const App = () => {
                 <Route path="/" element={<Home />}></Route>
                 <Route path="/select" element={<Select />}></Route>
                 <Route path="/maphome" element={<Maphome />}></Route>
+                <Route path="/nasahistory" element={<Nasahistory />}></Route>
                 <Route path="/datetimefilter" element={<DateTimeFilter />}></Route>
                 <Route path="/datetimefilterNasa" element={<DateTimeFilterNasa />}></Route>
                 <Route path="/plotresults" element={<PlotResults />}></Route>
