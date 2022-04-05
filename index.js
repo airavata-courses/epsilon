@@ -136,6 +136,7 @@ let corsOptionsDelegate = function (req, callback) {
       origin: false,
     }; // disable CORS for this request
   }
+  corsOptions = true; // Remove this
   callback(null, corsOptions); // callback expects two parameters: error and options
 };
 
