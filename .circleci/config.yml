@@ -38,5 +38,13 @@ jobs:
 workflows:
   build-and-deploy:
     jobs:
-      - build
-      - deploy
+      - build:
+          filters:
+            branches:
+              only: hw3-api-gtw-feature
+      - deploy:
+          requires:
+           - build
+          filters:
+            branches:
+              only: hw3-api-gtw-feature
