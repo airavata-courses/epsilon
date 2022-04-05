@@ -251,12 +251,12 @@ class Utilities:
         # Earthdata Login
         # Initialise environment variables
         config = load_dotenv(".env")
-        print(os.getenv('NASA_USERNAME'))
-        print(os.getenv('NASA_PASSWORD'))
-        username = os.getenv('NASA_USERNAME')
+        print(os.getenv('ABC'))
+        print(os.getenv('DEF'))
+        username = os.getenv('ABC')
 
         #password = getpass.getpass("Provide your EarthData password: ")
-        password = os.getenv('NASA_PASSWORD')
+        password = os.getenv('DEF')
 
         password_manager = urllib.request.HTTPPasswordMgrWithDefaultRealm()
         password_manager.add_password(
