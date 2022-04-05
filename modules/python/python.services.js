@@ -23,6 +23,9 @@ async function statusChecker(req) {
 async function nasaImageCreater(req) {
   try {
     let requestData = req.body;
+    if ("UID" in requestData) {
+      return { Success: true, UniqueID: UID };
+    }
     let UID = Date.now();
     requestData["UID"] = UID;
     kafka.run("getnasaimage", JSON.stringify(requestData));
@@ -50,12 +53,8 @@ async function nasaImageGetter(req) {
   try {
     let redisKey = req.body.UID;
     let redisValue = await redisNew.get(redisKey.toString());
-    console.log("REDIS", redisValue);
-    console.log("VALUE", redisValue["Status"]);
-    console.log("FILE", redisValue["FilePath"]);
     let redisValueJson = JSON.parse(redisValue);
     let action;
-    let file = "";
 
     if (redisValue) {
       if (
@@ -68,12 +67,6 @@ async function nasaImageGetter(req) {
         return { Success: false, Action: action, File: file };
       } else if (redisValueJson["Status"] == "Image Created Successfully") {
         action = "Display";
-        // let file_name = "/files/" + redisValueJson['FilePath'];
-        // const file_new = await fs.readFileSync(path.join(dirname + file_name), {
-        //     encoding: "base64",
-        //   });
-
-        //   file = file_new;
 
         let file_name = redisValueJson["FilePath"];
         console.log(file_name);

@@ -31,7 +31,7 @@ async function getUserHistory(user_id, source) {
           final_data.push(hist);
         }
         if (source == "NASA") {
-          hist.key = `Satellite Data for Start Date - End Date`;
+          hist.key = `Satellite Data for ${hist.value.startDate} - ${hist.value.endDate}`;
           final_data.push(hist);
         }
       }
