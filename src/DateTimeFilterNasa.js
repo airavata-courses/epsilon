@@ -7,7 +7,7 @@ import DatePicker from '@mui/lab/DatePicker';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Button from '@mui/material/Button';
 import { useLocation } from "react-router-dom";
-import Header from "./Header";
+import HeaderBack from "./HeaderBack";
 import { useNavigate } from "react-router-dom";
 
 const theme = createTheme();
@@ -72,7 +72,7 @@ const DateTimeFilter = () => {
 
     return (
         <>
-            <Header />
+            <HeaderBack />
             <ThemeProvider theme={theme}>
                 <Container component="main" maxWidth="md" >
                     <CssBaseline />
