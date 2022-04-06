@@ -34,7 +34,7 @@ spec:
         app: react-ui
     spec:
       containers:
-        - image: epsilonsp22/react-ui:prod
+        - image: epsilonsp22/react-ui-linux:latest
           env:
             - name: REACT_APP_API_GTW
               value: http://epsilon.pbrmtech.co.in:30000
