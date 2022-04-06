@@ -2,6 +2,7 @@ import React from "react";
 import { useLocation } from "react-router-dom";
 import axios from "axios";
 import Header from "./Header";
+import HeaderBackNexradDate from "./HeaderBackNexradDate";
 import ReactDOM from "react-dom";
 import { Typography } from "@material-ui/core";
 
@@ -35,7 +36,7 @@ const PlotResults = () => {
   FetchPlot();
   return (
     <main>
-      <Header />
+      <HeaderBackNexradDate />
       <Typography variant="h5" id="textMsg">
         Please wait until the plot is generated......
       </Typography>

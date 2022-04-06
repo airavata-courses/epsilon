@@ -5,6 +5,7 @@ import Header from "./Header";
 import ReactDOM from "react-dom";
 import { Typography } from "@material-ui/core";
 import { useNavigate } from "react-router-dom";
+import HeaderBackNasaDate from "./HeaderBackNasaDate";
 
 const axiosApiCall = (url, method, body = {}) =>
     axios({
@@ -68,7 +69,7 @@ const PlotResults = () => {
 
     return (
         <main>
-            <Header />
+            <HeaderBackNasaDate />
             <Typography variant="h5" id="textMsg">
                 Please wait until the plot is generated......
             </Typography>

@@ -14,7 +14,7 @@ import ListItemText from "@mui/material/ListItemText";
 import { FixedSizeList } from "react-window";
 import { Link } from "react-router-dom";
 import Header from "./Header";
-import HeaderBack from "./HeaderBack";
+import HeaderBackSelect from "./HeaderBackSelect";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
@@ -80,7 +80,7 @@ class Maphome extends Component {
       return (
         <>
           <main>
-            <HeaderBack />
+            <HeaderBackSelect />
             <ThemeProvider theme={theme}>
               <Container component="main" maxWidth="md">
                 <CssBaseline />
