@@ -16,9 +16,9 @@ jobs:
       - run:
           name: Build and push to docker
           command: |
-            docker build -t epsilonsp22/react-ui .
+            docker build -t epsilonsp22/react-ui-linux .
             echo $DOCKER_PWD | docker login -u $DOCKER_LOGIN --password-stdin
-            docker push epsilonsp22/react-ui:latest
+            docker push epsilonsp22/react-ui-linux:latest
       - run:    
           name: Fix Ssh Could not resolve hostname
           command: ssh-keyscan 149.165.153.71 >> ~/.ssh/known_hosts
