@@ -14,8 +14,8 @@ import ListItemText from "@mui/material/ListItemText";
 import { FixedSizeList } from "react-window";
 import { Link } from "react-router-dom";
 import Header from "./Header";
-import HeaderBack from "./HeaderBack";
 import axios from "axios";
+import HeaderBackNexradMap from "./HeaderBackNexradMap";
 
 const theme = createTheme();
 
@@ -79,7 +79,7 @@ class Nexradhistory extends Component {
       return (
         <>
           <main>
-            <Header />
+            <HeaderBackNexradMap />
             <ThemeProvider theme={theme}>
               <Container component="main" maxWidth="md">
                 <CssBaseline />

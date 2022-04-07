@@ -14,7 +14,7 @@ import ListItemText from "@mui/material/ListItemText";
 import { FixedSizeList } from "react-window";
 import { Link } from "react-router-dom";
 import Header from "./Header";
-import HeaderBack from "./HeaderBack";
+import HeaderBackNasaDate from "./HeaderBackNasaDate";
 import axios from "axios";
 
 const theme = createTheme();
@@ -79,7 +79,7 @@ class Nasahistory extends Component {
       return (
         <>
           <main>
-            <Header />
+            <HeaderBackNasaDate />
             <ThemeProvider theme={theme}>
               <Container component="main" maxWidth="md">
                 <CssBaseline />
