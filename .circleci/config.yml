@@ -38,4 +38,4 @@ workflows:
       - build:
           filters:
             branches:
-              only: hw3-msvc-nasa-python-feature
+              only: hw3-release-msvc-nasa-python
