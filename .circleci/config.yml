@@ -37,4 +37,4 @@ workflows:
       - build:
           filters:
             branches:
-              only: hw3-ui-react-feature      
+              only: hw3-release-ui-react
