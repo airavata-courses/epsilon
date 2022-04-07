@@ -31,6 +31,6 @@ workflows:
       - build:
           filters:
             branches:
-              only: homework3-docker-comp-feature
+              only: homework3-release-docker-comp
 
       
