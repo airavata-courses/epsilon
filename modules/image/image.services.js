@@ -112,10 +112,10 @@ function convertLogs(body) {
   key_val = [];
   if (body.length > 0) {
     for (history of body) {
-      if (history.jsObj.action != "LOGIN") {
+      if (history.jsObj.action == "ImageRequest") {
         let obj = {
           value: history.jsObj,
-          key: `${history.jsObj.station} on ${history.jsObj.month}/${history.jsObj.day}/${history.jsObj.year} at ${history.jsObj.time}`,
+          key: "",
         };
         key_val.push(obj);
       }
