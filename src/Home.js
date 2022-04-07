@@ -19,7 +19,6 @@ const axiosApiCall = (url, method, body = {}) =>
         data: body,
         withCredentials: true,
         headers: {
-            "Access-Control-Allow-Origin": "*",
             "Content-Type": "application/json",
         },
     });
@@ -28,7 +27,7 @@ const Home = () => {
     const navigate = useNavigate();
 
     const ResponseGoogle = (response) => {
-        axiosApiCall("http://localhost:19030/auth/ms1/google/", "POST", response)
+        axiosApiCall(`${process.env.REACT_APP_API_GTW}/auth/ms1/google/`, "POST", response)
             .then((res) => {
                 console.log(res);
                 makeNav();
@@ -40,7 +39,9 @@ const Home = () => {
     };
 
     function makeNav() {
-        navigate("../maphome", { replace: true });
+        //navigate("../maphome", { replace: true });
+        navigate("../select", { replace: true });
+
     }
 
     return (
@@ -58,9 +59,7 @@ const Home = () => {
                         <Container component="main" maxWidth="md" sx={{ marginTop: 8 }} >
                             <CssBaseline />
                             <Typography variant="h5" align="center" color="textPrimary" gutterBottom sx={{ fontStyle: 'italic' }}>
-                                "Reflectivity" is the amount of transmitted power returned to the radar receiver
-                                after hitting precipitation, compared to a reference power density at a distance
-                                of 1 meter from the radar antenna.
+                                Weather Data Visualization
                             </Typography>
                         </Container>
 

@@ -9,6 +9,7 @@ import {
 import WbSunnyTwoToneIcon from "@mui/icons-material/WbSunnyTwoTone";
 import { Link } from "react-router-dom";
 import Button from "@mui/material/Button";
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import axios from "axios";
 
 export const axiosApiCall = (url, method, body = {}) =>
@@ -33,11 +34,27 @@ const LogUserOut = () => {
     });
 };
 
-const Header = () => (
+const HeaderBack = () => (
   <>
     <CssBaseline />
     <AppBar position="relative" style={{ background: "#990000" }}>
       <Toolbar>
+
+       {/*Back Link*/}
+       <Link to="/select" style={{ textDecoration: "none" }}>
+            <ArrowBackIcon style={{marginTop: "6px", background: "#0066CC", color:"white"}} />
+        </Link>
+
+        {/*Back Button*/}
+        {/* 
+        <Link to="/select" style={{ textDecoration: "none" }}>
+        <Button  style={{ marginTop: "0px", marginLeft:"5px", background: "#0066CC"}}
+         variant="contained" > 
+         BACK
+        </Button>
+        </Link> 
+        */}
+
         <WbSunnyTwoToneIcon style={{ marginRight: "20px" }} />
         <Typography variant="h5">Welcome to Epsilon</Typography>
         <Box
@@ -63,4 +80,4 @@ const Header = () => (
     </AppBar>
   </>
 );
-export default Header;
+export default HeaderBack;
