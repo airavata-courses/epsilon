@@ -1,0 +1,70 @@
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: users-service
+spec:
+  selector:
+    app: msvc-users
+  ports:
+    - protocol: "TCP"
+      # Port accessible inside cluster
+      port: 19032
+      # Port to forward to inside the pod
+      targetPort: 19032
+      # Port accessible outside cluster
+      #nodePort: 30002
+  #type: LoadBalancer
+
+
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: msvc-users
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: msvc-users
+  template:
+    metadata:
+      labels:
+        app: msvc-users
+    spec:
+      containers:
+        - name: users-service
+          env:
+            - name: DATABASE_URL
+              value: postgres://admin:admin@localhost:5432/epsilon
+            - name: NODE_ENV
+            - name: TOKEN_SECRET
+              value: changeme
+          image: epsilonsp22/users-service-linux:latest
+          ports:
+          - containerPort: 19032
+          resources: 
+            requests:
+              cpu: '200m'
+              memory: '256M'
+            limits:
+              cpu: '500m'
+              memory: '512M'
+        - name: users-db
+          env:
+          - name: POSTGRES_PASSWORD
+            value: admin
+          - name: POSTGRES_USER
+            value: admin
+          image: epsilonsp22/users-db-linux:latest
+          ports:
+            - containerPort: 5432
+          resources: 
+            requests:
+               cpu: '200m'
+               memory: '256M'
+            limits:
+               cpu: '300m'
+               memory: '512M'
+      restartPolicy: Always

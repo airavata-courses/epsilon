@@ -1,0 +1,52 @@
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: zookeeper-services
+spec:
+  selector:
+    app: zookeeper
+  ports:
+    - protocol: "TCP"
+      # Port accessible inside cluster
+      port: 2181
+      # Port to forward to inside the pod
+      targetPort: 2181
+      # Port accessible outside cluster
+      #nodePort: 30004
+  #type: LoadBalancer
+
+
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: zookeeper
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: zookeeper
+  template:
+    metadata:
+      labels:
+        app: zookeeper
+    spec:
+      containers:
+        - name: zookeeper
+          env:
+            - name: ALLOW_ANONYMOUS_LOGIN
+              value: 'yes'
+          image: bitnami/zookeeper:latest
+          ports:
+            - containerPort: 2181
+          tty: true
+          resources: 
+            requests:
+               cpu: '150m'
+               memory: '128M'
+            limits:
+               cpu: '300m'
+               memory: '256M'
+      restartPolicy: Always
