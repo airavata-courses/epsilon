@@ -47,4 +47,4 @@ workflows:
            - build
           filters:
             branches:
-              only: hw3-api-gtw-feature
+              only: hw3-release-api-gtw
