@@ -9,6 +9,8 @@ const dotenv = require("dotenv");
 dotenv.config({
   path: __dirname + "/.env",
 });
+const log = require("./api/v1/common/logs/logs.v1.services");
+global.globalLogger = log;
 
 const redis = require("redis");
 const session = require("express-session");
@@ -20,6 +22,7 @@ const REDIS = require("./api/v1/common/redis");
 
 global.redisNew = new REDIS();
 global.redisClient;
+console.log(`REDIS -- ${process.env.REDIS_HOST}:${process.env.REDIS_PORT}`);
 (async () => {
   redisClient = redis.createClient({
     host: process.env.REDIS_HOST,
@@ -39,9 +42,6 @@ const cors = require("cors");
 global.HttpStatus = require("http-status-codes");
 global.dirname = __dirname;
 global.app_name = "MSVC-USERS";
-
-const log = require("./api/v1/common/logs/logs.v1.services");
-global.globalLogger = log;
 
 const port = process.env.PORT || 3003;
 
@@ -136,6 +136,7 @@ let corsOptionsDelegate = function (req, callback) {
       origin: false,
     }; // disable CORS for this request
   }
+
   callback(null, corsOptions); // callback expects two parameters: error and options
 };
 
