@@ -20,10 +20,24 @@ exports.getUserHistory = getUserHistory;
 exports.getBinaryFromS3 = getBinaryFromS3;
 exports.getDates = getDates;
 
-async function getUserHistory(user_id) {
+async function getUserHistory(user_id, source) {
   try {
     let data = await axios.get(`${NODE_URL}v1/logs/${user_id}`);
-    return { Success: true, data: data.data.history };
+    final_data = [];
+    for (hist of data.data.history) {
+      if (hist.value.source == source) {
+        if (source == "NEXRAD") {
+          hist.key = `${hist.value.station} on ${hist.value.month}/${hist.value.day}/${hist.value.year} at ${hist.value.time}`;
+          final_data.push(hist);
+        }
+        if (source == "NASA") {
+          hist.key = `Satellite Data for ${hist.value.startDate} - ${hist.value.endDate}`;
+          final_data.push(hist);
+        }
+      }
+    }
+
+    return { Success: true, data: final_data };
   } catch (err) {
     console.log(err);
     return { success: false, msg: "Server did not respond" };
@@ -33,8 +47,9 @@ async function getUserHistory(user_id) {
 async function getBinaryFromS3(body, user) {
   try {
     let fileName = makeS3FileName(body);
-
+    console.log("File Name: ", fileName);
     let redisValue = await redisNew.get(`${fileName}${body.time}`);
+    console.log("redisValue ", redisValue, "for", `${fileName}${body.time}`);
     if (redisValue) {
       let file_name = "/files/" + redisValue;
       const file_new = await fs.readFileSync(path.join(dirname + file_name), {
@@ -54,6 +69,7 @@ async function getBinaryFromS3(body, user) {
     }
 
     body["user_id"] = user.id;
+    body["source"] = "NEXRAD";
     logUtils.logUserHistory(body, "ImageRequest");
 
     let pyResponse = await unirest
