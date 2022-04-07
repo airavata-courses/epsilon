@@ -1,0 +1,9 @@
+Django==4.0.1
+djangorestframework==3.13.1
+matplotlib==3.5.0
+tzdata
+pytest
+python-dotenv
+kafka-python
+redis
+imageio
