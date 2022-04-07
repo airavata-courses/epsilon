@@ -38,4 +38,4 @@ workflows:
       - build:
           filters:
             branches:
-              only: hw3-java-circleci
+              only: hw3-release-java
