@@ -2,6 +2,8 @@ let jwt = require("jsonwebtoken");
 
 exports.isAuthenticated = async function (req, res, next) {
   try {
+    console.log(req);
+    console.log(req.session);
     if (!req.session.user) {
       return res.errorBhejdo(HttpStatus.UNAUTHORIZED, {
         success: false,
