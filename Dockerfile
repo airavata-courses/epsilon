@@ -3,7 +3,7 @@ FROM node:latest as build
 WORKDIR /app
 
 ENV PATH /app/node_modules/.bin:$PATH
-ENV REACT_APP_API_GTW='http://149.165.153.71:30000'
+ENV REACT_APP_API_GTW='http://epsilon.pbrmtech.co.in:30000'
 COPY package.json ./
 COPY package-lock.json ./
 
