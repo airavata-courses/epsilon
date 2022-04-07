@@ -1,0 +1,78 @@
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: nasa-services
+spec:
+  selector:
+    app: msvc-nasa
+  ports:
+    - protocol: "TCP"
+      # Port accessible inside cluster
+      port: 19036
+      # Port to forward to inside the pod
+      targetPort: 19036
+      # Port accessible outside cluster
+      #nodePort: 30004
+  #type: LoadBalancer
+
+
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: msvc-nasa
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: msvc-nasa
+  template:
+    metadata:
+      labels:
+        app: msvc-nasa
+    spec:
+      containers:
+        - args:
+            - python
+            - -u
+            - manage.py
+            - runserver
+            - 0.0.0.0:19036
+          env:
+            - name: ALLOWED_HOSTS
+              value: '[''*'',]'
+            - name: PORT
+              value: "19036"
+            - name: KAFKA
+              value: kafka-services:9092
+            - name: REDIS_HOST
+              value: redis-server-service
+            - name: REDIS_PORT
+              value: "6379"
+            - name: PYTHONUNBUFFERED
+              value: "1"
+            - name: ABC
+              value: vavish2097
+            - name: DEF
+              value: Vaibhav_9856
+          image: epsilonsp22/python-nasa:latest
+          name: msvc-python
+          ports:
+            - containerPort: 19036
+          resources: 
+            requests:
+               cpu: '500m'
+               memory: '7800M'
+            limits:
+               cpu: '700m'
+               memory: '10240M'
+          volumeMounts:
+            - mountPath: /msvc-nasa-python/files
+              name: files
+      restartPolicy: Always
+      volumes:
+        - name: files
+          persistentVolumeClaim:
+            claimName: files

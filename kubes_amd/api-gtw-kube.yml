@@ -14,7 +14,7 @@ spec:
       targetPort: 19030
       # Port accessible outside cluster
       nodePort: 30000
-  type: LoadBalancer
+  type: NodePort
 
 
 
@@ -52,8 +52,14 @@ spec:
             - name: TOKEN_SECRET
               value: 8ba7493001075aa54efc272589e48c57030fa4682e9d6a4cde8622089b5476f8
             - name: WHITELIST
-              value: http://localhost:20001,http://localhost:3000,http://localhost:3001,http://epsilon.pbrmtech.co.in/,http://149.165.153.71:30000
-          image: epsilonsp22/epsilon-api-gtw:latest
+              value: 'http://localhost:19032,http://localhost:20001,http://localhost:3000,http://localhost:3001,http://epsilon.pbrmtech.co.in,http://149.165.153.71:30000'
+            - name: PORT
+              value: "19030"
+            - name: ENABLE_CACHE
+              value: "1"
+            - name: KAFKA
+              value: kafka-services:9092
+          image: epsilonsp22/epsilon-api-gtw-linux:latest
           name: api-gtw
           ports:
             - containerPort: 19030

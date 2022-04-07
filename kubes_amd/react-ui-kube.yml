@@ -1,0 +1,51 @@
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: react-ui
+spec:
+  selector:
+    app: react-ui
+  ports:
+    - protocol: "TCP"
+      # Port accessible inside cluster
+      port: 80
+      # Port to forward to inside the pod
+      targetPort: 80
+      # Port accessible outside cluster
+      nodePort: 31000
+  type: NodePort
+
+
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: react-ui
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: react-ui
+  template:
+    metadata:
+      labels:
+        app: react-ui
+    spec:
+      containers:
+        - image: epsilonsp22/react-ui-linux:latest
+          env:
+            - name: REACT_APP_API_GTW
+              value: http://epsilon.pbrmtech.co.in:30000
+          name: react-ui
+          ports:
+            - containerPort: 80
+          resources: 
+            requests:
+               cpu: '500m'
+               memory: '1024M'
+            limits:
+               cpu: '700m'
+               memory: '2048M'
+      restartPolicy: Always
