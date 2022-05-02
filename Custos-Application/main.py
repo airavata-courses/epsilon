@@ -1,4 +1,3 @@
-from flask import Flask
 import uvicorn
 from fastapi.middleware import Middleware
 from fastapi.middleware.cors import CORSMiddleware
@@ -8,7 +7,6 @@ from starlette.responses import Response
 from functools import lru_cache
 import config
 
-app = Flask(__name__)
 app = FastAPI()
 
 # ENVIRONMENT VARIABLES
