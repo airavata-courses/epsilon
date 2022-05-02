@@ -6,7 +6,7 @@ from starlette.requests import Request
 from starlette.responses import Response
 from functools import lru_cache
 import config
-import custos
+import custosFunctions
 
 app = FastAPI()
 
