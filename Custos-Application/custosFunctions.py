@@ -62,7 +62,7 @@ except Exception as e:
 """
 
 
-def verifiy_user(login_user_id, login_user_password):
+async def verifiy_user(login_user_id, login_user_password):
     print("Login user " + login_user_id)
     login_reponse = identity_management_client.token(
         token=b64_encoded_custos_token, username=login_user_id, password=login_user_password, grant_type='password')
@@ -70,6 +70,7 @@ def verifiy_user(login_user_id, login_user_password):
     print("Login response: ", login_reponse)
     response = user_management_client.get_user(
         token=b64_encoded_custos_token, username=login_user_id)
+
     print(" Updating user profile...  ")
     user_management_client.update_user_profile(
         token=b64_encoded_custos_token,
@@ -79,10 +80,10 @@ def verifiy_user(login_user_id, login_user_password):
         last_name=response.last_name)
     print(" User  " + login_user_id +
           " successfully logged in and updated profile")
+    return response
 
 
 print("verifiy_user method is defined")
-
 
 
 """## Register new users
@@ -90,7 +91,7 @@ print("verifiy_user method is defined")
 """
 
 
-def register_users(users):
+async def register_users(users):
     for user in users:
         print("Registering user: " + user['username'])
         try:
@@ -226,6 +227,7 @@ def allocate_users_to_groups(user_group_mapping):
                                                             )
             resp = MessageToJson(val)
             print(resp)
+            return resp
         except Exception as e:
             print(e)
             print("User allocation error")
@@ -259,7 +261,6 @@ user_group_mapping = [
         'username': 'adalee'
     }
 ]
-
 
 
 """## Create group hierarchy
@@ -433,13 +434,13 @@ def share_resource_with_group(gr_sharings):
 
 print("share_resource_with_group method is defined")
 
-gr_sharings = [{
+# gr_sharings = [{
 
-    "entity_id": resource_ids[0],
-    "permission_type": "READ",
-    "type": "EXPERIMENT",
-    "group_name": 'Read Only Admin'
-}]
+#     "entity_id": resource_ids[0],
+#     "permission_type": "READ",
+#     "type": "EXPERIMENT",
+#     "group_name": 'Read Only Admin'
+# }]
 
 """## Share entity with a user
 
@@ -468,14 +469,14 @@ def share_resource_with_user(sharings):
 
 print("share_resource_with_user method is defined")
 
-sharings = [
-    {
-        "entity_id": resource_ids[0],
-        "permission_type": "READ",
-        "type": "EXPERIMENT",
-        "user_id": "abigaill"
-    }
-]
+# sharings = [
+#     {
+#         "entity_id": resource_ids[0],
+#         "permission_type": "READ",
+#         "type": "EXPERIMENT",
+#         "user_id": "abigaill"
+#     }
+# ]
 
 """## Evaluate permissions
 
@@ -538,4 +539,3 @@ sharing_management_client.create_entity(token=b64_encoded_custos_token,
                                         owner_id=admin_user_name,
                                         type='SECRET',
                                         parent_id='')
-
