@@ -83,16 +83,9 @@ def verifiy_user(login_user_id, login_user_password):
 
 print("verifiy_user method is defined")
 
-try:
-    verifiy_user(admin_user_name, admin_password)
-    print("Successfully verified user")
-except Exception as e:
-    print("verifiy_user is not defined or user may not be created  in the teanant" + str(e))
+
 
 """## Register new users
-
-
-
 
 """
 
@@ -161,10 +154,6 @@ users = [
     }
 ]
 
-try:
-    register_users(users)
-except Exception:
-    print("please defined method register_users")
 
 """## Create groups
 * Admin group
@@ -214,24 +203,12 @@ groups = [
         'owner_id': admin_user_name
     }
 ]
-try:
-    create_groups(groups)
-except Exception as e:
-    print(e)
-    print("please defined method create_groups")
 
 """## Alocate users to groups
-
 
 * Admin : alice, audery
 * Read only admin : sophia,abelota
 * Gateway User :  abgaill, adalee
-
-
-
-
-
-
 
 """
 
@@ -283,10 +260,7 @@ user_group_mapping = [
     }
 ]
 
-try:
-    allocate_users_to_groups(user_group_mapping)
-except Exception:
-    print("please defined method allocate_users_to_groups")
+
 
 """## Create group hierarchy
 * Assign Admin group as a child of Read Only Admin group
@@ -316,10 +290,6 @@ child_gr_parent_gr_mapping = [
     }
 ]
 
-try:
-    allocate_child_group_to_parent_group(child_gr_parent_gr_mapping)
-except Exception:
-    print("please defined method allocate_child_group_to_parent_group")
 
 """## Create Permissions
 
@@ -357,10 +327,6 @@ permissions = [
         'description': 'WRITE permission'
     }
 ]
-try:
-    create_permissions(permissions)
-except Exception:
-    print("please defined method create_permissions")
 
 """## Create entity type
 
@@ -400,10 +366,6 @@ entity_types = [
         'description': 'EXPERIMENT entity type'
     }
 ]
-try:
-    create_entity_types(entity_types)
-except Exception:
-    print("please defined method create_entity_types")
 
 """## Register entity 
 
@@ -443,10 +405,6 @@ resources = [
         'type': 'EXPERIMENT'
     }
 ]
-try:
-    register_resources(resources)
-except Exception as e:
-    print("Please defined method register_resources")
 
 """## Share resource with group
 
@@ -482,10 +440,6 @@ gr_sharings = [{
     "type": "EXPERIMENT",
     "group_name": 'Read Only Admin'
 }]
-try:
-    share_resource_with_group(gr_sharings)
-except Exception as e:
-    print("please defined method share_resource_with_group")
 
 """## Share entity with a user
 
@@ -522,10 +476,6 @@ sharings = [
         "user_id": "abigaill"
     }
 ]
-try:
-    share_resource_with_user(sharings)
-except Exception as e:
-    print("Please defined method share_resource_with_user")
 
 """## Evaluate permissions
 
@@ -558,12 +508,6 @@ def check_user_permissions(users):
 
 print("check_user_permissions is defined")
 
-try:
-    check_user_permissions(users)
-except Exception as e:
-    print(e)
-    print("please defined methos check_user_permissions")
-
 """# Secret Management
 
 ## Create SSH Key
@@ -594,5 +538,4 @@ sharing_management_client.create_entity(token=b64_encoded_custos_token,
                                         owner_id=admin_user_name,
                                         type='SECRET',
                                         parent_id='')
-value = get_SSH_key(token)
-print(value)
+
