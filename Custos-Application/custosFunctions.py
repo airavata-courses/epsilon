@@ -20,8 +20,8 @@ try:
     # read settings
     custos_settings = CustosServerClientSettings(custos_host='custos.scigap.org',
                                                  custos_port='31499',
-                                                 custos_client_id='custos-wwiyeainy5iuqp8rf0dh-10003415',
-                                                 custos_client_sec='NXiaLSa6mEA2RUl2XyCg2ZRlwTaq2xCvEMQUhP1K')
+                                                 custos_client_id='custos-1byxdgqtjllmsolh8iq3-10003425',
+                                                 custos_client_sec='aJjfu44Fn7zvkNMEJCPnGf6xZAYdKWCtsUhvsFXW')
 
 # create custos user management client
     user_management_client = UserManagementClient(custos_settings)
