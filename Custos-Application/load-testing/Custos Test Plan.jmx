@@ -18,7 +18,7 @@
           <boolProp name="LoopController.continue_forever">false</boolProp>
           <stringProp name="LoopController.loops">1</stringProp>
         </elementProp>
-        <stringProp name="ThreadGroup.num_threads">1</stringProp>
+        <stringProp name="ThreadGroup.num_threads">100</stringProp>
         <stringProp name="ThreadGroup.ramp_time">1</stringProp>
         <boolProp name="ThreadGroup.scheduler">false</boolProp>
         <stringProp name="ThreadGroup.duration"></stringProp>
@@ -330,7 +330,7 @@
                 <boolProp name="HTTPArgument.always_encode">false</boolProp>
                 <stringProp name="Argument.value">{&quot;resources&quot; :[&#xd;
     {&#xd;
-        &quot;name&quot;: &quot;Experiment${__threadNum}&quot;,&#xd;
+        &quot;name&quot;: &quot;LTExperiment${__threadNum}&quot;,&#xd;
         &quot;description&quot;: &quot;Register an experiment&quot;,&#xd;
         &quot;user_id&quot;: &quot;pnbhakta@iu.edu&quot;,&#xd;
         &quot;type&quot;: &quot;${type}&quot;&#xd;
@@ -375,7 +375,7 @@
                 <boolProp name="HTTPArgument.always_encode">false</boolProp>
                 <stringProp name="Argument.value">{&quot;gr_sharings&quot; :[{&#xd;
 &#xd;
-    &quot;entity_id&quot;: &quot;Experiment${__threadNum}&quot;,&#xd;
+    &quot;entity_id&quot;: &quot;LTExperiment${__threadNum}&quot;,&#xd;
     &quot;permission_type&quot;: &quot;READ&quot;,&#xd;
     &quot;type&quot;: &quot;${type}&quot;,&#xd;
     &quot;group_name&quot;: &quot;${Groupname}&quot;&#xd;
@@ -460,7 +460,7 @@
                 <boolProp name="HTTPArgument.always_encode">false</boolProp>
                 <stringProp name="Argument.value">{&quot;sharings&quot; : [&#xd;
     {&#xd;
-        &quot;entity_id&quot;: &quot;Experiment${__threadNum}&quot;,&#xd;
+        &quot;entity_id&quot;: &quot;LTExperiment${__threadNum}&quot;,&#xd;
         &quot;permission_type&quot;: &quot;READ&quot;,&#xd;
         &quot;type&quot;: &quot;${type}&quot;,&#xd;
         &quot;user_id&quot;: &quot;${username}&quot;&#xd;
