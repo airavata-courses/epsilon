@@ -1,0 +1,19 @@
+timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success,failureMessage,bytes,sentBytes,grpThreads,allThreads,URL,Latency,IdleTime,Connect
+1651560047759,520,Register New User Request,200,OK,Custos Thread Group 1-1,text,true,,143,352,1,1,http://127.0.0.1:8888/registerUsers,520,0,1
+1651560048279,1356,Create Group Request,200,OK,Custos Thread Group 1-1,text,true,,143,908,1,1,http://127.0.0.1:8888/createGroups,1356,0,0
+1651560049635,486,Create Permission Request,200,OK,Custos Thread Group 1-1,text,true,,143,543,1,1,http://127.0.0.1:8888/createPermission,486,0,0
+1651560050122,614,Create Entity Type Request,200,OK,Custos Thread Group 1-1,text,true,,143,585,1,1,http://127.0.0.1:8888/createEntityType,614,0,0
+1651560050736,2764,Verify User Request,200,OK,Custos Thread Group 1-1,text,true,,182,253,1,1,http://127.0.0.1:8888/verifyUser,2764,0,0
+1651560053500,410,Register Resources Request,500,Internal Server Error,Custos Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[5]]]00
+
+****** comparison: [[[2]]]00
+
+/",163,374,1,1,http://127.0.0.1:8888/registerResources,410,0,0
+1651560053910,409,Share Resources with Group Request,200,OK,Custos Thread Group 1-1,text,true,,143,347,1,1,http://127.0.0.1:8888/shareResourceWithGroup,409,0,0
+1651560054320,153,Allocate User to Group Request,200,OK,Custos Thread Group 1-1,text,true,,151,288,1,1,http://127.0.0.1:8888/allocateUsersToGroups,153,0,0
+1651560054474,440,Share Resource With User Request,200,OK,Custos Thread Group 1-1,text,true,,143,367,1,1,http://127.0.0.1:8888/shareResourceWithUser,440,0,0
+1651560054915,169,Check User Permission Request,200,OK,Custos Thread Group 1-1,text,true,,143,243,1,1,http://127.0.0.1:8888/checkUserPermission,169,0,0
+1651560055084,357,Create SSH Request,200,OK,Custos Thread Group 1-1,text,true,,128,257,1,1,http://127.0.0.1:8888/createSSH,357,0,0
+1651560055442,1,Get SSH Request,500,Internal Server Error,Custos Thread Group 1-1,text,false,,174,175,1,1,http://127.0.0.1:8888/getSSH,1,0,0
