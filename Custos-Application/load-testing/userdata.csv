@@ -1,4 +1,1000 @@
-1,custosuser12001,User,12001,custosuser12001@gmail.com,12345678,EXPERIMENT,Read Only Admin
-2,custosuser12002,User,12002,custosuser12002@gmail.com,12345678,ASSIGNMENT,Gateway User
-3,custosuser12003,User,12003,custosuser12003@gmail.com,12345678,PROJECT,Science User
-4,custosuser12004,User,12004,custosuser12004@gmail.com,12345678,EXPERIMENT,Service User
+0,custosuser6000,User,6000,custosuser6000@gmail.com,12345678,PROJECT,Admin
+1,custosuser6001,User,6001,custosuser6001@gmail.com,12345678,EXPERIMENT,Read Only Admin
+2,custosuser6002,User,6002,custosuser6002@gmail.com,12345678,ASSIGNMENT,Gateway User
+3,custosuser6003,User,6003,custosuser6003@gmail.com,12345678,PROJECT,Science User
+4,custosuser6004,User,6004,custosuser6004@gmail.com,12345678,EXPERIMENT,Service User
+5,custosuser6005,User,6005,custosuser6005@gmail.com,12345678,ASSIGNMENT,Admin
+6,custosuser6006,User,6006,custosuser6006@gmail.com,12345678,PROJECT,Read Only Admin
+7,custosuser6007,User,6007,custosuser6007@gmail.com,12345678,EXPERIMENT,Gateway User
+8,custosuser6008,User,6008,custosuser6008@gmail.com,12345678,ASSIGNMENT,Science User
+9,custosuser6009,User,6009,custosuser6009@gmail.com,12345678,PROJECT,Service User
+10,custosuser6010,User,6010,custosuser6010@gmail.com,12345678,EXPERIMENT,Admin
+11,custosuser6011,User,6011,custosuser6011@gmail.com,12345678,ASSIGNMENT,Read Only Admin
+12,custosuser6012,User,6012,custosuser6012@gmail.com,12345678,PROJECT,Gateway User
+13,custosuser6013,User,6013,custosuser6013@gmail.com,12345678,EXPERIMENT,Science User
+14,custosuser6014,User,6014,custosuser6014@gmail.com,12345678,ASSIGNMENT,Service User
+15,custosuser6015,User,6015,custosuser6015@gmail.com,12345678,PROJECT,Admin
+16,custosuser6016,User,6016,custosuser6016@gmail.com,12345678,EXPERIMENT,Read Only Admin
+17,custosuser6017,User,6017,custosuser6017@gmail.com,12345678,ASSIGNMENT,Gateway User
+18,custosuser6018,User,6018,custosuser6018@gmail.com,12345678,PROJECT,Science User
+19,custosuser6019,User,6019,custosuser6019@gmail.com,12345678,EXPERIMENT,Service User
+20,custosuser6020,User,6020,custosuser6020@gmail.com,12345678,ASSIGNMENT,Admin
+21,custosuser6021,User,6021,custosuser6021@gmail.com,12345678,PROJECT,Read Only Admin
+22,custosuser6022,User,6022,custosuser6022@gmail.com,12345678,EXPERIMENT,Gateway User
+23,custosuser6023,User,6023,custosuser6023@gmail.com,12345678,ASSIGNMENT,Science User
+24,custosuser6024,User,6024,custosuser6024@gmail.com,12345678,PROJECT,Service User
+25,custosuser6025,User,6025,custosuser6025@gmail.com,12345678,EXPERIMENT,Admin
+26,custosuser6026,User,6026,custosuser6026@gmail.com,12345678,ASSIGNMENT,Read Only Admin
+27,custosuser6027,User,6027,custosuser6027@gmail.com,12345678,PROJECT,Gateway User
+28,custosuser6028,User,6028,custosuser6028@gmail.com,12345678,EXPERIMENT,Science User
+29,custosuser6029,User,6029,custosuser6029@gmail.com,12345678,ASSIGNMENT,Service User
+30,custosuser6030,User,6030,custosuser6030@gmail.com,12345678,PROJECT,Admin
+31,custosuser6031,User,6031,custosuser6031@gmail.com,12345678,EXPERIMENT,Read Only Admin
+32,custosuser6032,User,6032,custosuser6032@gmail.com,12345678,ASSIGNMENT,Gateway User
+33,custosuser6033,User,6033,custosuser6033@gmail.com,12345678,PROJECT,Science User
+34,custosuser6034,User,6034,custosuser6034@gmail.com,12345678,EXPERIMENT,Service User
+35,custosuser6035,User,6035,custosuser6035@gmail.com,12345678,ASSIGNMENT,Admin
+36,custosuser6036,User,6036,custosuser6036@gmail.com,12345678,PROJECT,Read Only Admin
+37,custosuser6037,User,6037,custosuser6037@gmail.com,12345678,EXPERIMENT,Gateway User
+38,custosuser6038,User,6038,custosuser6038@gmail.com,12345678,ASSIGNMENT,Science User
+39,custosuser6039,User,6039,custosuser6039@gmail.com,12345678,PROJECT,Service User
+40,custosuser6040,User,6040,custosuser6040@gmail.com,12345678,EXPERIMENT,Admin
+41,custosuser6041,User,6041,custosuser6041@gmail.com,12345678,ASSIGNMENT,Read Only Admin
+42,custosuser6042,User,6042,custosuser6042@gmail.com,12345678,PROJECT,Gateway User
+43,custosuser6043,User,6043,custosuser6043@gmail.com,12345678,EXPERIMENT,Science User
+44,custosuser6044,User,6044,custosuser6044@gmail.com,12345678,ASSIGNMENT,Service User
+45,custosuser6045,User,6045,custosuser6045@gmail.com,12345678,PROJECT,Admin
+46,custosuser6046,User,6046,custosuser6046@gmail.com,12345678,EXPERIMENT,Read Only Admin
+47,custosuser6047,User,6047,custosuser6047@gmail.com,12345678,ASSIGNMENT,Gateway User
+48,custosuser6048,User,6048,custosuser6048@gmail.com,12345678,PROJECT,Science User
+49,custosuser6049,User,6049,custosuser6049@gmail.com,12345678,EXPERIMENT,Service User
+50,custosuser6050,User,6050,custosuser6050@gmail.com,12345678,ASSIGNMENT,Admin
+51,custosuser6051,User,6051,custosuser6051@gmail.com,12345678,PROJECT,Read Only Admin
+52,custosuser6052,User,6052,custosuser6052@gmail.com,12345678,EXPERIMENT,Gateway User
+53,custosuser6053,User,6053,custosuser6053@gmail.com,12345678,ASSIGNMENT,Science User
+54,custosuser6054,User,6054,custosuser6054@gmail.com,12345678,PROJECT,Service User
+55,custosuser6055,User,6055,custosuser6055@gmail.com,12345678,EXPERIMENT,Admin
+56,custosuser6056,User,6056,custosuser6056@gmail.com,12345678,ASSIGNMENT,Read Only Admin
+57,custosuser6057,User,6057,custosuser6057@gmail.com,12345678,PROJECT,Gateway User
+58,custosuser6058,User,6058,custosuser6058@gmail.com,12345678,EXPERIMENT,Science User
+59,custosuser6059,User,6059,custosuser6059@gmail.com,12345678,ASSIGNMENT,Service User
+60,custosuser6060,User,6060,custosuser6060@gmail.com,12345678,PROJECT,Admin
+61,custosuser6061,User,6061,custosuser6061@gmail.com,12345678,EXPERIMENT,Read Only Admin
+62,custosuser6062,User,6062,custosuser6062@gmail.com,12345678,ASSIGNMENT,Gateway User
+63,custosuser6063,User,6063,custosuser6063@gmail.com,12345678,PROJECT,Science User
+64,custosuser6064,User,6064,custosuser6064@gmail.com,12345678,EXPERIMENT,Service User
+65,custosuser6065,User,6065,custosuser6065@gmail.com,12345678,ASSIGNMENT,Admin
+66,custosuser6066,User,6066,custosuser6066@gmail.com,12345678,PROJECT,Read Only Admin
+67,custosuser6067,User,6067,custosuser6067@gmail.com,12345678,EXPERIMENT,Gateway User
+68,custosuser6068,User,6068,custosuser6068@gmail.com,12345678,ASSIGNMENT,Science User
+69,custosuser6069,User,6069,custosuser6069@gmail.com,12345678,PROJECT,Service User
+70,custosuser6070,User,6070,custosuser6070@gmail.com,12345678,EXPERIMENT,Admin
+71,custosuser6071,User,6071,custosuser6071@gmail.com,12345678,ASSIGNMENT,Read Only Admin
+72,custosuser6072,User,6072,custosuser6072@gmail.com,12345678,PROJECT,Gateway User
+73,custosuser6073,User,6073,custosuser6073@gmail.com,12345678,EXPERIMENT,Science User
+74,custosuser6074,User,6074,custosuser6074@gmail.com,12345678,ASSIGNMENT,Service User
+75,custosuser6075,User,6075,custosuser6075@gmail.com,12345678,PROJECT,Admin
+76,custosuser6076,User,6076,custosuser6076@gmail.com,12345678,EXPERIMENT,Read Only Admin
+77,custosuser6077,User,6077,custosuser6077@gmail.com,12345678,ASSIGNMENT,Gateway User
+78,custosuser6078,User,6078,custosuser6078@gmail.com,12345678,PROJECT,Science User
+79,custosuser6079,User,6079,custosuser6079@gmail.com,12345678,EXPERIMENT,Service User
+80,custosuser6080,User,6080,custosuser6080@gmail.com,12345678,ASSIGNMENT,Admin
+81,custosuser6081,User,6081,custosuser6081@gmail.com,12345678,PROJECT,Read Only Admin
+82,custosuser6082,User,6082,custosuser6082@gmail.com,12345678,EXPERIMENT,Gateway User
+83,custosuser6083,User,6083,custosuser6083@gmail.com,12345678,ASSIGNMENT,Science User
+84,custosuser6084,User,6084,custosuser6084@gmail.com,12345678,PROJECT,Service User
+85,custosuser6085,User,6085,custosuser6085@gmail.com,12345678,EXPERIMENT,Admin
+86,custosuser6086,User,6086,custosuser6086@gmail.com,12345678,ASSIGNMENT,Read Only Admin
+87,custosuser6087,User,6087,custosuser6087@gmail.com,12345678,PROJECT,Gateway User
+88,custosuser6088,User,6088,custosuser6088@gmail.com,12345678,EXPERIMENT,Science User
+89,custosuser6089,User,6089,custosuser6089@gmail.com,12345678,ASSIGNMENT,Service User
+90,custosuser6090,User,6090,custosuser6090@gmail.com,12345678,PROJECT,Admin
+91,custosuser6091,User,6091,custosuser6091@gmail.com,12345678,EXPERIMENT,Read Only Admin
+92,custosuser6092,User,6092,custosuser6092@gmail.com,12345678,ASSIGNMENT,Gateway User
+93,custosuser6093,User,6093,custosuser6093@gmail.com,12345678,PROJECT,Science User
+94,custosuser6094,User,6094,custosuser6094@gmail.com,12345678,EXPERIMENT,Service User
+95,custosuser6095,User,6095,custosuser6095@gmail.com,12345678,ASSIGNMENT,Admin
+96,custosuser6096,User,6096,custosuser6096@gmail.com,12345678,PROJECT,Read Only Admin
+97,custosuser6097,User,6097,custosuser6097@gmail.com,12345678,EXPERIMENT,Gateway User
+98,custosuser6098,User,6098,custosuser6098@gmail.com,12345678,ASSIGNMENT,Science User
+99,custosuser6099,User,6099,custosuser6099@gmail.com,12345678,PROJECT,Service User
+100,custosuser6100,User,6100,custosuser6100@gmail.com,12345678,EXPERIMENT,Admin
+101,custosuser6101,User,6101,custosuser6101@gmail.com,12345678,ASSIGNMENT,Read Only Admin
+102,custosuser6102,User,6102,custosuser6102@gmail.com,12345678,PROJECT,Gateway User
+103,custosuser6103,User,6103,custosuser6103@gmail.com,12345678,EXPERIMENT,Science User
+104,custosuser6104,User,6104,custosuser6104@gmail.com,12345678,ASSIGNMENT,Service User
+105,custosuser6105,User,6105,custosuser6105@gmail.com,12345678,PROJECT,Admin
+106,custosuser6106,User,6106,custosuser6106@gmail.com,12345678,EXPERIMENT,Read Only Admin
+107,custosuser6107,User,6107,custosuser6107@gmail.com,12345678,ASSIGNMENT,Gateway User
+108,custosuser6108,User,6108,custosuser6108@gmail.com,12345678,PROJECT,Science User
+109,custosuser6109,User,6109,custosuser6109@gmail.com,12345678,EXPERIMENT,Service User
+110,custosuser6110,User,6110,custosuser6110@gmail.com,12345678,ASSIGNMENT,Admin
+111,custosuser6111,User,6111,custosuser6111@gmail.com,12345678,PROJECT,Read Only Admin
+112,custosuser6112,User,6112,custosuser6112@gmail.com,12345678,EXPERIMENT,Gateway User
+113,custosuser6113,User,6113,custosuser6113@gmail.com,12345678,ASSIGNMENT,Science User
+114,custosuser6114,User,6114,custosuser6114@gmail.com,12345678,PROJECT,Service User
+115,custosuser6115,User,6115,custosuser6115@gmail.com,12345678,EXPERIMENT,Admin
+116,custosuser6116,User,6116,custosuser6116@gmail.com,12345678,ASSIGNMENT,Read Only Admin
+117,custosuser6117,User,6117,custosuser6117@gmail.com,12345678,PROJECT,Gateway User
+118,custosuser6118,User,6118,custosuser6118@gmail.com,12345678,EXPERIMENT,Science User
+119,custosuser6119,User,6119,custosuser6119@gmail.com,12345678,ASSIGNMENT,Service User
+120,custosuser6120,User,6120,custosuser6120@gmail.com,12345678,PROJECT,Admin
+121,custosuser6121,User,6121,custosuser6121@gmail.com,12345678,EXPERIMENT,Read Only Admin
+122,custosuser6122,User,6122,custosuser6122@gmail.com,12345678,ASSIGNMENT,Gateway User
+123,custosuser6123,User,6123,custosuser6123@gmail.com,12345678,PROJECT,Science User
+124,custosuser6124,User,6124,custosuser6124@gmail.com,12345678,EXPERIMENT,Service User
+125,custosuser6125,User,6125,custosuser6125@gmail.com,12345678,ASSIGNMENT,Admin
+126,custosuser6126,User,6126,custosuser6126@gmail.com,12345678,PROJECT,Read Only Admin
+127,custosuser6127,User,6127,custosuser6127@gmail.com,12345678,EXPERIMENT,Gateway User
+128,custosuser6128,User,6128,custosuser6128@gmail.com,12345678,ASSIGNMENT,Science User
+129,custosuser6129,User,6129,custosuser6129@gmail.com,12345678,PROJECT,Service User
+130,custosuser6130,User,6130,custosuser6130@gmail.com,12345678,EXPERIMENT,Admin
+131,custosuser6131,User,6131,custosuser6131@gmail.com,12345678,ASSIGNMENT,Read Only Admin
+132,custosuser6132,User,6132,custosuser6132@gmail.com,12345678,PROJECT,Gateway User
+133,custosuser6133,User,6133,custosuser6133@gmail.com,12345678,EXPERIMENT,Science User
+134,custosuser6134,User,6134,custosuser6134@gmail.com,12345678,ASSIGNMENT,Service User
+135,custosuser6135,User,6135,custosuser6135@gmail.com,12345678,PROJECT,Admin
+136,custosuser6136,User,6136,custosuser6136@gmail.com,12345678,EXPERIMENT,Read Only Admin
+137,custosuser6137,User,6137,custosuser6137@gmail.com,12345678,ASSIGNMENT,Gateway User
+138,custosuser6138,User,6138,custosuser6138@gmail.com,12345678,PROJECT,Science User
+139,custosuser6139,User,6139,custosuser6139@gmail.com,12345678,EXPERIMENT,Service User
+140,custosuser6140,User,6140,custosuser6140@gmail.com,12345678,ASSIGNMENT,Admin
+141,custosuser6141,User,6141,custosuser6141@gmail.com,12345678,PROJECT,Read Only Admin
+142,custosuser6142,User,6142,custosuser6142@gmail.com,12345678,EXPERIMENT,Gateway User
+143,custosuser6143,User,6143,custosuser6143@gmail.com,12345678,ASSIGNMENT,Science User
+144,custosuser6144,User,6144,custosuser6144@gmail.com,12345678,PROJECT,Service User
+145,custosuser6145,User,6145,custosuser6145@gmail.com,12345678,EXPERIMENT,Admin
+146,custosuser6146,User,6146,custosuser6146@gmail.com,12345678,ASSIGNMENT,Read Only Admin
+147,custosuser6147,User,6147,custosuser6147@gmail.com,12345678,PROJECT,Gateway User
+148,custosuser6148,User,6148,custosuser6148@gmail.com,12345678,EXPERIMENT,Science User
+149,custosuser6149,User,6149,custosuser6149@gmail.com,12345678,ASSIGNMENT,Service User
+150,custosuser6150,User,6150,custosuser6150@gmail.com,12345678,PROJECT,Admin
+151,custosuser6151,User,6151,custosuser6151@gmail.com,12345678,EXPERIMENT,Read Only Admin
+152,custosuser6152,User,6152,custosuser6152@gmail.com,12345678,ASSIGNMENT,Gateway User
+153,custosuser6153,User,6153,custosuser6153@gmail.com,12345678,PROJECT,Science User
+154,custosuser6154,User,6154,custosuser6154@gmail.com,12345678,EXPERIMENT,Service User
+155,custosuser6155,User,6155,custosuser6155@gmail.com,12345678,ASSIGNMENT,Admin
+156,custosuser6156,User,6156,custosuser6156@gmail.com,12345678,PROJECT,Read Only Admin
+157,custosuser6157,User,6157,custosuser6157@gmail.com,12345678,EXPERIMENT,Gateway User
+158,custosuser6158,User,6158,custosuser6158@gmail.com,12345678,ASSIGNMENT,Science User
+159,custosuser6159,User,6159,custosuser6159@gmail.com,12345678,PROJECT,Service User
+160,custosuser6160,User,6160,custosuser6160@gmail.com,12345678,EXPERIMENT,Admin
+161,custosuser6161,User,6161,custosuser6161@gmail.com,12345678,ASSIGNMENT,Read Only Admin
+162,custosuser6162,User,6162,custosuser6162@gmail.com,12345678,PROJECT,Gateway User
+163,custosuser6163,User,6163,custosuser6163@gmail.com,12345678,EXPERIMENT,Science User
+164,custosuser6164,User,6164,custosuser6164@gmail.com,12345678,ASSIGNMENT,Service User
+165,custosuser6165,User,6165,custosuser6165@gmail.com,12345678,PROJECT,Admin
+166,custosuser6166,User,6166,custosuser6166@gmail.com,12345678,EXPERIMENT,Read Only Admin
+167,custosuser6167,User,6167,custosuser6167@gmail.com,12345678,ASSIGNMENT,Gateway User
+168,custosuser6168,User,6168,custosuser6168@gmail.com,12345678,PROJECT,Science User
+169,custosuser6169,User,6169,custosuser6169@gmail.com,12345678,EXPERIMENT,Service User
+170,custosuser6170,User,6170,custosuser6170@gmail.com,12345678,ASSIGNMENT,Admin
+171,custosuser6171,User,6171,custosuser6171@gmail.com,12345678,PROJECT,Read Only Admin
+172,custosuser6172,User,6172,custosuser6172@gmail.com,12345678,EXPERIMENT,Gateway User
+173,custosuser6173,User,6173,custosuser6173@gmail.com,12345678,ASSIGNMENT,Science User
+174,custosuser6174,User,6174,custosuser6174@gmail.com,12345678,PROJECT,Service User
+175,custosuser6175,User,6175,custosuser6175@gmail.com,12345678,EXPERIMENT,Admin
+176,custosuser6176,User,6176,custosuser6176@gmail.com,12345678,ASSIGNMENT,Read Only Admin
+177,custosuser6177,User,6177,custosuser6177@gmail.com,12345678,PROJECT,Gateway User
+178,custosuser6178,User,6178,custosuser6178@gmail.com,12345678,EXPERIMENT,Science User
+179,custosuser6179,User,6179,custosuser6179@gmail.com,12345678,ASSIGNMENT,Service User
+180,custosuser6180,User,6180,custosuser6180@gmail.com,12345678,PROJECT,Admin
+181,custosuser6181,User,6181,custosuser6181@gmail.com,12345678,EXPERIMENT,Read Only Admin
+182,custosuser6182,User,6182,custosuser6182@gmail.com,12345678,ASSIGNMENT,Gateway User
+183,custosuser6183,User,6183,custosuser6183@gmail.com,12345678,PROJECT,Science User
+184,custosuser6184,User,6184,custosuser6184@gmail.com,12345678,EXPERIMENT,Service User
+185,custosuser6185,User,6185,custosuser6185@gmail.com,12345678,ASSIGNMENT,Admin
+186,custosuser6186,User,6186,custosuser6186@gmail.com,12345678,PROJECT,Read Only Admin
+187,custosuser6187,User,6187,custosuser6187@gmail.com,12345678,EXPERIMENT,Gateway User
+188,custosuser6188,User,6188,custosuser6188@gmail.com,12345678,ASSIGNMENT,Science User
+189,custosuser6189,User,6189,custosuser6189@gmail.com,12345678,PROJECT,Service User
+190,custosuser6190,User,6190,custosuser6190@gmail.com,12345678,EXPERIMENT,Admin
+191,custosuser6191,User,6191,custosuser6191@gmail.com,12345678,ASSIGNMENT,Read Only Admin
+192,custosuser6192,User,6192,custosuser6192@gmail.com,12345678,PROJECT,Gateway User
+193,custosuser6193,User,6193,custosuser6193@gmail.com,12345678,EXPERIMENT,Science User
+194,custosuser6194,User,6194,custosuser6194@gmail.com,12345678,ASSIGNMENT,Service User
+195,custosuser6195,User,6195,custosuser6195@gmail.com,12345678,PROJECT,Admin
+196,custosuser6196,User,6196,custosuser6196@gmail.com,12345678,EXPERIMENT,Read Only Admin
+197,custosuser6197,User,6197,custosuser6197@gmail.com,12345678,ASSIGNMENT,Gateway User
+198,custosuser6198,User,6198,custosuser6198@gmail.com,12345678,PROJECT,Science User
+199,custosuser6199,User,6199,custosuser6199@gmail.com,12345678,EXPERIMENT,Service User
+200,custosuser6200,User,6200,custosuser6200@gmail.com,12345678,ASSIGNMENT,Admin
+201,custosuser6201,User,6201,custosuser6201@gmail.com,12345678,PROJECT,Read Only Admin
+202,custosuser6202,User,6202,custosuser6202@gmail.com,12345678,EXPERIMENT,Gateway User
+203,custosuser6203,User,6203,custosuser6203@gmail.com,12345678,ASSIGNMENT,Science User
+204,custosuser6204,User,6204,custosuser6204@gmail.com,12345678,PROJECT,Service User
+205,custosuser6205,User,6205,custosuser6205@gmail.com,12345678,EXPERIMENT,Admin
+206,custosuser6206,User,6206,custosuser6206@gmail.com,12345678,ASSIGNMENT,Read Only Admin
+207,custosuser6207,User,6207,custosuser6207@gmail.com,12345678,PROJECT,Gateway User
+208,custosuser6208,User,6208,custosuser6208@gmail.com,12345678,EXPERIMENT,Science User
+209,custosuser6209,User,6209,custosuser6209@gmail.com,12345678,ASSIGNMENT,Service User
+210,custosuser6210,User,6210,custosuser6210@gmail.com,12345678,PROJECT,Admin
+211,custosuser6211,User,6211,custosuser6211@gmail.com,12345678,EXPERIMENT,Read Only Admin
+212,custosuser6212,User,6212,custosuser6212@gmail.com,12345678,ASSIGNMENT,Gateway User
+213,custosuser6213,User,6213,custosuser6213@gmail.com,12345678,PROJECT,Science User
+214,custosuser6214,User,6214,custosuser6214@gmail.com,12345678,EXPERIMENT,Service User
+215,custosuser6215,User,6215,custosuser6215@gmail.com,12345678,ASSIGNMENT,Admin
+216,custosuser6216,User,6216,custosuser6216@gmail.com,12345678,PROJECT,Read Only Admin
+217,custosuser6217,User,6217,custosuser6217@gmail.com,12345678,EXPERIMENT,Gateway User
+218,custosuser6218,User,6218,custosuser6218@gmail.com,12345678,ASSIGNMENT,Science User
+219,custosuser6219,User,6219,custosuser6219@gmail.com,12345678,PROJECT,Service User
+220,custosuser6220,User,6220,custosuser6220@gmail.com,12345678,EXPERIMENT,Admin
+221,custosuser6221,User,6221,custosuser6221@gmail.com,12345678,ASSIGNMENT,Read Only Admin
+222,custosuser6222,User,6222,custosuser6222@gmail.com,12345678,PROJECT,Gateway User
+223,custosuser6223,User,6223,custosuser6223@gmail.com,12345678,EXPERIMENT,Science User
+224,custosuser6224,User,6224,custosuser6224@gmail.com,12345678,ASSIGNMENT,Service User
+225,custosuser6225,User,6225,custosuser6225@gmail.com,12345678,PROJECT,Admin
+226,custosuser6226,User,6226,custosuser6226@gmail.com,12345678,EXPERIMENT,Read Only Admin
+227,custosuser6227,User,6227,custosuser6227@gmail.com,12345678,ASSIGNMENT,Gateway User
+228,custosuser6228,User,6228,custosuser6228@gmail.com,12345678,PROJECT,Science User
+229,custosuser6229,User,6229,custosuser6229@gmail.com,12345678,EXPERIMENT,Service User
+230,custosuser6230,User,6230,custosuser6230@gmail.com,12345678,ASSIGNMENT,Admin
+231,custosuser6231,User,6231,custosuser6231@gmail.com,12345678,PROJECT,Read Only Admin
+232,custosuser6232,User,6232,custosuser6232@gmail.com,12345678,EXPERIMENT,Gateway User
+233,custosuser6233,User,6233,custosuser6233@gmail.com,12345678,ASSIGNMENT,Science User
+234,custosuser6234,User,6234,custosuser6234@gmail.com,12345678,PROJECT,Service User
+235,custosuser6235,User,6235,custosuser6235@gmail.com,12345678,EXPERIMENT,Admin
+236,custosuser6236,User,6236,custosuser6236@gmail.com,12345678,ASSIGNMENT,Read Only Admin
+237,custosuser6237,User,6237,custosuser6237@gmail.com,12345678,PROJECT,Gateway User
+238,custosuser6238,User,6238,custosuser6238@gmail.com,12345678,EXPERIMENT,Science User
+239,custosuser6239,User,6239,custosuser6239@gmail.com,12345678,ASSIGNMENT,Service User
+240,custosuser6240,User,6240,custosuser6240@gmail.com,12345678,PROJECT,Admin
+241,custosuser6241,User,6241,custosuser6241@gmail.com,12345678,EXPERIMENT,Read Only Admin
+242,custosuser6242,User,6242,custosuser6242@gmail.com,12345678,ASSIGNMENT,Gateway User
+243,custosuser6243,User,6243,custosuser6243@gmail.com,12345678,PROJECT,Science User
+244,custosuser6244,User,6244,custosuser6244@gmail.com,12345678,EXPERIMENT,Service User
+245,custosuser6245,User,6245,custosuser6245@gmail.com,12345678,ASSIGNMENT,Admin
+246,custosuser6246,User,6246,custosuser6246@gmail.com,12345678,PROJECT,Read Only Admin
+247,custosuser6247,User,6247,custosuser6247@gmail.com,12345678,EXPERIMENT,Gateway User
+248,custosuser6248,User,6248,custosuser6248@gmail.com,12345678,ASSIGNMENT,Science User
+249,custosuser6249,User,6249,custosuser6249@gmail.com,12345678,PROJECT,Service User
+250,custosuser6250,User,6250,custosuser6250@gmail.com,12345678,EXPERIMENT,Admin
+251,custosuser6251,User,6251,custosuser6251@gmail.com,12345678,ASSIGNMENT,Read Only Admin
+252,custosuser6252,User,6252,custosuser6252@gmail.com,12345678,PROJECT,Gateway User
+253,custosuser6253,User,6253,custosuser6253@gmail.com,12345678,EXPERIMENT,Science User
+254,custosuser6254,User,6254,custosuser6254@gmail.com,12345678,ASSIGNMENT,Service User
+255,custosuser6255,User,6255,custosuser6255@gmail.com,12345678,PROJECT,Admin
+256,custosuser6256,User,6256,custosuser6256@gmail.com,12345678,EXPERIMENT,Read Only Admin
+257,custosuser6257,User,6257,custosuser6257@gmail.com,12345678,ASSIGNMENT,Gateway User
+258,custosuser6258,User,6258,custosuser6258@gmail.com,12345678,PROJECT,Science User
+259,custosuser6259,User,6259,custosuser6259@gmail.com,12345678,EXPERIMENT,Service User
+260,custosuser6260,User,6260,custosuser6260@gmail.com,12345678,ASSIGNMENT,Admin
+261,custosuser6261,User,6261,custosuser6261@gmail.com,12345678,PROJECT,Read Only Admin
+262,custosuser6262,User,6262,custosuser6262@gmail.com,12345678,EXPERIMENT,Gateway User
+263,custosuser6263,User,6263,custosuser6263@gmail.com,12345678,ASSIGNMENT,Science User
+264,custosuser6264,User,6264,custosuser6264@gmail.com,12345678,PROJECT,Service User
+265,custosuser6265,User,6265,custosuser6265@gmail.com,12345678,EXPERIMENT,Admin
+266,custosuser6266,User,6266,custosuser6266@gmail.com,12345678,ASSIGNMENT,Read Only Admin
+267,custosuser6267,User,6267,custosuser6267@gmail.com,12345678,PROJECT,Gateway User
+268,custosuser6268,User,6268,custosuser6268@gmail.com,12345678,EXPERIMENT,Science User
+269,custosuser6269,User,6269,custosuser6269@gmail.com,12345678,ASSIGNMENT,Service User
+270,custosuser6270,User,6270,custosuser6270@gmail.com,12345678,PROJECT,Admin
+271,custosuser6271,User,6271,custosuser6271@gmail.com,12345678,EXPERIMENT,Read Only Admin
+272,custosuser6272,User,6272,custosuser6272@gmail.com,12345678,ASSIGNMENT,Gateway User
+273,custosuser6273,User,6273,custosuser6273@gmail.com,12345678,PROJECT,Science User
+274,custosuser6274,User,6274,custosuser6274@gmail.com,12345678,EXPERIMENT,Service User
+275,custosuser6275,User,6275,custosuser6275@gmail.com,12345678,ASSIGNMENT,Admin
+276,custosuser6276,User,6276,custosuser6276@gmail.com,12345678,PROJECT,Read Only Admin
+277,custosuser6277,User,6277,custosuser6277@gmail.com,12345678,EXPERIMENT,Gateway User
+278,custosuser6278,User,6278,custosuser6278@gmail.com,12345678,ASSIGNMENT,Science User
+279,custosuser6279,User,6279,custosuser6279@gmail.com,12345678,PROJECT,Service User
+280,custosuser6280,User,6280,custosuser6280@gmail.com,12345678,EXPERIMENT,Admin
+281,custosuser6281,User,6281,custosuser6281@gmail.com,12345678,ASSIGNMENT,Read Only Admin
+282,custosuser6282,User,6282,custosuser6282@gmail.com,12345678,PROJECT,Gateway User
+283,custosuser6283,User,6283,custosuser6283@gmail.com,12345678,EXPERIMENT,Science User
+284,custosuser6284,User,6284,custosuser6284@gmail.com,12345678,ASSIGNMENT,Service User
+285,custosuser6285,User,6285,custosuser6285@gmail.com,12345678,PROJECT,Admin
+286,custosuser6286,User,6286,custosuser6286@gmail.com,12345678,EXPERIMENT,Read Only Admin
+287,custosuser6287,User,6287,custosuser6287@gmail.com,12345678,ASSIGNMENT,Gateway User
+288,custosuser6288,User,6288,custosuser6288@gmail.com,12345678,PROJECT,Science User
+289,custosuser6289,User,6289,custosuser6289@gmail.com,12345678,EXPERIMENT,Service User
+290,custosuser6290,User,6290,custosuser6290@gmail.com,12345678,ASSIGNMENT,Admin
+291,custosuser6291,User,6291,custosuser6291@gmail.com,12345678,PROJECT,Read Only Admin
+292,custosuser6292,User,6292,custosuser6292@gmail.com,12345678,EXPERIMENT,Gateway User
+293,custosuser6293,User,6293,custosuser6293@gmail.com,12345678,ASSIGNMENT,Science User
+294,custosuser6294,User,6294,custosuser6294@gmail.com,12345678,PROJECT,Service User
+295,custosuser6295,User,6295,custosuser6295@gmail.com,12345678,EXPERIMENT,Admin
+296,custosuser6296,User,6296,custosuser6296@gmail.com,12345678,ASSIGNMENT,Read Only Admin
+297,custosuser6297,User,6297,custosuser6297@gmail.com,12345678,PROJECT,Gateway User
+298,custosuser6298,User,6298,custosuser6298@gmail.com,12345678,EXPERIMENT,Science User
+299,custosuser6299,User,6299,custosuser6299@gmail.com,12345678,ASSIGNMENT,Service User
+300,custosuser6300,User,6300,custosuser6300@gmail.com,12345678,PROJECT,Admin
+301,custosuser6301,User,6301,custosuser6301@gmail.com,12345678,EXPERIMENT,Read Only Admin
+302,custosuser6302,User,6302,custosuser6302@gmail.com,12345678,ASSIGNMENT,Gateway User
+303,custosuser6303,User,6303,custosuser6303@gmail.com,12345678,PROJECT,Science User
+304,custosuser6304,User,6304,custosuser6304@gmail.com,12345678,EXPERIMENT,Service User
+305,custosuser6305,User,6305,custosuser6305@gmail.com,12345678,ASSIGNMENT,Admin
+306,custosuser6306,User,6306,custosuser6306@gmail.com,12345678,PROJECT,Read Only Admin
+307,custosuser6307,User,6307,custosuser6307@gmail.com,12345678,EXPERIMENT,Gateway User
+308,custosuser6308,User,6308,custosuser6308@gmail.com,12345678,ASSIGNMENT,Science User
+309,custosuser6309,User,6309,custosuser6309@gmail.com,12345678,PROJECT,Service User
+310,custosuser6310,User,6310,custosuser6310@gmail.com,12345678,EXPERIMENT,Admin
+311,custosuser6311,User,6311,custosuser6311@gmail.com,12345678,ASSIGNMENT,Read Only Admin
+312,custosuser6312,User,6312,custosuser6312@gmail.com,12345678,PROJECT,Gateway User
+313,custosuser6313,User,6313,custosuser6313@gmail.com,12345678,EXPERIMENT,Science User
+314,custosuser6314,User,6314,custosuser6314@gmail.com,12345678,ASSIGNMENT,Service User
+315,custosuser6315,User,6315,custosuser6315@gmail.com,12345678,PROJECT,Admin
+316,custosuser6316,User,6316,custosuser6316@gmail.com,12345678,EXPERIMENT,Read Only Admin
+317,custosuser6317,User,6317,custosuser6317@gmail.com,12345678,ASSIGNMENT,Gateway User
+318,custosuser6318,User,6318,custosuser6318@gmail.com,12345678,PROJECT,Science User
+319,custosuser6319,User,6319,custosuser6319@gmail.com,12345678,EXPERIMENT,Service User
+320,custosuser6320,User,6320,custosuser6320@gmail.com,12345678,ASSIGNMENT,Admin
+321,custosuser6321,User,6321,custosuser6321@gmail.com,12345678,PROJECT,Read Only Admin
+322,custosuser6322,User,6322,custosuser6322@gmail.com,12345678,EXPERIMENT,Gateway User
+323,custosuser6323,User,6323,custosuser6323@gmail.com,12345678,ASSIGNMENT,Science User
+324,custosuser6324,User,6324,custosuser6324@gmail.com,12345678,PROJECT,Service User
+325,custosuser6325,User,6325,custosuser6325@gmail.com,12345678,EXPERIMENT,Admin
+326,custosuser6326,User,6326,custosuser6326@gmail.com,12345678,ASSIGNMENT,Read Only Admin
+327,custosuser6327,User,6327,custosuser6327@gmail.com,12345678,PROJECT,Gateway User
+328,custosuser6328,User,6328,custosuser6328@gmail.com,12345678,EXPERIMENT,Science User
+329,custosuser6329,User,6329,custosuser6329@gmail.com,12345678,ASSIGNMENT,Service User
+330,custosuser6330,User,6330,custosuser6330@gmail.com,12345678,PROJECT,Admin
+331,custosuser6331,User,6331,custosuser6331@gmail.com,12345678,EXPERIMENT,Read Only Admin
+332,custosuser6332,User,6332,custosuser6332@gmail.com,12345678,ASSIGNMENT,Gateway User
+333,custosuser6333,User,6333,custosuser6333@gmail.com,12345678,PROJECT,Science User
+334,custosuser6334,User,6334,custosuser6334@gmail.com,12345678,EXPERIMENT,Service User
+335,custosuser6335,User,6335,custosuser6335@gmail.com,12345678,ASSIGNMENT,Admin
+336,custosuser6336,User,6336,custosuser6336@gmail.com,12345678,PROJECT,Read Only Admin
+337,custosuser6337,User,6337,custosuser6337@gmail.com,12345678,EXPERIMENT,Gateway User
+338,custosuser6338,User,6338,custosuser6338@gmail.com,12345678,ASSIGNMENT,Science User
+339,custosuser6339,User,6339,custosuser6339@gmail.com,12345678,PROJECT,Service User
+340,custosuser6340,User,6340,custosuser6340@gmail.com,12345678,EXPERIMENT,Admin
+341,custosuser6341,User,6341,custosuser6341@gmail.com,12345678,ASSIGNMENT,Read Only Admin
+342,custosuser6342,User,6342,custosuser6342@gmail.com,12345678,PROJECT,Gateway User
+343,custosuser6343,User,6343,custosuser6343@gmail.com,12345678,EXPERIMENT,Science User
+344,custosuser6344,User,6344,custosuser6344@gmail.com,12345678,ASSIGNMENT,Service User
+345,custosuser6345,User,6345,custosuser6345@gmail.com,12345678,PROJECT,Admin
+346,custosuser6346,User,6346,custosuser6346@gmail.com,12345678,EXPERIMENT,Read Only Admin
+347,custosuser6347,User,6347,custosuser6347@gmail.com,12345678,ASSIGNMENT,Gateway User
+348,custosuser6348,User,6348,custosuser6348@gmail.com,12345678,PROJECT,Science User
+349,custosuser6349,User,6349,custosuser6349@gmail.com,12345678,EXPERIMENT,Service User
+350,custosuser6350,User,6350,custosuser6350@gmail.com,12345678,ASSIGNMENT,Admin
+351,custosuser6351,User,6351,custosuser6351@gmail.com,12345678,PROJECT,Read Only Admin
+352,custosuser6352,User,6352,custosuser6352@gmail.com,12345678,EXPERIMENT,Gateway User
+353,custosuser6353,User,6353,custosuser6353@gmail.com,12345678,ASSIGNMENT,Science User
+354,custosuser6354,User,6354,custosuser6354@gmail.com,12345678,PROJECT,Service User
+355,custosuser6355,User,6355,custosuser6355@gmail.com,12345678,EXPERIMENT,Admin
+356,custosuser6356,User,6356,custosuser6356@gmail.com,12345678,ASSIGNMENT,Read Only Admin
+357,custosuser6357,User,6357,custosuser6357@gmail.com,12345678,PROJECT,Gateway User
+358,custosuser6358,User,6358,custosuser6358@gmail.com,12345678,EXPERIMENT,Science User
+359,custosuser6359,User,6359,custosuser6359@gmail.com,12345678,ASSIGNMENT,Service User
+360,custosuser6360,User,6360,custosuser6360@gmail.com,12345678,PROJECT,Admin
+361,custosuser6361,User,6361,custosuser6361@gmail.com,12345678,EXPERIMENT,Read Only Admin
+362,custosuser6362,User,6362,custosuser6362@gmail.com,12345678,ASSIGNMENT,Gateway User
+363,custosuser6363,User,6363,custosuser6363@gmail.com,12345678,PROJECT,Science User
+364,custosuser6364,User,6364,custosuser6364@gmail.com,12345678,EXPERIMENT,Service User
+365,custosuser6365,User,6365,custosuser6365@gmail.com,12345678,ASSIGNMENT,Admin
+366,custosuser6366,User,6366,custosuser6366@gmail.com,12345678,PROJECT,Read Only Admin
+367,custosuser6367,User,6367,custosuser6367@gmail.com,12345678,EXPERIMENT,Gateway User
+368,custosuser6368,User,6368,custosuser6368@gmail.com,12345678,ASSIGNMENT,Science User
+369,custosuser6369,User,6369,custosuser6369@gmail.com,12345678,PROJECT,Service User
+370,custosuser6370,User,6370,custosuser6370@gmail.com,12345678,EXPERIMENT,Admin
+371,custosuser6371,User,6371,custosuser6371@gmail.com,12345678,ASSIGNMENT,Read Only Admin
+372,custosuser6372,User,6372,custosuser6372@gmail.com,12345678,PROJECT,Gateway User
+373,custosuser6373,User,6373,custosuser6373@gmail.com,12345678,EXPERIMENT,Science User
+374,custosuser6374,User,6374,custosuser6374@gmail.com,12345678,ASSIGNMENT,Service User
+375,custosuser6375,User,6375,custosuser6375@gmail.com,12345678,PROJECT,Admin
+376,custosuser6376,User,6376,custosuser6376@gmail.com,12345678,EXPERIMENT,Read Only Admin
+377,custosuser6377,User,6377,custosuser6377@gmail.com,12345678,ASSIGNMENT,Gateway User
+378,custosuser6378,User,6378,custosuser6378@gmail.com,12345678,PROJECT,Science User
+379,custosuser6379,User,6379,custosuser6379@gmail.com,12345678,EXPERIMENT,Service User
+380,custosuser6380,User,6380,custosuser6380@gmail.com,12345678,ASSIGNMENT,Admin
+381,custosuser6381,User,6381,custosuser6381@gmail.com,12345678,PROJECT,Read Only Admin
+382,custosuser6382,User,6382,custosuser6382@gmail.com,12345678,EXPERIMENT,Gateway User
+383,custosuser6383,User,6383,custosuser6383@gmail.com,12345678,ASSIGNMENT,Science User
+384,custosuser6384,User,6384,custosuser6384@gmail.com,12345678,PROJECT,Service User
+385,custosuser6385,User,6385,custosuser6385@gmail.com,12345678,EXPERIMENT,Admin
+386,custosuser6386,User,6386,custosuser6386@gmail.com,12345678,ASSIGNMENT,Read Only Admin
+387,custosuser6387,User,6387,custosuser6387@gmail.com,12345678,PROJECT,Gateway User
+388,custosuser6388,User,6388,custosuser6388@gmail.com,12345678,EXPERIMENT,Science User
+389,custosuser6389,User,6389,custosuser6389@gmail.com,12345678,ASSIGNMENT,Service User
+390,custosuser6390,User,6390,custosuser6390@gmail.com,12345678,PROJECT,Admin
+391,custosuser6391,User,6391,custosuser6391@gmail.com,12345678,EXPERIMENT,Read Only Admin
+392,custosuser6392,User,6392,custosuser6392@gmail.com,12345678,ASSIGNMENT,Gateway User
+393,custosuser6393,User,6393,custosuser6393@gmail.com,12345678,PROJECT,Science User
+394,custosuser6394,User,6394,custosuser6394@gmail.com,12345678,EXPERIMENT,Service User
+395,custosuser6395,User,6395,custosuser6395@gmail.com,12345678,ASSIGNMENT,Admin
+396,custosuser6396,User,6396,custosuser6396@gmail.com,12345678,PROJECT,Read Only Admin
+397,custosuser6397,User,6397,custosuser6397@gmail.com,12345678,EXPERIMENT,Gateway User
+398,custosuser6398,User,6398,custosuser6398@gmail.com,12345678,ASSIGNMENT,Science User
+399,custosuser6399,User,6399,custosuser6399@gmail.com,12345678,PROJECT,Service User
+400,custosuser6400,User,6400,custosuser6400@gmail.com,12345678,EXPERIMENT,Admin
+401,custosuser6401,User,6401,custosuser6401@gmail.com,12345678,ASSIGNMENT,Read Only Admin
+402,custosuser6402,User,6402,custosuser6402@gmail.com,12345678,PROJECT,Gateway User
+403,custosuser6403,User,6403,custosuser6403@gmail.com,12345678,EXPERIMENT,Science User
+404,custosuser6404,User,6404,custosuser6404@gmail.com,12345678,ASSIGNMENT,Service User
+405,custosuser6405,User,6405,custosuser6405@gmail.com,12345678,PROJECT,Admin
+406,custosuser6406,User,6406,custosuser6406@gmail.com,12345678,EXPERIMENT,Read Only Admin
+407,custosuser6407,User,6407,custosuser6407@gmail.com,12345678,ASSIGNMENT,Gateway User
+408,custosuser6408,User,6408,custosuser6408@gmail.com,12345678,PROJECT,Science User
+409,custosuser6409,User,6409,custosuser6409@gmail.com,12345678,EXPERIMENT,Service User
+410,custosuser6410,User,6410,custosuser6410@gmail.com,12345678,ASSIGNMENT,Admin
+411,custosuser6411,User,6411,custosuser6411@gmail.com,12345678,PROJECT,Read Only Admin
+412,custosuser6412,User,6412,custosuser6412@gmail.com,12345678,EXPERIMENT,Gateway User
+413,custosuser6413,User,6413,custosuser6413@gmail.com,12345678,ASSIGNMENT,Science User
+414,custosuser6414,User,6414,custosuser6414@gmail.com,12345678,PROJECT,Service User
+415,custosuser6415,User,6415,custosuser6415@gmail.com,12345678,EXPERIMENT,Admin
+416,custosuser6416,User,6416,custosuser6416@gmail.com,12345678,ASSIGNMENT,Read Only Admin
+417,custosuser6417,User,6417,custosuser6417@gmail.com,12345678,PROJECT,Gateway User
+418,custosuser6418,User,6418,custosuser6418@gmail.com,12345678,EXPERIMENT,Science User
+419,custosuser6419,User,6419,custosuser6419@gmail.com,12345678,ASSIGNMENT,Service User
+420,custosuser6420,User,6420,custosuser6420@gmail.com,12345678,PROJECT,Admin
+421,custosuser6421,User,6421,custosuser6421@gmail.com,12345678,EXPERIMENT,Read Only Admin
+422,custosuser6422,User,6422,custosuser6422@gmail.com,12345678,ASSIGNMENT,Gateway User
+423,custosuser6423,User,6423,custosuser6423@gmail.com,12345678,PROJECT,Science User
+424,custosuser6424,User,6424,custosuser6424@gmail.com,12345678,EXPERIMENT,Service User
+425,custosuser6425,User,6425,custosuser6425@gmail.com,12345678,ASSIGNMENT,Admin
+426,custosuser6426,User,6426,custosuser6426@gmail.com,12345678,PROJECT,Read Only Admin
+427,custosuser6427,User,6427,custosuser6427@gmail.com,12345678,EXPERIMENT,Gateway User
+428,custosuser6428,User,6428,custosuser6428@gmail.com,12345678,ASSIGNMENT,Science User
+429,custosuser6429,User,6429,custosuser6429@gmail.com,12345678,PROJECT,Service User
+430,custosuser6430,User,6430,custosuser6430@gmail.com,12345678,EXPERIMENT,Admin
+431,custosuser6431,User,6431,custosuser6431@gmail.com,12345678,ASSIGNMENT,Read Only Admin
+432,custosuser6432,User,6432,custosuser6432@gmail.com,12345678,PROJECT,Gateway User
+433,custosuser6433,User,6433,custosuser6433@gmail.com,12345678,EXPERIMENT,Science User
+434,custosuser6434,User,6434,custosuser6434@gmail.com,12345678,ASSIGNMENT,Service User
+435,custosuser6435,User,6435,custosuser6435@gmail.com,12345678,PROJECT,Admin
+436,custosuser6436,User,6436,custosuser6436@gmail.com,12345678,EXPERIMENT,Read Only Admin
+437,custosuser6437,User,6437,custosuser6437@gmail.com,12345678,ASSIGNMENT,Gateway User
+438,custosuser6438,User,6438,custosuser6438@gmail.com,12345678,PROJECT,Science User
+439,custosuser6439,User,6439,custosuser6439@gmail.com,12345678,EXPERIMENT,Service User
+440,custosuser6440,User,6440,custosuser6440@gmail.com,12345678,ASSIGNMENT,Admin
+441,custosuser6441,User,6441,custosuser6441@gmail.com,12345678,PROJECT,Read Only Admin
+442,custosuser6442,User,6442,custosuser6442@gmail.com,12345678,EXPERIMENT,Gateway User
+443,custosuser6443,User,6443,custosuser6443@gmail.com,12345678,ASSIGNMENT,Science User
+444,custosuser6444,User,6444,custosuser6444@gmail.com,12345678,PROJECT,Service User
+445,custosuser6445,User,6445,custosuser6445@gmail.com,12345678,EXPERIMENT,Admin
+446,custosuser6446,User,6446,custosuser6446@gmail.com,12345678,ASSIGNMENT,Read Only Admin
+447,custosuser6447,User,6447,custosuser6447@gmail.com,12345678,PROJECT,Gateway User
+448,custosuser6448,User,6448,custosuser6448@gmail.com,12345678,EXPERIMENT,Science User
+449,custosuser6449,User,6449,custosuser6449@gmail.com,12345678,ASSIGNMENT,Service User
+450,custosuser6450,User,6450,custosuser6450@gmail.com,12345678,PROJECT,Admin
+451,custosuser6451,User,6451,custosuser6451@gmail.com,12345678,EXPERIMENT,Read Only Admin
+452,custosuser6452,User,6452,custosuser6452@gmail.com,12345678,ASSIGNMENT,Gateway User
+453,custosuser6453,User,6453,custosuser6453@gmail.com,12345678,PROJECT,Science User
+454,custosuser6454,User,6454,custosuser6454@gmail.com,12345678,EXPERIMENT,Service User
+455,custosuser6455,User,6455,custosuser6455@gmail.com,12345678,ASSIGNMENT,Admin
+456,custosuser6456,User,6456,custosuser6456@gmail.com,12345678,PROJECT,Read Only Admin
+457,custosuser6457,User,6457,custosuser6457@gmail.com,12345678,EXPERIMENT,Gateway User
+458,custosuser6458,User,6458,custosuser6458@gmail.com,12345678,ASSIGNMENT,Science User
+459,custosuser6459,User,6459,custosuser6459@gmail.com,12345678,PROJECT,Service User
+460,custosuser6460,User,6460,custosuser6460@gmail.com,12345678,EXPERIMENT,Admin
+461,custosuser6461,User,6461,custosuser6461@gmail.com,12345678,ASSIGNMENT,Read Only Admin
+462,custosuser6462,User,6462,custosuser6462@gmail.com,12345678,PROJECT,Gateway User
+463,custosuser6463,User,6463,custosuser6463@gmail.com,12345678,EXPERIMENT,Science User
+464,custosuser6464,User,6464,custosuser6464@gmail.com,12345678,ASSIGNMENT,Service User
+465,custosuser6465,User,6465,custosuser6465@gmail.com,12345678,PROJECT,Admin
+466,custosuser6466,User,6466,custosuser6466@gmail.com,12345678,EXPERIMENT,Read Only Admin
+467,custosuser6467,User,6467,custosuser6467@gmail.com,12345678,ASSIGNMENT,Gateway User
+468,custosuser6468,User,6468,custosuser6468@gmail.com,12345678,PROJECT,Science User
+469,custosuser6469,User,6469,custosuser6469@gmail.com,12345678,EXPERIMENT,Service User
+470,custosuser6470,User,6470,custosuser6470@gmail.com,12345678,ASSIGNMENT,Admin
+471,custosuser6471,User,6471,custosuser6471@gmail.com,12345678,PROJECT,Read Only Admin
+472,custosuser6472,User,6472,custosuser6472@gmail.com,12345678,EXPERIMENT,Gateway User
+473,custosuser6473,User,6473,custosuser6473@gmail.com,12345678,ASSIGNMENT,Science User
+474,custosuser6474,User,6474,custosuser6474@gmail.com,12345678,PROJECT,Service User
+475,custosuser6475,User,6475,custosuser6475@gmail.com,12345678,EXPERIMENT,Admin
+476,custosuser6476,User,6476,custosuser6476@gmail.com,12345678,ASSIGNMENT,Read Only Admin
+477,custosuser6477,User,6477,custosuser6477@gmail.com,12345678,PROJECT,Gateway User
+478,custosuser6478,User,6478,custosuser6478@gmail.com,12345678,EXPERIMENT,Science User
+479,custosuser6479,User,6479,custosuser6479@gmail.com,12345678,ASSIGNMENT,Service User
+480,custosuser6480,User,6480,custosuser6480@gmail.com,12345678,PROJECT,Admin
+481,custosuser6481,User,6481,custosuser6481@gmail.com,12345678,EXPERIMENT,Read Only Admin
+482,custosuser6482,User,6482,custosuser6482@gmail.com,12345678,ASSIGNMENT,Gateway User
+483,custosuser6483,User,6483,custosuser6483@gmail.com,12345678,PROJECT,Science User
+484,custosuser6484,User,6484,custosuser6484@gmail.com,12345678,EXPERIMENT,Service User
+485,custosuser6485,User,6485,custosuser6485@gmail.com,12345678,ASSIGNMENT,Admin
+486,custosuser6486,User,6486,custosuser6486@gmail.com,12345678,PROJECT,Read Only Admin
+487,custosuser6487,User,6487,custosuser6487@gmail.com,12345678,EXPERIMENT,Gateway User
+488,custosuser6488,User,6488,custosuser6488@gmail.com,12345678,ASSIGNMENT,Science User
+489,custosuser6489,User,6489,custosuser6489@gmail.com,12345678,PROJECT,Service User
+490,custosuser6490,User,6490,custosuser6490@gmail.com,12345678,EXPERIMENT,Admin
+491,custosuser6491,User,6491,custosuser6491@gmail.com,12345678,ASSIGNMENT,Read Only Admin
+492,custosuser6492,User,6492,custosuser6492@gmail.com,12345678,PROJECT,Gateway User
+493,custosuser6493,User,6493,custosuser6493@gmail.com,12345678,EXPERIMENT,Science User
+494,custosuser6494,User,6494,custosuser6494@gmail.com,12345678,ASSIGNMENT,Service User
+495,custosuser6495,User,6495,custosuser6495@gmail.com,12345678,PROJECT,Admin
+496,custosuser6496,User,6496,custosuser6496@gmail.com,12345678,EXPERIMENT,Read Only Admin
+497,custosuser6497,User,6497,custosuser6497@gmail.com,12345678,ASSIGNMENT,Gateway User
+498,custosuser6498,User,6498,custosuser6498@gmail.com,12345678,PROJECT,Science User
+499,custosuser6499,User,6499,custosuser6499@gmail.com,12345678,EXPERIMENT,Service User
+500,custosuser6500,User,6500,custosuser6500@gmail.com,12345678,ASSIGNMENT,Admin
+501,custosuser6501,User,6501,custosuser6501@gmail.com,12345678,PROJECT,Read Only Admin
+502,custosuser6502,User,6502,custosuser6502@gmail.com,12345678,EXPERIMENT,Gateway User
+503,custosuser6503,User,6503,custosuser6503@gmail.com,12345678,ASSIGNMENT,Science User
+504,custosuser6504,User,6504,custosuser6504@gmail.com,12345678,PROJECT,Service User
+505,custosuser6505,User,6505,custosuser6505@gmail.com,12345678,EXPERIMENT,Admin
+506,custosuser6506,User,6506,custosuser6506@gmail.com,12345678,ASSIGNMENT,Read Only Admin
+507,custosuser6507,User,6507,custosuser6507@gmail.com,12345678,PROJECT,Gateway User
+508,custosuser6508,User,6508,custosuser6508@gmail.com,12345678,EXPERIMENT,Science User
+509,custosuser6509,User,6509,custosuser6509@gmail.com,12345678,ASSIGNMENT,Service User
+510,custosuser6510,User,6510,custosuser6510@gmail.com,12345678,PROJECT,Admin
+511,custosuser6511,User,6511,custosuser6511@gmail.com,12345678,EXPERIMENT,Read Only Admin
+512,custosuser6512,User,6512,custosuser6512@gmail.com,12345678,ASSIGNMENT,Gateway User
+513,custosuser6513,User,6513,custosuser6513@gmail.com,12345678,PROJECT,Science User
+514,custosuser6514,User,6514,custosuser6514@gmail.com,12345678,EXPERIMENT,Service User
+515,custosuser6515,User,6515,custosuser6515@gmail.com,12345678,ASSIGNMENT,Admin
+516,custosuser6516,User,6516,custosuser6516@gmail.com,12345678,PROJECT,Read Only Admin
+517,custosuser6517,User,6517,custosuser6517@gmail.com,12345678,EXPERIMENT,Gateway User
+518,custosuser6518,User,6518,custosuser6518@gmail.com,12345678,ASSIGNMENT,Science User
+519,custosuser6519,User,6519,custosuser6519@gmail.com,12345678,PROJECT,Service User
+520,custosuser6520,User,6520,custosuser6520@gmail.com,12345678,EXPERIMENT,Admin
+521,custosuser6521,User,6521,custosuser6521@gmail.com,12345678,ASSIGNMENT,Read Only Admin
+522,custosuser6522,User,6522,custosuser6522@gmail.com,12345678,PROJECT,Gateway User
+523,custosuser6523,User,6523,custosuser6523@gmail.com,12345678,EXPERIMENT,Science User
+524,custosuser6524,User,6524,custosuser6524@gmail.com,12345678,ASSIGNMENT,Service User
+525,custosuser6525,User,6525,custosuser6525@gmail.com,12345678,PROJECT,Admin
+526,custosuser6526,User,6526,custosuser6526@gmail.com,12345678,EXPERIMENT,Read Only Admin
+527,custosuser6527,User,6527,custosuser6527@gmail.com,12345678,ASSIGNMENT,Gateway User
+528,custosuser6528,User,6528,custosuser6528@gmail.com,12345678,PROJECT,Science User
+529,custosuser6529,User,6529,custosuser6529@gmail.com,12345678,EXPERIMENT,Service User
+530,custosuser6530,User,6530,custosuser6530@gmail.com,12345678,ASSIGNMENT,Admin
+531,custosuser6531,User,6531,custosuser6531@gmail.com,12345678,PROJECT,Read Only Admin
+532,custosuser6532,User,6532,custosuser6532@gmail.com,12345678,EXPERIMENT,Gateway User
+533,custosuser6533,User,6533,custosuser6533@gmail.com,12345678,ASSIGNMENT,Science User
+534,custosuser6534,User,6534,custosuser6534@gmail.com,12345678,PROJECT,Service User
+535,custosuser6535,User,6535,custosuser6535@gmail.com,12345678,EXPERIMENT,Admin
+536,custosuser6536,User,6536,custosuser6536@gmail.com,12345678,ASSIGNMENT,Read Only Admin
+537,custosuser6537,User,6537,custosuser6537@gmail.com,12345678,PROJECT,Gateway User
+538,custosuser6538,User,6538,custosuser6538@gmail.com,12345678,EXPERIMENT,Science User
+539,custosuser6539,User,6539,custosuser6539@gmail.com,12345678,ASSIGNMENT,Service User
+540,custosuser6540,User,6540,custosuser6540@gmail.com,12345678,PROJECT,Admin
+541,custosuser6541,User,6541,custosuser6541@gmail.com,12345678,EXPERIMENT,Read Only Admin
+542,custosuser6542,User,6542,custosuser6542@gmail.com,12345678,ASSIGNMENT,Gateway User
+543,custosuser6543,User,6543,custosuser6543@gmail.com,12345678,PROJECT,Science User
+544,custosuser6544,User,6544,custosuser6544@gmail.com,12345678,EXPERIMENT,Service User
+545,custosuser6545,User,6545,custosuser6545@gmail.com,12345678,ASSIGNMENT,Admin
+546,custosuser6546,User,6546,custosuser6546@gmail.com,12345678,PROJECT,Read Only Admin
+547,custosuser6547,User,6547,custosuser6547@gmail.com,12345678,EXPERIMENT,Gateway User
+548,custosuser6548,User,6548,custosuser6548@gmail.com,12345678,ASSIGNMENT,Science User
+549,custosuser6549,User,6549,custosuser6549@gmail.com,12345678,PROJECT,Service User
+550,custosuser6550,User,6550,custosuser6550@gmail.com,12345678,EXPERIMENT,Admin
+551,custosuser6551,User,6551,custosuser6551@gmail.com,12345678,ASSIGNMENT,Read Only Admin
+552,custosuser6552,User,6552,custosuser6552@gmail.com,12345678,PROJECT,Gateway User
+553,custosuser6553,User,6553,custosuser6553@gmail.com,12345678,EXPERIMENT,Science User
+554,custosuser6554,User,6554,custosuser6554@gmail.com,12345678,ASSIGNMENT,Service User
+555,custosuser6555,User,6555,custosuser6555@gmail.com,12345678,PROJECT,Admin
+556,custosuser6556,User,6556,custosuser6556@gmail.com,12345678,EXPERIMENT,Read Only Admin
+557,custosuser6557,User,6557,custosuser6557@gmail.com,12345678,ASSIGNMENT,Gateway User
+558,custosuser6558,User,6558,custosuser6558@gmail.com,12345678,PROJECT,Science User
+559,custosuser6559,User,6559,custosuser6559@gmail.com,12345678,EXPERIMENT,Service User
+560,custosuser6560,User,6560,custosuser6560@gmail.com,12345678,ASSIGNMENT,Admin
+561,custosuser6561,User,6561,custosuser6561@gmail.com,12345678,PROJECT,Read Only Admin
+562,custosuser6562,User,6562,custosuser6562@gmail.com,12345678,EXPERIMENT,Gateway User
+563,custosuser6563,User,6563,custosuser6563@gmail.com,12345678,ASSIGNMENT,Science User
+564,custosuser6564,User,6564,custosuser6564@gmail.com,12345678,PROJECT,Service User
+565,custosuser6565,User,6565,custosuser6565@gmail.com,12345678,EXPERIMENT,Admin
+566,custosuser6566,User,6566,custosuser6566@gmail.com,12345678,ASSIGNMENT,Read Only Admin
+567,custosuser6567,User,6567,custosuser6567@gmail.com,12345678,PROJECT,Gateway User
+568,custosuser6568,User,6568,custosuser6568@gmail.com,12345678,EXPERIMENT,Science User
+569,custosuser6569,User,6569,custosuser6569@gmail.com,12345678,ASSIGNMENT,Service User
+570,custosuser6570,User,6570,custosuser6570@gmail.com,12345678,PROJECT,Admin
+571,custosuser6571,User,6571,custosuser6571@gmail.com,12345678,EXPERIMENT,Read Only Admin
+572,custosuser6572,User,6572,custosuser6572@gmail.com,12345678,ASSIGNMENT,Gateway User
+573,custosuser6573,User,6573,custosuser6573@gmail.com,12345678,PROJECT,Science User
+574,custosuser6574,User,6574,custosuser6574@gmail.com,12345678,EXPERIMENT,Service User
+575,custosuser6575,User,6575,custosuser6575@gmail.com,12345678,ASSIGNMENT,Admin
+576,custosuser6576,User,6576,custosuser6576@gmail.com,12345678,PROJECT,Read Only Admin
+577,custosuser6577,User,6577,custosuser6577@gmail.com,12345678,EXPERIMENT,Gateway User
+578,custosuser6578,User,6578,custosuser6578@gmail.com,12345678,ASSIGNMENT,Science User
+579,custosuser6579,User,6579,custosuser6579@gmail.com,12345678,PROJECT,Service User
+580,custosuser6580,User,6580,custosuser6580@gmail.com,12345678,EXPERIMENT,Admin
+581,custosuser6581,User,6581,custosuser6581@gmail.com,12345678,ASSIGNMENT,Read Only Admin
+582,custosuser6582,User,6582,custosuser6582@gmail.com,12345678,PROJECT,Gateway User
+583,custosuser6583,User,6583,custosuser6583@gmail.com,12345678,EXPERIMENT,Science User
+584,custosuser6584,User,6584,custosuser6584@gmail.com,12345678,ASSIGNMENT,Service User
+585,custosuser6585,User,6585,custosuser6585@gmail.com,12345678,PROJECT,Admin
+586,custosuser6586,User,6586,custosuser6586@gmail.com,12345678,EXPERIMENT,Read Only Admin
+587,custosuser6587,User,6587,custosuser6587@gmail.com,12345678,ASSIGNMENT,Gateway User
+588,custosuser6588,User,6588,custosuser6588@gmail.com,12345678,PROJECT,Science User
+589,custosuser6589,User,6589,custosuser6589@gmail.com,12345678,EXPERIMENT,Service User
+590,custosuser6590,User,6590,custosuser6590@gmail.com,12345678,ASSIGNMENT,Admin
+591,custosuser6591,User,6591,custosuser6591@gmail.com,12345678,PROJECT,Read Only Admin
+592,custosuser6592,User,6592,custosuser6592@gmail.com,12345678,EXPERIMENT,Gateway User
+593,custosuser6593,User,6593,custosuser6593@gmail.com,12345678,ASSIGNMENT,Science User
+594,custosuser6594,User,6594,custosuser6594@gmail.com,12345678,PROJECT,Service User
+595,custosuser6595,User,6595,custosuser6595@gmail.com,12345678,EXPERIMENT,Admin
+596,custosuser6596,User,6596,custosuser6596@gmail.com,12345678,ASSIGNMENT,Read Only Admin
+597,custosuser6597,User,6597,custosuser6597@gmail.com,12345678,PROJECT,Gateway User
+598,custosuser6598,User,6598,custosuser6598@gmail.com,12345678,EXPERIMENT,Science User
+599,custosuser6599,User,6599,custosuser6599@gmail.com,12345678,ASSIGNMENT,Service User
+600,custosuser6600,User,6600,custosuser6600@gmail.com,12345678,PROJECT,Admin
+601,custosuser6601,User,6601,custosuser6601@gmail.com,12345678,EXPERIMENT,Read Only Admin
+602,custosuser6602,User,6602,custosuser6602@gmail.com,12345678,ASSIGNMENT,Gateway User
+603,custosuser6603,User,6603,custosuser6603@gmail.com,12345678,PROJECT,Science User
+604,custosuser6604,User,6604,custosuser6604@gmail.com,12345678,EXPERIMENT,Service User
+605,custosuser6605,User,6605,custosuser6605@gmail.com,12345678,ASSIGNMENT,Admin
+606,custosuser6606,User,6606,custosuser6606@gmail.com,12345678,PROJECT,Read Only Admin
+607,custosuser6607,User,6607,custosuser6607@gmail.com,12345678,EXPERIMENT,Gateway User
+608,custosuser6608,User,6608,custosuser6608@gmail.com,12345678,ASSIGNMENT,Science User
+609,custosuser6609,User,6609,custosuser6609@gmail.com,12345678,PROJECT,Service User
+610,custosuser6610,User,6610,custosuser6610@gmail.com,12345678,EXPERIMENT,Admin
+611,custosuser6611,User,6611,custosuser6611@gmail.com,12345678,ASSIGNMENT,Read Only Admin
+612,custosuser6612,User,6612,custosuser6612@gmail.com,12345678,PROJECT,Gateway User
+613,custosuser6613,User,6613,custosuser6613@gmail.com,12345678,EXPERIMENT,Science User
+614,custosuser6614,User,6614,custosuser6614@gmail.com,12345678,ASSIGNMENT,Service User
+615,custosuser6615,User,6615,custosuser6615@gmail.com,12345678,PROJECT,Admin
+616,custosuser6616,User,6616,custosuser6616@gmail.com,12345678,EXPERIMENT,Read Only Admin
+617,custosuser6617,User,6617,custosuser6617@gmail.com,12345678,ASSIGNMENT,Gateway User
+618,custosuser6618,User,6618,custosuser6618@gmail.com,12345678,PROJECT,Science User
+619,custosuser6619,User,6619,custosuser6619@gmail.com,12345678,EXPERIMENT,Service User
+620,custosuser6620,User,6620,custosuser6620@gmail.com,12345678,ASSIGNMENT,Admin
+621,custosuser6621,User,6621,custosuser6621@gmail.com,12345678,PROJECT,Read Only Admin
+622,custosuser6622,User,6622,custosuser6622@gmail.com,12345678,EXPERIMENT,Gateway User
+623,custosuser6623,User,6623,custosuser6623@gmail.com,12345678,ASSIGNMENT,Science User
+624,custosuser6624,User,6624,custosuser6624@gmail.com,12345678,PROJECT,Service User
+625,custosuser6625,User,6625,custosuser6625@gmail.com,12345678,EXPERIMENT,Admin
+626,custosuser6626,User,6626,custosuser6626@gmail.com,12345678,ASSIGNMENT,Read Only Admin
+627,custosuser6627,User,6627,custosuser6627@gmail.com,12345678,PROJECT,Gateway User
+628,custosuser6628,User,6628,custosuser6628@gmail.com,12345678,EXPERIMENT,Science User
+629,custosuser6629,User,6629,custosuser6629@gmail.com,12345678,ASSIGNMENT,Service User
+630,custosuser6630,User,6630,custosuser6630@gmail.com,12345678,PROJECT,Admin
+631,custosuser6631,User,6631,custosuser6631@gmail.com,12345678,EXPERIMENT,Read Only Admin
+632,custosuser6632,User,6632,custosuser6632@gmail.com,12345678,ASSIGNMENT,Gateway User
+633,custosuser6633,User,6633,custosuser6633@gmail.com,12345678,PROJECT,Science User
+634,custosuser6634,User,6634,custosuser6634@gmail.com,12345678,EXPERIMENT,Service User
+635,custosuser6635,User,6635,custosuser6635@gmail.com,12345678,ASSIGNMENT,Admin
+636,custosuser6636,User,6636,custosuser6636@gmail.com,12345678,PROJECT,Read Only Admin
+637,custosuser6637,User,6637,custosuser6637@gmail.com,12345678,EXPERIMENT,Gateway User
+638,custosuser6638,User,6638,custosuser6638@gmail.com,12345678,ASSIGNMENT,Science User
+639,custosuser6639,User,6639,custosuser6639@gmail.com,12345678,PROJECT,Service User
+640,custosuser6640,User,6640,custosuser6640@gmail.com,12345678,EXPERIMENT,Admin
+641,custosuser6641,User,6641,custosuser6641@gmail.com,12345678,ASSIGNMENT,Read Only Admin
+642,custosuser6642,User,6642,custosuser6642@gmail.com,12345678,PROJECT,Gateway User
+643,custosuser6643,User,6643,custosuser6643@gmail.com,12345678,EXPERIMENT,Science User
+644,custosuser6644,User,6644,custosuser6644@gmail.com,12345678,ASSIGNMENT,Service User
+645,custosuser6645,User,6645,custosuser6645@gmail.com,12345678,PROJECT,Admin
+646,custosuser6646,User,6646,custosuser6646@gmail.com,12345678,EXPERIMENT,Read Only Admin
+647,custosuser6647,User,6647,custosuser6647@gmail.com,12345678,ASSIGNMENT,Gateway User
+648,custosuser6648,User,6648,custosuser6648@gmail.com,12345678,PROJECT,Science User
+649,custosuser6649,User,6649,custosuser6649@gmail.com,12345678,EXPERIMENT,Service User
+650,custosuser6650,User,6650,custosuser6650@gmail.com,12345678,ASSIGNMENT,Admin
+651,custosuser6651,User,6651,custosuser6651@gmail.com,12345678,PROJECT,Read Only Admin
+652,custosuser6652,User,6652,custosuser6652@gmail.com,12345678,EXPERIMENT,Gateway User
+653,custosuser6653,User,6653,custosuser6653@gmail.com,12345678,ASSIGNMENT,Science User
+654,custosuser6654,User,6654,custosuser6654@gmail.com,12345678,PROJECT,Service User
+655,custosuser6655,User,6655,custosuser6655@gmail.com,12345678,EXPERIMENT,Admin
+656,custosuser6656,User,6656,custosuser6656@gmail.com,12345678,ASSIGNMENT,Read Only Admin
+657,custosuser6657,User,6657,custosuser6657@gmail.com,12345678,PROJECT,Gateway User
+658,custosuser6658,User,6658,custosuser6658@gmail.com,12345678,EXPERIMENT,Science User
+659,custosuser6659,User,6659,custosuser6659@gmail.com,12345678,ASSIGNMENT,Service User
+660,custosuser6660,User,6660,custosuser6660@gmail.com,12345678,PROJECT,Admin
+661,custosuser6661,User,6661,custosuser6661@gmail.com,12345678,EXPERIMENT,Read Only Admin
+662,custosuser6662,User,6662,custosuser6662@gmail.com,12345678,ASSIGNMENT,Gateway User
+663,custosuser6663,User,6663,custosuser6663@gmail.com,12345678,PROJECT,Science User
+664,custosuser6664,User,6664,custosuser6664@gmail.com,12345678,EXPERIMENT,Service User
+665,custosuser6665,User,6665,custosuser6665@gmail.com,12345678,ASSIGNMENT,Admin
+666,custosuser6666,User,6666,custosuser6666@gmail.com,12345678,PROJECT,Read Only Admin
+667,custosuser6667,User,6667,custosuser6667@gmail.com,12345678,EXPERIMENT,Gateway User
+668,custosuser6668,User,6668,custosuser6668@gmail.com,12345678,ASSIGNMENT,Science User
+669,custosuser6669,User,6669,custosuser6669@gmail.com,12345678,PROJECT,Service User
+670,custosuser6670,User,6670,custosuser6670@gmail.com,12345678,EXPERIMENT,Admin
+671,custosuser6671,User,6671,custosuser6671@gmail.com,12345678,ASSIGNMENT,Read Only Admin
+672,custosuser6672,User,6672,custosuser6672@gmail.com,12345678,PROJECT,Gateway User
+673,custosuser6673,User,6673,custosuser6673@gmail.com,12345678,EXPERIMENT,Science User
+674,custosuser6674,User,6674,custosuser6674@gmail.com,12345678,ASSIGNMENT,Service User
+675,custosuser6675,User,6675,custosuser6675@gmail.com,12345678,PROJECT,Admin
+676,custosuser6676,User,6676,custosuser6676@gmail.com,12345678,EXPERIMENT,Read Only Admin
+677,custosuser6677,User,6677,custosuser6677@gmail.com,12345678,ASSIGNMENT,Gateway User
+678,custosuser6678,User,6678,custosuser6678@gmail.com,12345678,PROJECT,Science User
+679,custosuser6679,User,6679,custosuser6679@gmail.com,12345678,EXPERIMENT,Service User
+680,custosuser6680,User,6680,custosuser6680@gmail.com,12345678,ASSIGNMENT,Admin
+681,custosuser6681,User,6681,custosuser6681@gmail.com,12345678,PROJECT,Read Only Admin
+682,custosuser6682,User,6682,custosuser6682@gmail.com,12345678,EXPERIMENT,Gateway User
+683,custosuser6683,User,6683,custosuser6683@gmail.com,12345678,ASSIGNMENT,Science User
+684,custosuser6684,User,6684,custosuser6684@gmail.com,12345678,PROJECT,Service User
+685,custosuser6685,User,6685,custosuser6685@gmail.com,12345678,EXPERIMENT,Admin
+686,custosuser6686,User,6686,custosuser6686@gmail.com,12345678,ASSIGNMENT,Read Only Admin
+687,custosuser6687,User,6687,custosuser6687@gmail.com,12345678,PROJECT,Gateway User
+688,custosuser6688,User,6688,custosuser6688@gmail.com,12345678,EXPERIMENT,Science User
+689,custosuser6689,User,6689,custosuser6689@gmail.com,12345678,ASSIGNMENT,Service User
+690,custosuser6690,User,6690,custosuser6690@gmail.com,12345678,PROJECT,Admin
+691,custosuser6691,User,6691,custosuser6691@gmail.com,12345678,EXPERIMENT,Read Only Admin
+692,custosuser6692,User,6692,custosuser6692@gmail.com,12345678,ASSIGNMENT,Gateway User
+693,custosuser6693,User,6693,custosuser6693@gmail.com,12345678,PROJECT,Science User
+694,custosuser6694,User,6694,custosuser6694@gmail.com,12345678,EXPERIMENT,Service User
+695,custosuser6695,User,6695,custosuser6695@gmail.com,12345678,ASSIGNMENT,Admin
+696,custosuser6696,User,6696,custosuser6696@gmail.com,12345678,PROJECT,Read Only Admin
+697,custosuser6697,User,6697,custosuser6697@gmail.com,12345678,EXPERIMENT,Gateway User
+698,custosuser6698,User,6698,custosuser6698@gmail.com,12345678,ASSIGNMENT,Science User
+699,custosuser6699,User,6699,custosuser6699@gmail.com,12345678,PROJECT,Service User
+700,custosuser6700,User,6700,custosuser6700@gmail.com,12345678,EXPERIMENT,Admin
+701,custosuser6701,User,6701,custosuser6701@gmail.com,12345678,ASSIGNMENT,Read Only Admin
+702,custosuser6702,User,6702,custosuser6702@gmail.com,12345678,PROJECT,Gateway User
+703,custosuser6703,User,6703,custosuser6703@gmail.com,12345678,EXPERIMENT,Science User
+704,custosuser6704,User,6704,custosuser6704@gmail.com,12345678,ASSIGNMENT,Service User
+705,custosuser6705,User,6705,custosuser6705@gmail.com,12345678,PROJECT,Admin
+706,custosuser6706,User,6706,custosuser6706@gmail.com,12345678,EXPERIMENT,Read Only Admin
+707,custosuser6707,User,6707,custosuser6707@gmail.com,12345678,ASSIGNMENT,Gateway User
+708,custosuser6708,User,6708,custosuser6708@gmail.com,12345678,PROJECT,Science User
+709,custosuser6709,User,6709,custosuser6709@gmail.com,12345678,EXPERIMENT,Service User
+710,custosuser6710,User,6710,custosuser6710@gmail.com,12345678,ASSIGNMENT,Admin
+711,custosuser6711,User,6711,custosuser6711@gmail.com,12345678,PROJECT,Read Only Admin
+712,custosuser6712,User,6712,custosuser6712@gmail.com,12345678,EXPERIMENT,Gateway User
+713,custosuser6713,User,6713,custosuser6713@gmail.com,12345678,ASSIGNMENT,Science User
+714,custosuser6714,User,6714,custosuser6714@gmail.com,12345678,PROJECT,Service User
+715,custosuser6715,User,6715,custosuser6715@gmail.com,12345678,EXPERIMENT,Admin
+716,custosuser6716,User,6716,custosuser6716@gmail.com,12345678,ASSIGNMENT,Read Only Admin
+717,custosuser6717,User,6717,custosuser6717@gmail.com,12345678,PROJECT,Gateway User
+718,custosuser6718,User,6718,custosuser6718@gmail.com,12345678,EXPERIMENT,Science User
+719,custosuser6719,User,6719,custosuser6719@gmail.com,12345678,ASSIGNMENT,Service User
+720,custosuser6720,User,6720,custosuser6720@gmail.com,12345678,PROJECT,Admin
+721,custosuser6721,User,6721,custosuser6721@gmail.com,12345678,EXPERIMENT,Read Only Admin
+722,custosuser6722,User,6722,custosuser6722@gmail.com,12345678,ASSIGNMENT,Gateway User
+723,custosuser6723,User,6723,custosuser6723@gmail.com,12345678,PROJECT,Science User
+724,custosuser6724,User,6724,custosuser6724@gmail.com,12345678,EXPERIMENT,Service User
+725,custosuser6725,User,6725,custosuser6725@gmail.com,12345678,ASSIGNMENT,Admin
+726,custosuser6726,User,6726,custosuser6726@gmail.com,12345678,PROJECT,Read Only Admin
+727,custosuser6727,User,6727,custosuser6727@gmail.com,12345678,EXPERIMENT,Gateway User
+728,custosuser6728,User,6728,custosuser6728@gmail.com,12345678,ASSIGNMENT,Science User
+729,custosuser6729,User,6729,custosuser6729@gmail.com,12345678,PROJECT,Service User
+730,custosuser6730,User,6730,custosuser6730@gmail.com,12345678,EXPERIMENT,Admin
+731,custosuser6731,User,6731,custosuser6731@gmail.com,12345678,ASSIGNMENT,Read Only Admin
+732,custosuser6732,User,6732,custosuser6732@gmail.com,12345678,PROJECT,Gateway User
+733,custosuser6733,User,6733,custosuser6733@gmail.com,12345678,EXPERIMENT,Science User
+734,custosuser6734,User,6734,custosuser6734@gmail.com,12345678,ASSIGNMENT,Service User
+735,custosuser6735,User,6735,custosuser6735@gmail.com,12345678,PROJECT,Admin
+736,custosuser6736,User,6736,custosuser6736@gmail.com,12345678,EXPERIMENT,Read Only Admin
+737,custosuser6737,User,6737,custosuser6737@gmail.com,12345678,ASSIGNMENT,Gateway User
+738,custosuser6738,User,6738,custosuser6738@gmail.com,12345678,PROJECT,Science User
+739,custosuser6739,User,6739,custosuser6739@gmail.com,12345678,EXPERIMENT,Service User
+740,custosuser6740,User,6740,custosuser6740@gmail.com,12345678,ASSIGNMENT,Admin
+741,custosuser6741,User,6741,custosuser6741@gmail.com,12345678,PROJECT,Read Only Admin
+742,custosuser6742,User,6742,custosuser6742@gmail.com,12345678,EXPERIMENT,Gateway User
+743,custosuser6743,User,6743,custosuser6743@gmail.com,12345678,ASSIGNMENT,Science User
+744,custosuser6744,User,6744,custosuser6744@gmail.com,12345678,PROJECT,Service User
+745,custosuser6745,User,6745,custosuser6745@gmail.com,12345678,EXPERIMENT,Admin
+746,custosuser6746,User,6746,custosuser6746@gmail.com,12345678,ASSIGNMENT,Read Only Admin
+747,custosuser6747,User,6747,custosuser6747@gmail.com,12345678,PROJECT,Gateway User
+748,custosuser6748,User,6748,custosuser6748@gmail.com,12345678,EXPERIMENT,Science User
+749,custosuser6749,User,6749,custosuser6749@gmail.com,12345678,ASSIGNMENT,Service User
+750,custosuser6750,User,6750,custosuser6750@gmail.com,12345678,PROJECT,Admin
+751,custosuser6751,User,6751,custosuser6751@gmail.com,12345678,EXPERIMENT,Read Only Admin
+752,custosuser6752,User,6752,custosuser6752@gmail.com,12345678,ASSIGNMENT,Gateway User
+753,custosuser6753,User,6753,custosuser6753@gmail.com,12345678,PROJECT,Science User
+754,custosuser6754,User,6754,custosuser6754@gmail.com,12345678,EXPERIMENT,Service User
+755,custosuser6755,User,6755,custosuser6755@gmail.com,12345678,ASSIGNMENT,Admin
+756,custosuser6756,User,6756,custosuser6756@gmail.com,12345678,PROJECT,Read Only Admin
+757,custosuser6757,User,6757,custosuser6757@gmail.com,12345678,EXPERIMENT,Gateway User
+758,custosuser6758,User,6758,custosuser6758@gmail.com,12345678,ASSIGNMENT,Science User
+759,custosuser6759,User,6759,custosuser6759@gmail.com,12345678,PROJECT,Service User
+760,custosuser6760,User,6760,custosuser6760@gmail.com,12345678,EXPERIMENT,Admin
+761,custosuser6761,User,6761,custosuser6761@gmail.com,12345678,ASSIGNMENT,Read Only Admin
+762,custosuser6762,User,6762,custosuser6762@gmail.com,12345678,PROJECT,Gateway User
+763,custosuser6763,User,6763,custosuser6763@gmail.com,12345678,EXPERIMENT,Science User
+764,custosuser6764,User,6764,custosuser6764@gmail.com,12345678,ASSIGNMENT,Service User
+765,custosuser6765,User,6765,custosuser6765@gmail.com,12345678,PROJECT,Admin
+766,custosuser6766,User,6766,custosuser6766@gmail.com,12345678,EXPERIMENT,Read Only Admin
+767,custosuser6767,User,6767,custosuser6767@gmail.com,12345678,ASSIGNMENT,Gateway User
+768,custosuser6768,User,6768,custosuser6768@gmail.com,12345678,PROJECT,Science User
+769,custosuser6769,User,6769,custosuser6769@gmail.com,12345678,EXPERIMENT,Service User
+770,custosuser6770,User,6770,custosuser6770@gmail.com,12345678,ASSIGNMENT,Admin
+771,custosuser6771,User,6771,custosuser6771@gmail.com,12345678,PROJECT,Read Only Admin
+772,custosuser6772,User,6772,custosuser6772@gmail.com,12345678,EXPERIMENT,Gateway User
+773,custosuser6773,User,6773,custosuser6773@gmail.com,12345678,ASSIGNMENT,Science User
+774,custosuser6774,User,6774,custosuser6774@gmail.com,12345678,PROJECT,Service User
+775,custosuser6775,User,6775,custosuser6775@gmail.com,12345678,EXPERIMENT,Admin
+776,custosuser6776,User,6776,custosuser6776@gmail.com,12345678,ASSIGNMENT,Read Only Admin
+777,custosuser6777,User,6777,custosuser6777@gmail.com,12345678,PROJECT,Gateway User
+778,custosuser6778,User,6778,custosuser6778@gmail.com,12345678,EXPERIMENT,Science User
+779,custosuser6779,User,6779,custosuser6779@gmail.com,12345678,ASSIGNMENT,Service User
+780,custosuser6780,User,6780,custosuser6780@gmail.com,12345678,PROJECT,Admin
+781,custosuser6781,User,6781,custosuser6781@gmail.com,12345678,EXPERIMENT,Read Only Admin
+782,custosuser6782,User,6782,custosuser6782@gmail.com,12345678,ASSIGNMENT,Gateway User
+783,custosuser6783,User,6783,custosuser6783@gmail.com,12345678,PROJECT,Science User
+784,custosuser6784,User,6784,custosuser6784@gmail.com,12345678,EXPERIMENT,Service User
+785,custosuser6785,User,6785,custosuser6785@gmail.com,12345678,ASSIGNMENT,Admin
+786,custosuser6786,User,6786,custosuser6786@gmail.com,12345678,PROJECT,Read Only Admin
+787,custosuser6787,User,6787,custosuser6787@gmail.com,12345678,EXPERIMENT,Gateway User
+788,custosuser6788,User,6788,custosuser6788@gmail.com,12345678,ASSIGNMENT,Science User
+789,custosuser6789,User,6789,custosuser6789@gmail.com,12345678,PROJECT,Service User
+790,custosuser6790,User,6790,custosuser6790@gmail.com,12345678,EXPERIMENT,Admin
+791,custosuser6791,User,6791,custosuser6791@gmail.com,12345678,ASSIGNMENT,Read Only Admin
+792,custosuser6792,User,6792,custosuser6792@gmail.com,12345678,PROJECT,Gateway User
+793,custosuser6793,User,6793,custosuser6793@gmail.com,12345678,EXPERIMENT,Science User
+794,custosuser6794,User,6794,custosuser6794@gmail.com,12345678,ASSIGNMENT,Service User
+795,custosuser6795,User,6795,custosuser6795@gmail.com,12345678,PROJECT,Admin
+796,custosuser6796,User,6796,custosuser6796@gmail.com,12345678,EXPERIMENT,Read Only Admin
+797,custosuser6797,User,6797,custosuser6797@gmail.com,12345678,ASSIGNMENT,Gateway User
+798,custosuser6798,User,6798,custosuser6798@gmail.com,12345678,PROJECT,Science User
+799,custosuser6799,User,6799,custosuser6799@gmail.com,12345678,EXPERIMENT,Service User
+800,custosuser6800,User,6800,custosuser6800@gmail.com,12345678,ASSIGNMENT,Admin
+801,custosuser6801,User,6801,custosuser6801@gmail.com,12345678,PROJECT,Read Only Admin
+802,custosuser6802,User,6802,custosuser6802@gmail.com,12345678,EXPERIMENT,Gateway User
+803,custosuser6803,User,6803,custosuser6803@gmail.com,12345678,ASSIGNMENT,Science User
+804,custosuser6804,User,6804,custosuser6804@gmail.com,12345678,PROJECT,Service User
+805,custosuser6805,User,6805,custosuser6805@gmail.com,12345678,EXPERIMENT,Admin
+806,custosuser6806,User,6806,custosuser6806@gmail.com,12345678,ASSIGNMENT,Read Only Admin
+807,custosuser6807,User,6807,custosuser6807@gmail.com,12345678,PROJECT,Gateway User
+808,custosuser6808,User,6808,custosuser6808@gmail.com,12345678,EXPERIMENT,Science User
+809,custosuser6809,User,6809,custosuser6809@gmail.com,12345678,ASSIGNMENT,Service User
+810,custosuser6810,User,6810,custosuser6810@gmail.com,12345678,PROJECT,Admin
+811,custosuser6811,User,6811,custosuser6811@gmail.com,12345678,EXPERIMENT,Read Only Admin
+812,custosuser6812,User,6812,custosuser6812@gmail.com,12345678,ASSIGNMENT,Gateway User
+813,custosuser6813,User,6813,custosuser6813@gmail.com,12345678,PROJECT,Science User
+814,custosuser6814,User,6814,custosuser6814@gmail.com,12345678,EXPERIMENT,Service User
+815,custosuser6815,User,6815,custosuser6815@gmail.com,12345678,ASSIGNMENT,Admin
+816,custosuser6816,User,6816,custosuser6816@gmail.com,12345678,PROJECT,Read Only Admin
+817,custosuser6817,User,6817,custosuser6817@gmail.com,12345678,EXPERIMENT,Gateway User
+818,custosuser6818,User,6818,custosuser6818@gmail.com,12345678,ASSIGNMENT,Science User
+819,custosuser6819,User,6819,custosuser6819@gmail.com,12345678,PROJECT,Service User
+820,custosuser6820,User,6820,custosuser6820@gmail.com,12345678,EXPERIMENT,Admin
+821,custosuser6821,User,6821,custosuser6821@gmail.com,12345678,ASSIGNMENT,Read Only Admin
+822,custosuser6822,User,6822,custosuser6822@gmail.com,12345678,PROJECT,Gateway User
+823,custosuser6823,User,6823,custosuser6823@gmail.com,12345678,EXPERIMENT,Science User
+824,custosuser6824,User,6824,custosuser6824@gmail.com,12345678,ASSIGNMENT,Service User
+825,custosuser6825,User,6825,custosuser6825@gmail.com,12345678,PROJECT,Admin
+826,custosuser6826,User,6826,custosuser6826@gmail.com,12345678,EXPERIMENT,Read Only Admin
+827,custosuser6827,User,6827,custosuser6827@gmail.com,12345678,ASSIGNMENT,Gateway User
+828,custosuser6828,User,6828,custosuser6828@gmail.com,12345678,PROJECT,Science User
+829,custosuser6829,User,6829,custosuser6829@gmail.com,12345678,EXPERIMENT,Service User
+830,custosuser6830,User,6830,custosuser6830@gmail.com,12345678,ASSIGNMENT,Admin
+831,custosuser6831,User,6831,custosuser6831@gmail.com,12345678,PROJECT,Read Only Admin
+832,custosuser6832,User,6832,custosuser6832@gmail.com,12345678,EXPERIMENT,Gateway User
+833,custosuser6833,User,6833,custosuser6833@gmail.com,12345678,ASSIGNMENT,Science User
+834,custosuser6834,User,6834,custosuser6834@gmail.com,12345678,PROJECT,Service User
+835,custosuser6835,User,6835,custosuser6835@gmail.com,12345678,EXPERIMENT,Admin
+836,custosuser6836,User,6836,custosuser6836@gmail.com,12345678,ASSIGNMENT,Read Only Admin
+837,custosuser6837,User,6837,custosuser6837@gmail.com,12345678,PROJECT,Gateway User
+838,custosuser6838,User,6838,custosuser6838@gmail.com,12345678,EXPERIMENT,Science User
+839,custosuser6839,User,6839,custosuser6839@gmail.com,12345678,ASSIGNMENT,Service User
+840,custosuser6840,User,6840,custosuser6840@gmail.com,12345678,PROJECT,Admin
+841,custosuser6841,User,6841,custosuser6841@gmail.com,12345678,EXPERIMENT,Read Only Admin
+842,custosuser6842,User,6842,custosuser6842@gmail.com,12345678,ASSIGNMENT,Gateway User
+843,custosuser6843,User,6843,custosuser6843@gmail.com,12345678,PROJECT,Science User
+844,custosuser6844,User,6844,custosuser6844@gmail.com,12345678,EXPERIMENT,Service User
+845,custosuser6845,User,6845,custosuser6845@gmail.com,12345678,ASSIGNMENT,Admin
+846,custosuser6846,User,6846,custosuser6846@gmail.com,12345678,PROJECT,Read Only Admin
+847,custosuser6847,User,6847,custosuser6847@gmail.com,12345678,EXPERIMENT,Gateway User
+848,custosuser6848,User,6848,custosuser6848@gmail.com,12345678,ASSIGNMENT,Science User
+849,custosuser6849,User,6849,custosuser6849@gmail.com,12345678,PROJECT,Service User
+850,custosuser6850,User,6850,custosuser6850@gmail.com,12345678,EXPERIMENT,Admin
+851,custosuser6851,User,6851,custosuser6851@gmail.com,12345678,ASSIGNMENT,Read Only Admin
+852,custosuser6852,User,6852,custosuser6852@gmail.com,12345678,PROJECT,Gateway User
+853,custosuser6853,User,6853,custosuser6853@gmail.com,12345678,EXPERIMENT,Science User
+854,custosuser6854,User,6854,custosuser6854@gmail.com,12345678,ASSIGNMENT,Service User
+855,custosuser6855,User,6855,custosuser6855@gmail.com,12345678,PROJECT,Admin
+856,custosuser6856,User,6856,custosuser6856@gmail.com,12345678,EXPERIMENT,Read Only Admin
+857,custosuser6857,User,6857,custosuser6857@gmail.com,12345678,ASSIGNMENT,Gateway User
+858,custosuser6858,User,6858,custosuser6858@gmail.com,12345678,PROJECT,Science User
+859,custosuser6859,User,6859,custosuser6859@gmail.com,12345678,EXPERIMENT,Service User
+860,custosuser6860,User,6860,custosuser6860@gmail.com,12345678,ASSIGNMENT,Admin
+861,custosuser6861,User,6861,custosuser6861@gmail.com,12345678,PROJECT,Read Only Admin
+862,custosuser6862,User,6862,custosuser6862@gmail.com,12345678,EXPERIMENT,Gateway User
+863,custosuser6863,User,6863,custosuser6863@gmail.com,12345678,ASSIGNMENT,Science User
+864,custosuser6864,User,6864,custosuser6864@gmail.com,12345678,PROJECT,Service User
+865,custosuser6865,User,6865,custosuser6865@gmail.com,12345678,EXPERIMENT,Admin
+866,custosuser6866,User,6866,custosuser6866@gmail.com,12345678,ASSIGNMENT,Read Only Admin
+867,custosuser6867,User,6867,custosuser6867@gmail.com,12345678,PROJECT,Gateway User
+868,custosuser6868,User,6868,custosuser6868@gmail.com,12345678,EXPERIMENT,Science User
+869,custosuser6869,User,6869,custosuser6869@gmail.com,12345678,ASSIGNMENT,Service User
+870,custosuser6870,User,6870,custosuser6870@gmail.com,12345678,PROJECT,Admin
+871,custosuser6871,User,6871,custosuser6871@gmail.com,12345678,EXPERIMENT,Read Only Admin
+872,custosuser6872,User,6872,custosuser6872@gmail.com,12345678,ASSIGNMENT,Gateway User
+873,custosuser6873,User,6873,custosuser6873@gmail.com,12345678,PROJECT,Science User
+874,custosuser6874,User,6874,custosuser6874@gmail.com,12345678,EXPERIMENT,Service User
+875,custosuser6875,User,6875,custosuser6875@gmail.com,12345678,ASSIGNMENT,Admin
+876,custosuser6876,User,6876,custosuser6876@gmail.com,12345678,PROJECT,Read Only Admin
+877,custosuser6877,User,6877,custosuser6877@gmail.com,12345678,EXPERIMENT,Gateway User
+878,custosuser6878,User,6878,custosuser6878@gmail.com,12345678,ASSIGNMENT,Science User
+879,custosuser6879,User,6879,custosuser6879@gmail.com,12345678,PROJECT,Service User
+880,custosuser6880,User,6880,custosuser6880@gmail.com,12345678,EXPERIMENT,Admin
+881,custosuser6881,User,6881,custosuser6881@gmail.com,12345678,ASSIGNMENT,Read Only Admin
+882,custosuser6882,User,6882,custosuser6882@gmail.com,12345678,PROJECT,Gateway User
+883,custosuser6883,User,6883,custosuser6883@gmail.com,12345678,EXPERIMENT,Science User
+884,custosuser6884,User,6884,custosuser6884@gmail.com,12345678,ASSIGNMENT,Service User
+885,custosuser6885,User,6885,custosuser6885@gmail.com,12345678,PROJECT,Admin
+886,custosuser6886,User,6886,custosuser6886@gmail.com,12345678,EXPERIMENT,Read Only Admin
+887,custosuser6887,User,6887,custosuser6887@gmail.com,12345678,ASSIGNMENT,Gateway User
+888,custosuser6888,User,6888,custosuser6888@gmail.com,12345678,PROJECT,Science User
+889,custosuser6889,User,6889,custosuser6889@gmail.com,12345678,EXPERIMENT,Service User
+890,custosuser6890,User,6890,custosuser6890@gmail.com,12345678,ASSIGNMENT,Admin
+891,custosuser6891,User,6891,custosuser6891@gmail.com,12345678,PROJECT,Read Only Admin
+892,custosuser6892,User,6892,custosuser6892@gmail.com,12345678,EXPERIMENT,Gateway User
+893,custosuser6893,User,6893,custosuser6893@gmail.com,12345678,ASSIGNMENT,Science User
+894,custosuser6894,User,6894,custosuser6894@gmail.com,12345678,PROJECT,Service User
+895,custosuser6895,User,6895,custosuser6895@gmail.com,12345678,EXPERIMENT,Admin
+896,custosuser6896,User,6896,custosuser6896@gmail.com,12345678,ASSIGNMENT,Read Only Admin
+897,custosuser6897,User,6897,custosuser6897@gmail.com,12345678,PROJECT,Gateway User
+898,custosuser6898,User,6898,custosuser6898@gmail.com,12345678,EXPERIMENT,Science User
+899,custosuser6899,User,6899,custosuser6899@gmail.com,12345678,ASSIGNMENT,Service User
+900,custosuser6900,User,6900,custosuser6900@gmail.com,12345678,PROJECT,Admin
+901,custosuser6901,User,6901,custosuser6901@gmail.com,12345678,EXPERIMENT,Read Only Admin
+902,custosuser6902,User,6902,custosuser6902@gmail.com,12345678,ASSIGNMENT,Gateway User
+903,custosuser6903,User,6903,custosuser6903@gmail.com,12345678,PROJECT,Science User
+904,custosuser6904,User,6904,custosuser6904@gmail.com,12345678,EXPERIMENT,Service User
+905,custosuser6905,User,6905,custosuser6905@gmail.com,12345678,ASSIGNMENT,Admin
+906,custosuser6906,User,6906,custosuser6906@gmail.com,12345678,PROJECT,Read Only Admin
+907,custosuser6907,User,6907,custosuser6907@gmail.com,12345678,EXPERIMENT,Gateway User
+908,custosuser6908,User,6908,custosuser6908@gmail.com,12345678,ASSIGNMENT,Science User
+909,custosuser6909,User,6909,custosuser6909@gmail.com,12345678,PROJECT,Service User
+910,custosuser6910,User,6910,custosuser6910@gmail.com,12345678,EXPERIMENT,Admin
+911,custosuser6911,User,6911,custosuser6911@gmail.com,12345678,ASSIGNMENT,Read Only Admin
+912,custosuser6912,User,6912,custosuser6912@gmail.com,12345678,PROJECT,Gateway User
+913,custosuser6913,User,6913,custosuser6913@gmail.com,12345678,EXPERIMENT,Science User
+914,custosuser6914,User,6914,custosuser6914@gmail.com,12345678,ASSIGNMENT,Service User
+915,custosuser6915,User,6915,custosuser6915@gmail.com,12345678,PROJECT,Admin
+916,custosuser6916,User,6916,custosuser6916@gmail.com,12345678,EXPERIMENT,Read Only Admin
+917,custosuser6917,User,6917,custosuser6917@gmail.com,12345678,ASSIGNMENT,Gateway User
+918,custosuser6918,User,6918,custosuser6918@gmail.com,12345678,PROJECT,Science User
+919,custosuser6919,User,6919,custosuser6919@gmail.com,12345678,EXPERIMENT,Service User
+920,custosuser6920,User,6920,custosuser6920@gmail.com,12345678,ASSIGNMENT,Admin
+921,custosuser6921,User,6921,custosuser6921@gmail.com,12345678,PROJECT,Read Only Admin
+922,custosuser6922,User,6922,custosuser6922@gmail.com,12345678,EXPERIMENT,Gateway User
+923,custosuser6923,User,6923,custosuser6923@gmail.com,12345678,ASSIGNMENT,Science User
+924,custosuser6924,User,6924,custosuser6924@gmail.com,12345678,PROJECT,Service User
+925,custosuser6925,User,6925,custosuser6925@gmail.com,12345678,EXPERIMENT,Admin
+926,custosuser6926,User,6926,custosuser6926@gmail.com,12345678,ASSIGNMENT,Read Only Admin
+927,custosuser6927,User,6927,custosuser6927@gmail.com,12345678,PROJECT,Gateway User
+928,custosuser6928,User,6928,custosuser6928@gmail.com,12345678,EXPERIMENT,Science User
+929,custosuser6929,User,6929,custosuser6929@gmail.com,12345678,ASSIGNMENT,Service User
+930,custosuser6930,User,6930,custosuser6930@gmail.com,12345678,PROJECT,Admin
+931,custosuser6931,User,6931,custosuser6931@gmail.com,12345678,EXPERIMENT,Read Only Admin
+932,custosuser6932,User,6932,custosuser6932@gmail.com,12345678,ASSIGNMENT,Gateway User
+933,custosuser6933,User,6933,custosuser6933@gmail.com,12345678,PROJECT,Science User
+934,custosuser6934,User,6934,custosuser6934@gmail.com,12345678,EXPERIMENT,Service User
+935,custosuser6935,User,6935,custosuser6935@gmail.com,12345678,ASSIGNMENT,Admin
+936,custosuser6936,User,6936,custosuser6936@gmail.com,12345678,PROJECT,Read Only Admin
+937,custosuser6937,User,6937,custosuser6937@gmail.com,12345678,EXPERIMENT,Gateway User
+938,custosuser6938,User,6938,custosuser6938@gmail.com,12345678,ASSIGNMENT,Science User
+939,custosuser6939,User,6939,custosuser6939@gmail.com,12345678,PROJECT,Service User
+940,custosuser6940,User,6940,custosuser6940@gmail.com,12345678,EXPERIMENT,Admin
+941,custosuser6941,User,6941,custosuser6941@gmail.com,12345678,ASSIGNMENT,Read Only Admin
+942,custosuser6942,User,6942,custosuser6942@gmail.com,12345678,PROJECT,Gateway User
+943,custosuser6943,User,6943,custosuser6943@gmail.com,12345678,EXPERIMENT,Science User
+944,custosuser6944,User,6944,custosuser6944@gmail.com,12345678,ASSIGNMENT,Service User
+945,custosuser6945,User,6945,custosuser6945@gmail.com,12345678,PROJECT,Admin
+946,custosuser6946,User,6946,custosuser6946@gmail.com,12345678,EXPERIMENT,Read Only Admin
+947,custosuser6947,User,6947,custosuser6947@gmail.com,12345678,ASSIGNMENT,Gateway User
+948,custosuser6948,User,6948,custosuser6948@gmail.com,12345678,PROJECT,Science User
+949,custosuser6949,User,6949,custosuser6949@gmail.com,12345678,EXPERIMENT,Service User
+950,custosuser6950,User,6950,custosuser6950@gmail.com,12345678,ASSIGNMENT,Admin
+951,custosuser6951,User,6951,custosuser6951@gmail.com,12345678,PROJECT,Read Only Admin
+952,custosuser6952,User,6952,custosuser6952@gmail.com,12345678,EXPERIMENT,Gateway User
+953,custosuser6953,User,6953,custosuser6953@gmail.com,12345678,ASSIGNMENT,Science User
+954,custosuser6954,User,6954,custosuser6954@gmail.com,12345678,PROJECT,Service User
+955,custosuser6955,User,6955,custosuser6955@gmail.com,12345678,EXPERIMENT,Admin
+956,custosuser6956,User,6956,custosuser6956@gmail.com,12345678,ASSIGNMENT,Read Only Admin
+957,custosuser6957,User,6957,custosuser6957@gmail.com,12345678,PROJECT,Gateway User
+958,custosuser6958,User,6958,custosuser6958@gmail.com,12345678,EXPERIMENT,Science User
+959,custosuser6959,User,6959,custosuser6959@gmail.com,12345678,ASSIGNMENT,Service User
+960,custosuser6960,User,6960,custosuser6960@gmail.com,12345678,PROJECT,Admin
+961,custosuser6961,User,6961,custosuser6961@gmail.com,12345678,EXPERIMENT,Read Only Admin
+962,custosuser6962,User,6962,custosuser6962@gmail.com,12345678,ASSIGNMENT,Gateway User
+963,custosuser6963,User,6963,custosuser6963@gmail.com,12345678,PROJECT,Science User
+964,custosuser6964,User,6964,custosuser6964@gmail.com,12345678,EXPERIMENT,Service User
+965,custosuser6965,User,6965,custosuser6965@gmail.com,12345678,ASSIGNMENT,Admin
+966,custosuser6966,User,6966,custosuser6966@gmail.com,12345678,PROJECT,Read Only Admin
+967,custosuser6967,User,6967,custosuser6967@gmail.com,12345678,EXPERIMENT,Gateway User
+968,custosuser6968,User,6968,custosuser6968@gmail.com,12345678,ASSIGNMENT,Science User
+969,custosuser6969,User,6969,custosuser6969@gmail.com,12345678,PROJECT,Service User
+970,custosuser6970,User,6970,custosuser6970@gmail.com,12345678,EXPERIMENT,Admin
+971,custosuser6971,User,6971,custosuser6971@gmail.com,12345678,ASSIGNMENT,Read Only Admin
+972,custosuser6972,User,6972,custosuser6972@gmail.com,12345678,PROJECT,Gateway User
+973,custosuser6973,User,6973,custosuser6973@gmail.com,12345678,EXPERIMENT,Science User
+974,custosuser6974,User,6974,custosuser6974@gmail.com,12345678,ASSIGNMENT,Service User
+975,custosuser6975,User,6975,custosuser6975@gmail.com,12345678,PROJECT,Admin
+976,custosuser6976,User,6976,custosuser6976@gmail.com,12345678,EXPERIMENT,Read Only Admin
+977,custosuser6977,User,6977,custosuser6977@gmail.com,12345678,ASSIGNMENT,Gateway User
+978,custosuser6978,User,6978,custosuser6978@gmail.com,12345678,PROJECT,Science User
+979,custosuser6979,User,6979,custosuser6979@gmail.com,12345678,EXPERIMENT,Service User
+980,custosuser6980,User,6980,custosuser6980@gmail.com,12345678,ASSIGNMENT,Admin
+981,custosuser6981,User,6981,custosuser6981@gmail.com,12345678,PROJECT,Read Only Admin
+982,custosuser6982,User,6982,custosuser6982@gmail.com,12345678,EXPERIMENT,Gateway User
+983,custosuser6983,User,6983,custosuser6983@gmail.com,12345678,ASSIGNMENT,Science User
+984,custosuser6984,User,6984,custosuser6984@gmail.com,12345678,PROJECT,Service User
+985,custosuser6985,User,6985,custosuser6985@gmail.com,12345678,EXPERIMENT,Admin
+986,custosuser6986,User,6986,custosuser6986@gmail.com,12345678,ASSIGNMENT,Read Only Admin
+987,custosuser6987,User,6987,custosuser6987@gmail.com,12345678,PROJECT,Gateway User
+988,custosuser6988,User,6988,custosuser6988@gmail.com,12345678,EXPERIMENT,Science User
+989,custosuser6989,User,6989,custosuser6989@gmail.com,12345678,ASSIGNMENT,Service User
+990,custosuser6990,User,6990,custosuser6990@gmail.com,12345678,PROJECT,Admin
+991,custosuser6991,User,6991,custosuser6991@gmail.com,12345678,EXPERIMENT,Read Only Admin
+992,custosuser6992,User,6992,custosuser6992@gmail.com,12345678,ASSIGNMENT,Gateway User
+993,custosuser6993,User,6993,custosuser6993@gmail.com,12345678,PROJECT,Science User
+994,custosuser6994,User,6994,custosuser6994@gmail.com,12345678,EXPERIMENT,Service User
+995,custosuser6995,User,6995,custosuser6995@gmail.com,12345678,ASSIGNMENT,Admin
+996,custosuser6996,User,6996,custosuser6996@gmail.com,12345678,PROJECT,Read Only Admin
+997,custosuser6997,User,6997,custosuser6997@gmail.com,12345678,EXPERIMENT,Gateway User
+998,custosuser6998,User,6998,custosuser6998@gmail.com,12345678,ASSIGNMENT,Science User
+999,custosuser6999,User,6999,custosuser6999@gmail.com,12345678,PROJECT,Service User
