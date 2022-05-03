@@ -142,7 +142,7 @@ async def registerResources(info: Request):
         cf.register_resources(req_data['resources'])
         return JSONResponse({"success": "true"})
     except Exception as e:
-        print("Please defined method register_resources")
+        print("Please defined method register_resources", e)
         return JSONResponse({"success": "false"}, 500)
 
 
@@ -185,6 +185,7 @@ async def createSSH(info: Request):
     req_data = await info.json()
     try:
         token = await cf.create_SSH_key(req_data['user_id'], req_data['description'])
+        return JSONResponse({"success": "true", "token": token})
         JsonResp = JSONResponse({"success": "true"})
         JsonResp.set_cookie(key="token", value=token)
         return JsonResp
@@ -194,10 +195,10 @@ async def createSSH(info: Request):
 
 @app.post("/getSSH")
 async def getSSH(info: Request):
-    req_data = info.cookies["token"]
+    req_data = await info.json()
     print(req_data)
     try:
-        val = await cf.get_SSH_key(req_data)
+        val = await cf.get_SSH_key(req_data["token"])
         return JSONResponse({"success": "true", "data": val})
     except Exception as e:
         print(e)
