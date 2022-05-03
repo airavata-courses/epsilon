@@ -184,7 +184,7 @@ async def checkUserPermission(info: Request):
 async def createSSH(info: Request):
     req_data = await info.json()
     try:
-        token = cf.create_SSH_key(req_data['user_id'], req_data['description'])
+        token = await cf.create_SSH_key(req_data['user_id'], req_data['description'])
         JsonResp = JSONResponse({"success": "true"})
         JsonResp.set_cookie(key="token", value=token)
         return JsonResp
@@ -194,7 +194,13 @@ async def createSSH(info: Request):
 
 @app.post("/getSSH")
 async def getSSH(info: Request):
-    req_data = await info.json()
+    req_data = info.cookies["token"]
+    print(req_data)
+    try:
+        val = await cf.get_SSH_key(req_data)
+        return JSONResponse({"success": "true", "data": val})
+    except Exception as e:
+        print(e)
 
 
 def start():

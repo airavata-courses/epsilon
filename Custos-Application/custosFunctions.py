@@ -44,18 +44,19 @@ try:
 
     created_groups = {}
 
-    admin_user_name = "isjarana"
-    admin_password = "IJR@circ@1"
+    admin_user_name = "pnbhakta@iu.edu"
+    admin_password = "epsilon_spring2022"
 
     resource_ids = []
     print("Successfully configured all custos clients")
 except Exception as e:
-    raise e
     print("Custos Id and Secret may wrong " + str(e))
+    raise e
+
 
 """# Sharing usecase
-## Verfy  user 
-     
+# Verfy  user
+
 *    Get admin user
 *  Update admin user profie
 
@@ -380,8 +381,7 @@ entity_types = [
 
 def register_resources(resources):
     for resource in resources:
-        id = resource['name'].join(random.choice(
-            string.ascii_letters) for x in range(5))
+        id = resource['name']
         resource_ids.append(id)
         resource['id'] = id
         print("Register resources " +
@@ -480,7 +480,7 @@ print("share_resource_with_user method is defined")
 
 """## Evaluate permissions
 
-### Expected result
+# Expected result
 *   alice : True  
 *   audrey : True
 * sophia: True
@@ -511,7 +511,7 @@ print("check_user_permissions is defined")
 
 """# Secret Management
 
-## Create SSH Key
+# Create SSH Key
 """
 
 
@@ -524,7 +524,7 @@ def create_SSH_key(user_id, description):
 """## Fetch SSH Key"""
 
 
-def get_SSH_key(token):
+async def get_SSH_key(token):
     return resource_secret_client.get_ssh_credential(token=b64_encoded_custos_token, client_id=custos_settings.CUSTOS_CLIENT_ID, ssh_credential_token=token)
 
 
